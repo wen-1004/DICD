@@ -1,0 +1,1 @@
+g++ -I$SYSTEMC_HOME/include -L$SYSTEMC_HOME/lib64 -lsystemc -lm EstimatorTop.cpp delay_n.cpp phi_sum.cpp gamma_sum.cpp mag_mod.cpp angle_mod.cpp minus_mod.cpp argmax_mod.cpp select_eps.cpp main3.cpp -o full_test
