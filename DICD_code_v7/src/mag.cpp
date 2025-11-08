@@ -78,18 +78,31 @@ static inline mag_t ambm_pw_hypot_fx(gamma_t x, gamma_t y) {
 }
 
 struct mag : public sc_module {
+    sc_in<bool>    clk;
+    sc_in<bool>    rst;        // assume active-low, match your other modules
     sc_in<gamma_t> gm_in_real;
     sc_in<gamma_t> gm_in_imag;
     sc_out<mag_t>  mag_out;
-  
+
     SC_HAS_PROCESS(mag);
     mag(sc_module_name n) : sc_module(n) {
-        SC_METHOD(proc);
-        sensitive << gm_in_real << gm_in_imag;
-        dont_initialize();
+        SC_CTHREAD(proc, clk.pos());
+        reset_signal_is(rst, false); // active-low reset
     }
-  
+
     void proc() {
-        mag_out.write(ambm_pw_hypot_fx(gm_in_real.read(), gm_in_imag.read()));
+        // reset: define output and consume 1 cycle
+        mag_out.write(0);
+        wait();
+
+        while (true) {
+            if (!rst.read()) {
+                mag_out.write(0);
+            } else {
+                mag_t z = ambm_pw_hypot_fx(gm_in_real.read(), gm_in_imag.read());
+                mag_out.write(z);  // 1-cycle latency from inputs to output
+            }
+            wait();
+        }
     }
 };

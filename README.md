@@ -6,8 +6,9 @@
 - Version 2: First standalone system simulation with all signal using "double"
 - Version 3: Replace "double" with user-defined data type
 - Version 4: Debugging, adjust Alpla-max approximation parameter, passed testcase
-- Version 5: Trim redundant bits for fixed-point datapath(for better PPA)
-- Version 6: Final version
+- Version 5: Trim redundant bits for datapath
+- Version 6: Further reduce bits for datapath
+- Version 7: **lastest verion, use this**Add 1 more latency in the system
 
 ## How to run
 
