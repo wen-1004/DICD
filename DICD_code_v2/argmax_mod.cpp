@@ -55,7 +55,7 @@ struct argmax_mod : public sc_module {
 
         // (2) 尋找最大值索引
         auto max_it = std::max_element(buf, buf + N);
-        int idx = 256 -  std::distance(buf, max_it); // 回傳最大值的 index
+        int idx = std::distance(buf, max_it); // 回傳最大值的 index
 
         // (3) 延遲線更新
         for (int i = N_DELAY - 1; i > 0; --i)

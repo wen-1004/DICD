@@ -42,7 +42,7 @@ struct select_eps : public sc_module {
     angle_buf[0] = ang_new;
 
     // --- 2) 用 theta 直接索引目前滑動視窗 ---
-    ux_theta_t th = 256 - theta_in.read();
+    ux_theta_t th = theta_in.read();
     int idx = (int)th & 0xFF;           // 保險起見取 0..255
     fx_phase_t sel_ang = angle_buf[idx];
 
