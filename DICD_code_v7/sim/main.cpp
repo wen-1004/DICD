@@ -232,6 +232,8 @@ int sc_main(int argc, char* argv[]) {
     std::cout << std::setprecision(10);
   
     bool all_ok = true;
+    double sum_abs_err = 0.0;
+    double sum_rel_err = 0.0;
     for (size_t k = 0; k < Ncmp; ++k) {
         const auto& r = recs[k];
         const int theta_m = r.theta;
@@ -243,6 +245,8 @@ int sc_main(int argc, char* argv[]) {
         const bool theta_ok = (theta_m == theta_g);
         const bool eps_ok   = (rel_err <= EPS_REL_TOL);
         all_ok = all_ok && theta_ok && eps_ok;
+        sum_abs_err += abs_err;
+        sum_rel_err += rel_err;
     
         std::cout << r.t_report << " | "
                   << "theta: DUT=" << theta_m
@@ -260,8 +264,14 @@ int sc_main(int argc, char* argv[]) {
         std::cout << "NOTE: No comparable outputs (captured=" << Ncap
                   << ", theta_golden=" << Ngth << ", eps_golden=" << Ngep << ").\n";
         return 2; // treat as failure
+    } else if (Ncmp > 0) {
+        const double avg_abs_err = sum_abs_err / static_cast<double>(Ncmp);
+        const double avg_rel_err_pct = (sum_rel_err / static_cast<double>(Ncmp)) * 100.0;
+
+        std::cout << "\n=== SUMMARY (AVERAGE EPSILON ERR) ===\n";
+        std::cout << "Avg |eps_DUT - eps_golden| = " << avg_abs_err
+                  << "  (" << avg_rel_err_pct << "% over " << Ncmp << " outputs)\n";
     }
-  
     return all_ok ? 0 : 2;
 }
 

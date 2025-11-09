@@ -72,7 +72,6 @@ static inline mag_t ambm_pw_hypot_fx(gamma_t x, gamma_t y) {
     }
 
     mag_t z = alpha * ax + beta * ay;
-    std::cout << "alpha=" << alpha << " ax=" << ax << " beta=" << beta << " ay=" << ay << " z=" << z << " r=" << r << std::endl;
 
     return z;
 }
