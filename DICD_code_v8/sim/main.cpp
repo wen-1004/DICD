@@ -9,7 +9,7 @@
 #include <cmath>
 #include <algorithm>
 
-#include "EstimatorTop.cpp"   // your DUT wiring (connects 8 modules)
+#include "../src/EstimatorTop.cpp"   // your DUT wiring (connects 8 modules)
 #include "../include/data_type.hpp"    // your data types
 
 using namespace sc_core;
@@ -152,7 +152,7 @@ int sc_main(int argc, char* argv[]) {
     // Argmax emission rule: first result after 528 samples, then every +256 samples
     const int FIRST_SAMPLES = 528;
     const int STEP_SAMPLES  = 256;
-    const int     PIPE_CYCLES = 8;    // same as above, for actual sim steps
+    const int     PIPE_CYCLES = 9;    // same as above, for actual sim steps
   
     // How many outputs we *expect* from NSAMPLES
     size_t expected_out = 0;
@@ -188,7 +188,7 @@ int sc_main(int argc, char* argv[]) {
         while (!due.empty() && due.front() <= sample_cnt) {
             Rec r;
             // monitor prints on the current posedge time; to match the printed line,
-            // report the previous tick (e.g., 5410 ns) as sc_time_stamp() - Tclk
+            // report the previous tick (e.g., 5310 ns) as sc_time_stamp() - Tclk
             r.t_report = sc_time_stamp() - Tclk;
             r.theta    = static_cast<int>(theta_out.read());
             r.eps      = eps_out.read();
@@ -202,7 +202,7 @@ int sc_main(int argc, char* argv[]) {
         ++sample_cnt;
         while (!due.empty() && due.front() <= sample_cnt) {
             Rec r;
-            r.t_report = sc_time_stamp() - Tclk;   // e.g., 5410 + 2560*k ns
+            r.t_report = sc_time_stamp() - Tclk;   // e.g., 5310 + 2560*k ns
             r.theta    = static_cast<int>(theta_out.read());
             r.eps      = eps_out.read();
             recs.push_back(r);
@@ -232,6 +232,8 @@ int sc_main(int argc, char* argv[]) {
     std::cout << std::setprecision(10);
   
     bool all_ok = true;
+    double sum_abs_err = 0.0;
+    double sum_rel_err = 0.0;
     for (size_t k = 0; k < Ncmp; ++k) {
         const auto& r = recs[k];
         const int theta_m = r.theta;
@@ -243,6 +245,8 @@ int sc_main(int argc, char* argv[]) {
         const bool theta_ok = (theta_m == theta_g);
         const bool eps_ok   = (rel_err <= EPS_REL_TOL);
         all_ok = all_ok && theta_ok && eps_ok;
+        sum_abs_err += abs_err;
+        sum_rel_err += rel_err;
     
         std::cout << r.t_report << " | "
                   << "theta: DUT=" << theta_m
@@ -260,8 +264,15 @@ int sc_main(int argc, char* argv[]) {
         std::cout << "NOTE: No comparable outputs (captured=" << Ncap
                   << ", theta_golden=" << Ngth << ", eps_golden=" << Ngep << ").\n";
         return 2; // treat as failure
+    } else if (Ncmp > 0) {
+        const double avg_abs_err = sum_abs_err / static_cast<double>(Ncmp);
+        const double avg_rel_err_pct = (sum_rel_err / static_cast<double>(Ncmp)) * 100.0;
+
+        std::cout << "\n=== SUMMARY (AVERAGE EPSILON ERR) ===\n";
+        std::cout << "Avg |eps_DUT - eps_golden| = " << avg_abs_err
+                  << "  (" << avg_rel_err_pct << "% over " << Ncmp << " outputs)\n";
     }
-  
     return all_ok ? 0 : 2;
 }
+
 
