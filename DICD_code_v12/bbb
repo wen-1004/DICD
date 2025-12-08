@@ -1,0 +1,4 @@
+rm full_test
+./run_verilator.sh
+./run_sim.sh
+./full_test prog0

@@ -1,0 +1,3 @@
+./run_verilator.sh
+./run_sim.sh
+./full_test prog5

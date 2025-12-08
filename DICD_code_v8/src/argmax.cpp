@@ -40,6 +40,7 @@ struct argmax : public sc_module {
                 theta_out.write(0);
             } else {
                 lambda_t new_val = lambda_in.read();
+
         
                 for (int i = N - 1; i > 0; --i)
                     buf[i] = buf[i - 1];
@@ -48,6 +49,9 @@ struct argmax : public sc_module {
         
                 theta_t pos = std::distance(buf, std::max_element(buf, buf + N));
                 theta_t idx = 255 - pos;
+
+                std::cout << "current max: " << buf[pos] << std::endl;
+                std::cout << "new_val: " << new_val << std::endl;
 
                 for (int i = N_DELAY - 1; i > 0; --i)
                     delay_line[i] = delay_line[i - 1];

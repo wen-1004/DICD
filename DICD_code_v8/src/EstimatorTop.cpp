@@ -203,7 +203,6 @@ private:
                       << " | " << std::setw(W) << "gamma_out_r"  << " " << std::setw(W) << "gamma_out_i"
                       << " | " << std::setw(W) << "mag_out"
                       << " | " << std::setw(W) << "ang_out"
-                      << " | " << std::setw(W) << "rho_in"
                       << " | " << std::setw(W) << "lambda_out"
                       << " | " << std::setw(W) << "theta"
                       << " | " << std::setw(W) << "eps_out"
@@ -218,7 +217,6 @@ private:
               + 3 + (W*2+1)         // gamma_out real/imag
               + 3 + W               // mag_out
               + 3 + W               // ang_out
-              + 3 + W               // rho_in
               + 3 + W               // lambda_out
               + 3 + W               // theta
               + 3 + W;              // eps_out
@@ -234,7 +232,6 @@ private:
                   << " | " << std::setw(W) << fmt3(gamma_out_real.read())   << " " << std::setw(W) << fmt3(gamma_out_imag.read())
                   << " | " << std::setw(W) << fmt3(mag_out.read())
                   << " | " << std::setw(W) << fmt3(ang_out.read())
-                  << " | " << std::setw(W) << fmt3(rho_in.read())
                   << " | " << std::setw(W) << fmt3(lambda_out.read())
                   << " | " << std::setw(W) << short(theta_sig.read())
                   << " | " << std::setw(W) << fmt3(eps_out.read())

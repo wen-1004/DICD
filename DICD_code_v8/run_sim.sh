@@ -5,6 +5,7 @@ g++ -std=c++17 -DUSE_RTL_MINUS \
   -Iobj_minus \
   -I"$VERILATOR_ROOT/include" \
   -I"$VERILATOR_ROOT/include/vltstd" \
+  sim/main.cpp \
   src/EstimatorTop.cpp \
   src/delay_n.cpp \
   src/phi_sum.cpp \
@@ -13,7 +14,6 @@ g++ -std=c++17 -DUSE_RTL_MINUS \
   src/angle.cpp \
   src/argmax.cpp \
   src/select_eps.cpp \
-  sim/main.cpp \
   verilator/obj_minus/Vminus__ALL.a \
   "$VERILATOR_ROOT/include/verilated.cpp" \
   "$VERILATOR_ROOT/include/verilated_threads.cpp" \

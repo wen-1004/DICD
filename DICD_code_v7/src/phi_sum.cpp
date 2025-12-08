@@ -40,12 +40,12 @@ SC_MODULE(phi_sum) {
 
         while (true) {
             // compute new sample energy
-            rho_t rho_half = rho_in.read() * 0.5;
-            phi_t r_k_sq   = std::pow(r_k_in_real.read(), 2) +
-                             std::pow(r_k_in_imag.read(), 2);
-            phi_t r_kmN_sq = std::pow(r_k_minus_N_in_real.read(), 2) +
-                             std::pow(r_k_minus_N_in_imag.read(), 2);
-            phi_t energy_to_sum = rho_half * (r_k_sq + r_kmN_sq);
+            rho_t rho_half = rho_in.read() * rho_t(0.5);
+            phi_t r_k_sq = r_k_in_real.read() * r_k_in_real.read()
+                         + r_k_in_imag.read() * r_k_in_imag.read();
+            phi_t r_kmN_sq = r_k_minus_N_in_real.read() * r_k_minus_N_in_real.read()
+                           + r_k_minus_N_in_imag.read() * r_k_minus_N_in_imag.read();
+            phi_t energy_to_sum = phi_t(rho_half) * (r_k_sq + r_kmN_sq);
 
             // subtract oldest, add newest
             phi_t old_energy = delay_line[L_CONST_PHI - 1];

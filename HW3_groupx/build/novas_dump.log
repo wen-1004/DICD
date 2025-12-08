@@ -1,0 +1,397 @@
+#######################################################################################
+# log primitive debug message of FSDB dumping                                         #
+# This is for R&D to analyze when there are issues happening when FSDB dump           #
+#######################################################################################
+ANF: vcsd_get_serial_mode_status('simv: undefined symbol: vcsd_get_serial_mode_status')
+ANF: vcsd_enable_sva_success_callback('simv: undefined symbol: vcsd_enable_sva_success_callback')
+ANF: vcsd_disable_sva_success_callback('simv: undefined symbol: vcsd_disable_sva_success_callback')
+ANF: vcsd_get_power_scope_name('simv: undefined symbol: vcsd_get_power_scope_name')
+ANF: vcsd_dump_var_vpdg('simv: undefined symbol: vcsd_dump_var_vpdg')
+ANF: vcsd_begin_no_value_var_info('simv: undefined symbol: vcsd_begin_no_value_var_info')
+ANF: vcsd_end_no_value_var_info('simv: undefined symbol: vcsd_end_no_value_var_info')
+ANF: vcsd_remove_xprop_merge_mode_callback('simv: undefined symbol: vcsd_remove_xprop_merge_mode_callback')
+ANF: vhpi_get_cb_info('simv: undefined symbol: vhpi_get_cb_info')
+ANF: vhpi_free_handle('simv: undefined symbol: vhpi_free_handle')
+ANF: vhpi_fetch_vcsd_handle('simv: undefined symbol: vhpi_fetch_vcsd_handle')
+ANF: vhpi_fetch_vpi_handle('simv: undefined symbol: vhpi_fetch_vpi_handle')
+ANF: vhpi_has_verilog_parent('simv: undefined symbol: vhpi_has_verilog_parent')
+ANF: vhpi_is_verilog_scope('simv: undefined symbol: vhpi_is_verilog_scope')
+ANF: scsd_xprop_is_enabled('simv: undefined symbol: scsd_xprop_is_enabled')
+ANF: scsd_xprop_sig_is_promoted('simv: undefined symbol: scsd_xprop_sig_is_promoted')
+ANF: scsd_xprop_int_xvalue('simv: undefined symbol: scsd_xprop_int_xvalue')
+ANF: scsd_xprop_bool_xvalue('simv: undefined symbol: scsd_xprop_bool_xvalue')
+ANF: scsd_xprop_enum_xvalue('simv: undefined symbol: scsd_xprop_enum_xvalue')
+ANF: scsd_xprop_register_merge_mode_cb('simv: undefined symbol: scsd_xprop_register_merge_mode_cb')
+ANF: scsd_xprop_delete_merge_mode_cb('simv: undefined symbol: scsd_xprop_delete_merge_mode_cb')
+ANF: scsd_xprop_get_merge_mode('simv: undefined symbol: scsd_xprop_get_merge_mode')
+ANF: scsd_thread_get_info('simv: undefined symbol: scsd_thread_get_info')
+ANF: scsd_thread_vc_init('simv: undefined symbol: scsd_thread_vc_init')
+ANF: scsd_master_set_delta_sync_cbk('simv: undefined symbol: scsd_master_set_delta_sync_cbk')
+ANF: scsd_fgp_get_fsdb_cores('simv: undefined symbol: scsd_fgp_get_fsdb_cores')
+ANF: scsd_fgp_get_is_cpu_affinity_disabled('simv: undefined symbol: scsd_fgp_get_is_cpu_affinity_disabled')
+ANF: vhdi_dt_get_type('simv: undefined symbol: vhdi_dt_get_type')
+ANF: vhdi_dt_get_key('simv: undefined symbol: vhdi_dt_get_key')
+ANF: vhdi_dt_get_vhdl_enum_info('simv: undefined symbol: vhdi_dt_get_vhdl_enum_info')
+ANF: vhdi_dt_get_vhdl_physical_info('simv: undefined symbol: vhdi_dt_get_vhdl_physical_info')
+ANF: vhdi_dt_get_vhdl_array_info('simv: undefined symbol: vhdi_dt_get_vhdl_array_info')
+ANF: vhdi_dt_get_vhdl_record_info('simv: undefined symbol: vhdi_dt_get_vhdl_record_info')
+ANF: vhdi_dt_get_vhdl_integer_range_info('simv: undefined symbol: vhdi_dt_get_vhdl_integer_range_info')
+ANF: vhdi_def_traverse_module('simv: undefined symbol: vhdi_def_traverse_module')
+ANF: vhdi_def_traverse_scope('simv: undefined symbol: vhdi_def_traverse_scope')
+ANF: vhdi_def_traverse_variable('simv: undefined symbol: vhdi_def_traverse_variable')
+ANF: vhdi_def_get_module_id_by_vhpi('simv: undefined symbol: vhdi_def_get_module_id_by_vhpi')
+ANF: vhdi_def_get_handle_by_module_id('simv: undefined symbol: vhdi_def_get_handle_by_module_id')
+ANF: vhdi_def_get_variable_info_by_vhpi('simv: undefined symbol: vhdi_def_get_variable_info_by_vhpi')
+ANF: vhdi_def_free('simv: undefined symbol: vhdi_def_free')
+ANF: vhdi_ist_traverse_scope('simv: undefined symbol: vhdi_ist_traverse_scope')
+ANF: vhdi_ist_traverse_variable('simv: undefined symbol: vhdi_ist_traverse_variable')
+ANF: vhdi_ist_convert_by_vhpi('simv: undefined symbol: vhdi_ist_convert_by_vhpi')
+ANF: vhdi_ist_clone('simv: undefined symbol: vhdi_ist_clone')
+ANF: vhdi_ist_free('simv: undefined symbol: vhdi_ist_free')
+ANF: vhdi_ist_hash_key('simv: undefined symbol: vhdi_ist_hash_key')
+ANF: vhdi_ist_compare('simv: undefined symbol: vhdi_ist_compare')
+ANF: vhdi_ist_get_value_addr('simv: undefined symbol: vhdi_ist_get_value_addr')
+ANF: vhdi_set_scsd_callback('simv: undefined symbol: vhdi_set_scsd_callback')
+ANF: vhdi_cbk_set_force_callback('simv: undefined symbol: vhdi_cbk_set_force_callback')
+ANF: vhdi_trigger_init_force('simv: undefined symbol: vhdi_trigger_init_force')
+ANF: vhdi_ist_check_scsd_callback('simv: undefined symbol: vhdi_ist_check_scsd_callback')
+ANF: vhdi_ist_add_scsd_callback('simv: undefined symbol: vhdi_ist_add_scsd_callback')
+ANF: vhdi_ist_remove_scsd_callback('simv: undefined symbol: vhdi_ist_remove_scsd_callback')
+ANF: vhdi_ist_get_scsd_user_data('simv: undefined symbol: vhdi_ist_get_scsd_user_data')
+ANF: vhdi_add_time_change_callback('simv: undefined symbol: vhdi_add_time_change_callback')
+ANF: vhdi_get_real_value_by_value_addr('simv: undefined symbol: vhdi_get_real_value_by_value_addr')
+ANF: vhdi_get_64_value_by_value_addr('simv: undefined symbol: vhdi_get_64_value_by_value_addr')
+ANF: vhdi_xprop_inst_is_promoted('simv: undefined symbol: vhdi_xprop_inst_is_promoted')
+ANF: vdi_ist_convert_by_vhdi('simv: undefined symbol: vdi_ist_convert_by_vhdi')
+ANF: vhdi_ist_get_module_id('simv: undefined symbol: vhdi_ist_get_module_id')
+ANF: vhdi_refine_foreign_scope_type('simv: undefined symbol: vhdi_refine_foreign_scope_type')
+ANF: vhdi_flush_callback('simv: undefined symbol: vhdi_flush_callback')
+ANF: vhdi_set_orig_name('simv: undefined symbol: vhdi_set_orig_name')
+ANF: vhdi_set_dump_pt('simv: undefined symbol: vhdi_set_dump_pt')
+ANF: vhdi_set_int_subtype('simv: undefined symbol: vhdi_set_int_subtype')
+ANF: vhdi_set_fixed_point('simv: undefined symbol: vhdi_set_fixed_point')
+ANF: vhdi_get_fsdb_option('simv: undefined symbol: vhdi_get_fsdb_option')
+ANF: vhdi_fgp_get_mode('simv: undefined symbol: vhdi_fgp_get_mode')
+ANF: vhdi_node_register_composite_var('simv: undefined symbol: vhdi_node_register_composite_var')
+ANF: vhdi_node_analysis('simv: undefined symbol: vhdi_node_analysis')
+ANF: vhdi_node_id('simv: undefined symbol: vhdi_node_id')
+ANF: vhdi_node_ist_check_scsd_callback('simv: undefined symbol: vhdi_node_ist_check_scsd_callback')
+ANF: vhdi_node_ist_add_scsd_callback('simv: undefined symbol: vhdi_node_ist_add_scsd_callback')
+ANF: vhdi_node_ist_get_value_addr('simv: undefined symbol: vhdi_node_ist_get_value_addr')
+ANF: vhdi_enc_def_traverse_module('simv: undefined symbol: vhdi_enc_def_traverse_module')
+ANF: vhdi_enc_def_traverse_scope('simv: undefined symbol: vhdi_enc_def_traverse_scope')
+ANF: vhdi_enc_def_traverse_variable('simv: undefined symbol: vhdi_enc_def_traverse_variable')
+ANF: vhdi_enc_ist_traverse_scope('simv: undefined symbol: vhdi_enc_ist_traverse_scope')
+ANF: vhdi_enc_ist_traverse_variable('simv: undefined symbol: vhdi_enc_ist_traverse_variable')
+ANF: vhdi_enc_ist_get_module_id('simv: undefined symbol: vhdi_enc_ist_get_module_id')
+ANF: vhdi_enc_def_get_handle_by_module_id('simv: undefined symbol: vhdi_enc_def_get_handle_by_module_id')
+VCS compile option:
+ option[0]: simv
+ option[1]: +define+prog0
+ option[2]: +prog_path=/home/patata0717/DICD/HW3_groupx/./sim/prog0
+ option[3]: +define+CYCLE=0.4
+ option[4]: +define+MAX=100000
+ option[5]: +notimingcheck
+ option[6]: /usr/cad/synopsys/vcs/2024.09-sp2/linux64/bin/vcs1
+ option[7]: -Mcc=gcc
+ option[8]: -Mcplusplus=g++
+ option[9]: -Masflags=
+ option[10]: -Mcfl= -pipe -fPIC -O -I/usr/cad/synopsys/vcs/2024.09-sp2/include 
+ option[11]: -Mxllcflags=
+ option[12]: -Mxcflags= -pipe -fPIC -I/usr/cad/synopsys/vcs/2024.09-sp2/include
+ option[13]: -Mldflags= -rdynamic 
+ option[14]: -Mout=simv
+ option[15]: -Mamsrun=
+ option[16]: -Mvcsaceobjs=
+ option[17]: -Mobjects= /usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib/libvirsim.so /usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib/liberrorinf.so /usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib/libsnpsmalloc.so /usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib/libvfs.so 
+ option[18]: -Mexternalobj=
+ option[19]: -Msaverestoreobj=/usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib/vcs_save_restore_new.o
+ option[20]: -Mcrt0=
+ option[21]: -Mcrtn=
+ option[22]: -Mcsrc=
+ option[23]: -Msyslibs=/usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/VCS/LINUX64/pli.a -ldl 
+ option[24]: -Xvcs_run_simv=1
+ option[25]: -debug_access+all
+ option[26]: +vpi
+ option[27]: +vcsd1
+ option[28]: +itf+/usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib/vcsdp_lite.tab
+ option[29]: -full64
+ option[30]: +define+prog0
+ option[31]: +prog_path=/home/patata0717/DICD/HW3_groupx/./sim/prog0
+ option[32]: +define+CYCLE=0.4
+ option[33]: +define+MAX=100000
+ option[34]: +notimingcheck
+ option[35]: -picarchive
+ option[36]: -P
+ option[37]: /usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/VCS/LINUX64/verdi.tab
+ option[38]: -fsdb
+ option[39]: -sverilog
+ option[40]: -gen_obj
+ option[41]: /home/patata0717/DICD/HW3_groupx/./sim/top_tb.sv
+ option[42]: +incdir+/home/patata0717/DICD/HW3_groupx/./src+/home/patata0717/DICD/HW3_groupx/./include+/home/patata0717/DICD/HW3_groupx/./sim
+ option[43]: -load
+ option[44]: /usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/VCS/LINUX64/libnovas.so:FSDBDumpCmd
+Chronologic Simulation VCS Release W-2024.09-SP2_Full64
+Linux 3.10.0-1160.119.1.el7.x86_64 #1 SMP Tue Jun 4 14:43:51 UTC 2024 x86_64
+CPU cores: 20
+Limit information:
+======================================
+cputime		unlimited
+filesize		unlimited
+datasize		unlimited
+stacksize		8193 kbytes
+coredumpsize		0 kbytes
+memoryuse		unlimited
+vmemoryuse		unlimited
+descriptors		1024
+memorylocked		64 kbytes
+maxproc		4096
+======================================
+(Special)Runtime environment variables:
+
+Runtime environment variables:
+REMOTEHOST=140.116.226.70
+MANPATH=/opt/rh/devtoolset-11/root/usr/share/man:/usr/cad/synopsys/synthesis/2024.09-sp2/doc/syn/man:/usr/cad/synopsys/lc/2024.09-sp2/doc/lc/man:/usr/cad/synopsys/vcs/2024.09-sp2/doc/man:/usr/cad/synopsys/primelib/2025.06//ncx/man:/usr/cad/synopsys/synthesis/2024.09-sp2/doc/syn/man:/usr/cad/synopsys/lc/2024.09-sp2/doc/lc/man:/usr/cad/synopsys/vcs/2024.09-sp2/doc/man:/usr/cad/synopsys/primelib/2025.06//ncx/man
+SYNOPSYS_LC_ROOT=/usr/cad/synopsys/lc/cur
+SNPS_VCS_INTERNAL_MAKE_OPT=
+SALT_LICENSE_SERVER=1717@lstn
+XDG_SESSION_ID=37113
+HOSTNAME=vlsilab.es.ncku.edu.tw
+XLOCALEDIR=/usr/cad/synopsys/icc2/2024.09-sp2//etc/locale
+UNAME=/bin/uname
+SELINUX_ROLE_REQUESTED=
+SNPS_VCS_PYTHON3=/usr/cad/synopsys/vcs/2024.09-sp2/linux64/bin/Python3/bin/python3
+SCRNAME=vcs
+VCS_DEPTH=0
+HOST=vlsilab.es.ncku.edu.tw
+SHELL=/bin/bash
+TERM=xterm
+MAKEFLAGS=
+HISTSIZE=1000
+SSH_CLIENT=140.116.226.70 59202 22
+SELINUX_USE_CURRENT_RANGE=
+CALIBRE_2025_1_ENABLE_DEPRECATED_RHEL7=3
+VCS_PYTHON3=/usr/cad/synopsys/vcs/2024.09-sp2/linux64/bin/Python3/bin/python3
+QTDIR=/usr/lib64/qt-3.3
+MGC_LOCATION_MAP=NO_MAP
+QTINC=/usr/lib64/qt-3.3/include
+SSH_TTY=/dev/pts/6
+X_SCLS=devtoolset-11 
+LC_ALL=C
+SNPS_VCS_INTERNAL_ROOT_PID=30087
+QT_GRAPHICSSYSTEM_CHECKED=1
+GROUP=patata0717
+PCP_DIR=/opt/rh/devtoolset-11/root
+USER=patata0717
+LD_LIBRARY_PATH=/usr/cad/synopsys/vcs/2024.09-sp2/lib:/usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib:/opt/gurobi1203/linux64/lib:/opt/systemc-3.0.1/lib64::/usr/cad/cadence/LIBERATE/LIBERATE_23.16.074/tools.lnx86/lib/64bit:/usr/cad/cadence/LIBERATE/LIBERATE_23.16.074/tools.lnx86/lib64:/usr/cad/cadence/LIBERATE/LIBERATE_23.16.074/tools.lnx86/lib::::::::::::/usr/cad/synopsys/verdi/cur/share/PLI/VCS/LINUX64::/lib64:/usr/lib64:/usr/local/lib64:/usr/cad/synopsys/verdi/2024.09-sp2/etc/lib/libstdc++/LINUX64/:/usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/lib/LINUX64/:/usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/VCS/LINUX64/::::/usr/cad/cadence/GENUS/GENUS_21.18.000/tools/lib/64bit:/usr/cad/cadence/GENUS/GENUS_21.18.000/tools/lib64:/usr/cad/cadence/GENUS/GENUS_21.18.000/tools/lib::/opt/rh/devtoolset-11/root/usr/lib64:/opt/rh/devtoolset-11/root/usr/lib:/opt/rh/devtoolset-11/root/usr/lib64/dyninst:/opt/rh/devtoolset-11/root/usr/lib/dyninst::/usr/cad/cadence/LIBERATE/LIBERATE_23.16.074/tools.lnx86/lib/64bit:/usr/cad/cadence/LIBERATE/LIBERATE_23.16.074/tools.lnx86/lib64:/usr/cad/cadence/LIBERATE/LIBERATE_23.16.074/tools.lnx86/lib::::::::::::/usr/cad/synopsys/verdi/cur/share/PLI/VCS/LINUX64::/lib64:/usr/lib64:/usr/local/lib64:/usr/cad/synopsys/verdi/2024.09-sp2/etc/lib/libstdc++/LINUX64/:/usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/lib/LINUX64/:/usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/VCS/LINUX64/::::/usr/cad/cadence/GENUS/GENUS_21.18.000/tools/lib/64bit:/usr/cad/cadence/GENUS/GENUS_21.18.000/tools/lib64:/usr/cad/cadence/GENUS/GENUS_21.18.000/tools/lib::/lib64:/usr/lib64:/usr/local/lib64:/lib64:/usr/lib64:/usr/local/lib64:/lib64:/usr/lib64:/usr/local/lib64:/lib64:/usr/lib64:/usr/local/lib64
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:
+VCS_INTERNAL_CONVERTEDLIBS=
+SYSTEMC_INCLUDE=/opt/systemc-3.0.1/include
+SYSTEMC_LIBDIR=/opt/systemc-3.0.1/lib64
+SCRIPT_NAME=vcs
+MAKE_TERMOUT=/dev/pts/6
+VCS_MX_HOME_INTERNAL=1
+HOSTTYPE=x86_64-linux
+SNPS_VCS_CLANG_PATH=/usr/cad/synopsys/vcs/2024.09-sp2/linux64/clang
+CALIBRE_2025_2_ENABLE_DEPRECATED_RHEL7=6
+MAKELEVEL=1
+OVA_UUM=0
+MFLAGS=
+VCS_MODE_FLAG=64
+SYNOPSYS_NCX_ROOT=/usr/cad/synopsys/primelib/2025.06/
+MAIL=/var/spool/mail/patata0717
+PATH=.:/opt/gurobi1203/linux64/bin:/tools/Xilinx/Vitis_HLS/2020.2/bin:/tools/Xilinx/Model_Composer/2020.2/bin:/tools/Xilinx/Vivado/2020.2/bin:/usr/cad/synopsys/primelib/2025.06//bin:/usr/cad/cadence/LIBERATE/LIBERATE_23.16.074/tools.lnx86/bin/64bit:/usr/cad/cadence/LIBERATE/LIBERATE_23.16.074/tools.lnx86/bin:/usr/cad/mentor/calibre/aoj_cal_2024.4_12.9/bin:/usr/cad/mentor/Questa_Sim/2024.3/questasim/bin:/usr/cad/mentor/Questa_VIP/2024.3/bin:/usr/cad/synopsys/icc2/2024.09-sp2//bin:/usr/cad/synopsys/tmax/2024.09-sp2//vui/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//vtran/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//vgen/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//vcap/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//testmax/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//idq/cur/linux64/iddq/bin:/usr/cad/synopsys/tmax/2024.09-sp2//dftview/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//ale/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//bin:/usr/cad/cadence/JASPER/jasper_2024.03p002/bin:/usr/cad/synopsys/spyglass/2024.09-sp2/SPYGLASS_HOME/bin:/usr/cad/synopsys/primetime/2024.09-sp2//amd64/syn/bin:/usr/cad/synopsys/primetime/2024.09-sp2//primeclosure/cur/amd64/syn/bin:/usr/cad/synopsys/formality/2024.09-sp2//amd64/fm/bin:/usr/cad/synopsys/vcs/2024.09-sp2/bin:/usr/cad/synopsys/vcs/2024.09-sp2/vcfca/bin:/usr/cad/synopsys/vcs/2024.09-sp2/amd64/bin:/usr/cad/synopsys/verdi/2024.09-sp2/bin:/usr/cad/synopsys/lc/2024.09-sp2/bin:/usr/cad/synopsys/synthesis/2024.09-sp2/amd64/syn/bin:/usr/cad/synopsys/lc/cur/bin:/usr/cad/cadence/GENUS/GENUS_21.18.000/tools/bin/64bit:/usr/cad/cadence/GENUS/GENUS_21.18.000/tools/bin:/opt/rh/devtoolset-11/root/usr/bin:/tools/Xilinx/Vitis_HLS/2020.2/bin:/tools/Xilinx/Model_Composer/2020.2/bin:/tools/Xilinx/Vivado/2020.2/bin:/usr/cad/synopsys/primelib/2025.06//bin:/usr/cad/cadence/LIBERATE/LIBERATE_23.16.074/tools.lnx86/bin/64bit:/usr/cad/cadence/LIBERATE/LIBERATE_23.16.074/tools.lnx86/bin:/usr/cad/mentor/calibre/aoj_cal_2024.4_12.9/bin:/usr/cad/mentor/Questa_Sim/2024.3/questasim/bin:/usr/cad/mentor/Questa_VIP/2024.3/bin:/usr/cad/synopsys/icc2/2024.09-sp2//bin:/usr/cad/synopsys/tmax/2024.09-sp2//vui/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//vtran/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//vgen/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//vcap/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//testmax/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//idq/cur/linux64/iddq/bin:/usr/cad/synopsys/tmax/2024.09-sp2//dftview/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//ale/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//bin:/usr/cad/cadence/JASPER/jasper_2024.03p002/bin:/usr/cad/synopsys/spyglass/2024.09-sp2/SPYGLASS_HOME/bin:/usr/cad/synopsys/primetime/2024.09-sp2//amd64/syn/bin:/usr/cad/synopsys/primetime/2024.09-sp2//primeclosure/cur/amd64/syn/bin:/usr/cad/synopsys/formality/2024.09-sp2//amd64/fm/bin:/usr/cad/synopsys/vcs/2024.09-sp2/bin:/usr/cad/synopsys/vcs/2024.09-sp2/vcfca/bin:/usr/cad/synopsys/vcs/2024.09-sp2/amd64/bin:/usr/cad/synopsys/verdi/2024.09-sp2/bin:/usr/cad/synopsys/lc/2024.09-sp2/bin:/usr/cad/synopsys/synthesis/2024.09-sp2/amd64/syn/bin:/usr/cad/synopsys/lc/cur/bin:/usr/cad/cadence/GENUS/GENUS_21.18.000/tools/bin/64bit:/usr/cad/cadence/GENUS/GENUS_21.18.000/tools/bin:/opt/riscv/bin:/opt/automake-1.16.1/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+SALT_LICENSE_FILE=1717@lstn
+SNPS_VCS_INTERNAL_CURR_PID=30087
+VERDI_HOME=/usr/cad/synopsys/verdi/2024.09-sp2
+CALIBRE_HOME=/usr/cad/mentor/calibre/aoj_cal_2024.4_12.9
+PWD=/home/patata0717/DICD/HW3_groupx/build
+VCS_HOME=/usr/cad/synopsys/vcs/2024.09-sp2
+SNPS_VCS_INTERNAL_MEMPRELOAD_USE_LIBC=1
+SNPS_INTERNAL_VCS_LINUX_OS=linux
+LANG=en_US.UTF-8
+VMR_MODE_FLAG=64
+GUROBI_HOME=/opt/gurobi1203/linux64
+XILINX_HLS=/tools/Xilinx/Vitis_HLS/2020.2
+SYSTEMC_HOME=/opt/systemc-3.0.1
+SELINUX_LEVEL_REQUESTED=
+VCS_CC=gcc
+XILINX_VIVADO=/tools/Xilinx/Vivado/2020.2
+LM_LICENSE_FILE=26585@lstn:5280@lstn:1717@lstn:
+SYNOPSYS=/usr/cad/synopsys/formality/cur
+HISTCONTROL=ignoredups
+VCS_ARG_ADDED_FOR_TMP=1
+SNPS_VCS_TMPDIR=/tmp/vcs_20251208085125_30087
+SHLVL=6
+RISCV=/opt/riscv
+HOME=/home/patata0717
+OSTYPE=linux
+MGC_HOME=/usr/cad/mentor/calibre/aoj_cal_2024.4_12.9
+FORMALITY=/usr/cad/synopsys/formality/cur
+CDN_SYNTH_ROOT=/usr/cad/cadence/GENUS/cur/tools
+VCS_STATIC_HOME=/usr/cad/synopsys/vcs/2024.09-sp2/vcfca
+VCS_COM=/usr/cad/synopsys/vcs/2024.09-sp2/linux64/bin/vcs1
+VENDOR=unknown
+MGC_TMPDIR=/tmp
+MACHTYPE=x86_64
+LOGNAME=patata0717
+SNPS_VCS_INTERNAL_MAKE=make
+QTLIB=/usr/lib64/qt-3.3/lib
+MAKE_TERMERR=/dev/pts/6
+SNPS_VCS_INTERNAL_ROOT_START_TIME=1765183885.525639465
+XDG_DATA_DIRS=/home/patata0717/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+SSH_CONNECTION=140.116.226.70 59202 140.116.226.74 22
+PKG_CONFIG_PATH=/opt/rh/devtoolset-11/root/usr/lib64/pkgconfig
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+SHLIB_PATH=/usr/cad/synopsys/verdi/2024.09-sp2/etc/lib/libstdc++/LINUX64/:/usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/lib/LINUX64/:/usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/VCS/LINUX64/::/usr/cad/synopsys/verdi/2024.09-sp2/etc/lib/libstdc++/LINUX64/:/usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/lib/LINUX64/:/usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/VCS/LINUX64/:
+sysc_uni_pwd=/home/patata0717/DICD/HW3_groupx/build
+INFOPATH=/opt/rh/devtoolset-11/root/usr/share/info
+CMAKE_PREFIX_PATH=/opt/systemc-3.0.1
+DISPLAY=140.116.226.74:10.0
+XDG_RUNTIME_DIR=/run/user/1005
+VCS_ARCH=linux64
+VERILATOR_ROOT=/usr/local/share/verilator
+SYN_MAN_DIR=/usr/cad/synopsys/primelib/2025.06//ncx/man
+TOOL_HOME=/usr/cad/synopsys/vcs/2024.09-sp2/linux64
+_=./simv
+OLDPWD=/home/patata0717/DICD/HW3_groupx/build/simv.daidir/debug_dump/fsearch
+VCS_PATHMAP_PRELOAD_DONE=1
+VCS_EXEC_DONE=1
+DVE=/usr/cad/synopsys/vcs/2024.09-sp2/gui/dve
+SPECMAN_OUTPUT_TO_TTY=1
+FLEXLM_BORROWFILE=/home/patata0717/.vlsilab.es.ncku.edu.tw-borrow.txt
+Runtime command line arguments:
+argv[0]=simv
+argv[1]=+define+prog0
+argv[2]=+prog_path=/home/patata0717/DICD/HW3_groupx/./sim/prog0
+argv[3]=+define+CYCLE=0.4
+argv[4]=+define+MAX=100000
+argv[5]=+notimingcheck
+269 profile - 100
+          CPU/Mem usage: 0.020 sys,  0.120 user,  221.61M mem
+270 Elapsed time:    0:00:01    Mon Dec  8 16:51:28 2025
+271 User CPU time used: 0 seconds
+272 System CPU time used: 0 seconds
+273 pliAppInit
+274 FSDB_GATE is set.
+275 FSDB_RTL is set.
+276 FSDB_DYNAMIC_ALIAS is enabled.
+277 libnuma.so open fail. libnuma.so: cannot open shared object file: No such file or directory
+278 FSDB NUMA optimize not available.
+279 FSDB_PACKED_MODE is enabled.
+280 FSDB_GATE_PACKED is enabled.
+281 [SC]Init: MemoryConsumed=0.00MB ElapsedTime=0hour 0min. 0sec.
+282 FSDB_REDUCE_VC_MEM is enabled.
+283 FSDB_ALIAS_ARRAY_ELEM is set to 4294967295.
+284 Enable Parallel Dumping.
+285 pliAppMiscSet: New Sim Round
+286 pliEntryInit
+287 LIBSSCORE=found /usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/lib/LINUXAMD64/libsscore_vcs202409.so through $NOVAS_HOME setting.
+288 FSDB Dumper for VCS, Release Verdi_W-2024.09-SP2, Linux x86_64/64bit, 03/03/2025
+289 (C) 1996 - 2025 by Synopsys, Inc.
+290 sps_call_fsdbDumpfile_main at 0 : /home/patata0717/DICD/HW3_groupx/./sim/top_tb.sv(315)
+291 argv[0]: (top.fsdb)
+292 *Verdi* : Create FSDB file 'top.fsdb'
+293 [spi_vcs_vd_ppi_create_root]: no upf option
+294 DUMPER_MEMORY_REDUCTION is enabled.
+295 compile option from '/home/patata0717/DICD/HW3_groupx/build/simv.daidir/vcs_rebuild'.
+296   "vcs '-R' '-sverilog' '/home/patata0717/DICD/HW3_groupx/./sim/top_tb.sv' '-debug_access+all' '-full64' '+incdir+/home/patata0717/DICD/HW3_groupx/./src+/home/patata0717/DICD/HW3_groupx/./include+/home/patata0717/DICD/HW3_groupx/./sim' '+define+prog0' '+prog_path=/home/patata0717/DICD/HW3_groupx/./sim/prog0' '+define+CYCLE=0.4' '+define+MAX=100000' '+notimingcheck' 2>&1"
+297 DVDI_is_vir_unload_enabled is enable
+298 FSDB_VCS_ENABLE_NATIVE_VC is enable
+299 FSDB_VCS_ENABLE_MEMORY_NATIVE_VC is enabled
+300 spi_vcs_vd_vlog_vc_enable_vector_strength is skipped since VCS is not support.
+301 sps_call_fsdbDumpvars_vd_main at 0 : /home/patata0717/DICD/HW3_groupx/./sim/top_tb.sv(316)
+302 argv[0]: (0)
+303 argv[1]: (+mda)
+304 argv[2]: (handle) tb_top
+305 *Verdi* : Begin traversing the scope (tb_top), layer (0).
+306 *Verdi* : Enable +mda dumping.
+307 *Verdi* : End of traversing.
+308 pliAppHDL_DumpVarComplete traverse var: profile - 
+          CPU/Mem usage: 0.030 sys,  0.130 user,  320.51M mem
+                   incr: 0.010 sys,  0.010 user,  8.50M mem
+                   accu: 0.010 sys,  0.010 user,  8.50M mem
+              accu incr: 0.010 sys,  0.010 user,  8.50M mem
+
+          Count usage: 1913 var,  267 idcode,  141 callback
+                 incr: 1913 var,  267 idcode,  141 callback
+                 accu: 1913 var,  267 idcode,  141 callback
+            accu incr: 1913 var,  267 idcode,  141 callback
+309 Idcode  0 - bc1:0  mda:1660
+310 Elapsed time:    0:00:01    Mon Dec  8 16:51:28 2025
+311 User CPU time used: 0 seconds
+312 System CPU time used: 0 seconds
+313 pliAppHDL_DumpVarComplete: profile - 
+          CPU/Mem usage: 0.030 sys,  0.130 user,  320.51M mem
+                   incr: 0.000 sys,  0.000 user,  0.00M mem
+                   accu: 0.010 sys,  0.010 user,  8.50M mem
+              accu incr: 0.000 sys,  0.000 user,  0.00M mem
+
+          Count usage: 1913 var,  267 idcode,  141 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 1913 var,  267 idcode,  141 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+314 Idcode  0 - bc1:0  mda:1660
+315 Elapsed time:    0:00:01    Mon Dec  8 16:51:28 2025
+316 User CPU time used: 0 seconds
+317 System CPU time used: 0 seconds
+318 sps_call_fsdbDumpvars_vd_main at 0 : /home/patata0717/DICD/HW3_groupx/./sim/top_tb.sv(317)
+319 argv[0]: (0)
+320 argv[1]: (handle) tb_top
+321 *Verdi* : Begin traversing the scope (tb_top), layer (0).
+322 *Verdi* : End of traversing.
+323 pliAppHDL_DumpVarComplete traverse var: profile - 
+          CPU/Mem usage: 0.030 sys,  0.130 user,  320.51M mem
+                   incr: 0.000 sys,  0.000 user,  0.00M mem
+                   accu: 0.000 sys,  0.000 user,  0.00M mem
+              accu incr: 0.000 sys,  0.000 user,  0.00M mem
+
+          Count usage: 2180 var,  267 idcode,  141 callback
+                 incr: 267 var,  0 idcode,  0 callback
+                 accu: 267 var,  0 idcode,  0 callback
+            accu incr: 267 var,  0 idcode,  0 callback
+324 Idcode  0 - bc1:0  mda:1660
+325 Elapsed time:    0:00:02    Mon Dec  8 16:51:29 2025
+326 User CPU time used: 0 seconds
+327 System CPU time used: 0 seconds
+328 pliAppHDL_DumpVarComplete: profile - 
+          CPU/Mem usage: 0.030 sys,  0.130 user,  320.51M mem
+                   incr: 0.000 sys,  0.000 user,  0.00M mem
+                   accu: 0.000 sys,  0.000 user,  0.00M mem
+              accu incr: 0.000 sys,  0.000 user,  0.00M mem
+
+          Count usage: 2180 var,  267 idcode,  141 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 267 var,  0 idcode,  0 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+329 Idcode  0 - bc1:0  mda:1660
+330 Elapsed time:    0:00:02    Mon Dec  8 16:51:29 2025
+331 User CPU time used: 0 seconds
+332 System CPU time used: 0 seconds
+333 End of simulation at 4000220
+334 Memory usage: 401.273 M
+335 Maximum resident set size: 168 MB
+336 Hard page faults: 1
+337 Soft page faults: 29529
+338 Elapsed time:    0:00:02    Mon Dec  8 16:51:29 2025
+339 User CPU time used: 0 seconds
+340 System CPU time used: 0 seconds
+341 Begin FSDB profile info:
+342 FSDB Writer : bc1(200015) bcn(1135880) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.315854) io wait(0.000000) theadpool wait(0.000000)
+FSDB Writer cpu time : MT Compression : 0
+343 End FSDB profile info
+344 FSDB closed. Name: top.fsdb Size: 170626
+345 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
+346                      - BlockUsed:12 Acquire:0 BufferUsed:21060544
+347                      - Flush:4 Expand:0 ProducerWait:0 ConsumerWait:1
+348                      - MainProducerTime:0.288081563 TotalConsumerTime:0.071403177
+349                      - ElapsedTime:1.791525000
+350 Producer   0 profile - BlockUsed:12 Acquire:0 BufferUsed:21060544
+351 Consumer   0 profile - Affinity:-1 CPUTime:0.071403177 LifeTime:0.075628472 (0.94%)
+352                      - BlockUsed:12 Acquire:0 BufferUsed:21060544
+353 SimExit
+354 Elapsed time:    0:00:03    Mon Dec  8 16:51:30 2025
+355 User CPU time used: 0 seconds
+356 System CPU time used: 0 seconds
+357 Sim process exit
