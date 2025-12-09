@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1765261205.257587059, "rt":0.90, "ut":0.22, "st":0.06}}
+{"vcselab":{"timestamp_begin":1765261206.189413991, "rt":0.76, "ut":0.13, "st":0.03}}
+{"link":{"timestamp_begin":1765261206.977435855, "rt":0.11, "ut":0.09, "st":0.02}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1765261205.049510848}
+{"VCS_COMP_START_TIME": 1765261205.049510848}
+{"VCS_COMP_END_TIME": 1765261210.595089500}
+{"VCS_USER_OPTIONS": "-R -sverilog /home/patata0717/DICD/HW3_groupx/./sim/top_tb2.sv -debug_access+all -full64 +incdir+/home/patata0717/DICD/HW3_groupx/./src+/home/patata0717/DICD/HW3_groupx/./include+/home/patata0717/DICD/HW3_groupx/./sim +define+prog4 +prog_path=/home/patata0717/DICD/HW3_groupx/./sim/prog4 +define+CYCLE=0.35 +define+MAX=100000 +notimingcheck"}
+{"vcs1": {"peak_mem": 308184}}
+{"vcselab": {"peak_mem": 173868}}

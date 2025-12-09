@@ -1,0 +1,190 @@
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+       Version W-2024.09-SP2_Full64 -- Tue Dec  9 14:34:34 2025
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file '/home/patata0717/DICD/HW3_groupx/./sim/top_tb3.sv'
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/angle.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/angle.sv'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/argmax.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/argmax.sv'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/delay_n.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/delay_n.sv'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/gamma_sum.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/gamma_sum.sv'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/mag.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/mag.sv'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/minus.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/minus.sv'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/phi_sum.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/phi_sum.sv'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./sim/top_tb3.sv'.
+Top Level Modules:
+       tb_top
+
+Warning-[AOUP] Attempt to override undefined parameter
+/home/patata0717/DICD/HW3_groupx/./sim/top_tb3.sv, 102
+  Attempting to override undefined parameter "INT_BITS", will ignore it.
+
+
+Warning-[AOUP] Attempt to override undefined parameter
+/home/patata0717/DICD/HW3_groupx/./sim/top_tb3.sv, 102
+  Attempting to override undefined parameter "FRAC_BITS", will ignore it.
+
+
+Warning-[AOUP] Attempt to override undefined parameter
+/home/patata0717/DICD/HW3_groupx/./sim/top_tb3.sv, 102
+  Attempting to override undefined parameter "RHO_INT_BITS", will ignore it.
+
+
+Warning-[AOUP] Attempt to override undefined parameter
+/home/patata0717/DICD/HW3_groupx/./sim/top_tb3.sv, 102
+  Attempting to override undefined parameter "RHO_FRAC_BITS", will ignore it.
+
+TimeScale is 1 ns / 10 ps
+Starting vcs inline pass...
+2 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory '/home/patata0717/DICD/HW3_groupx/build/csrc'
+make[1]: Leaving directory '/home/patata0717/DICD/HW3_groupx/build/csrc'
+make[1]: Entering directory '/home/patata0717/DICD/HW3_groupx/build/csrc'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib -L/usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/a/amcQw_d.o  _31217_archive_1.so _prev_archive_1.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive       _vcs_pli_stub_.o   /usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib/vcs_save_restore_new.o /usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory '/home/patata0717/DICD/HW3_groupx/build/csrc'
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Notice: timing checks disabled with +notimingcheck at compile-time
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP2_Full64; Runtime version W-2024.09-SP2_Full64;  Dec  9 14:34 2025
+[TB] CYCLE=0.350 ns, MAX_CYCLE=100000, K=200, SAMPLES=51472
+[TB] PASS_ART=pass_art.txt  FAIL_ART=fail_art.txt
+[TB] prog_path = /home/patata0717/DICD/HW3_groupx/./sim/prog5
+*Verdi* Loading libsscore_vcs202409.so
+FSDB Dumper for VCS, Release Verdi_W-2024.09-SP2, Linux x86_64/64bit, 03/03/2025
+(C) 1996 - 2025 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'top.fsdb'
+*Verdi* : Begin traversing the scope (tb_top), layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the scope (tb_top), layer (0).
+*Verdi* : End of traversing.
+----------------------------------------------------------------
+[EPSILON #0/199] relative_error = 1.025% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 421603 (0x66ee3)  -> 0.40207195
+[ THETA  #0/199] |dut-ref| = 0 samp   dut=0 ref=0
+
+----------------------------------------------------------------
+[EPSILON #1/199] relative_error = 2.815% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 418828 (0x6640c)  -> 0.39942551
+[ THETA  #1/199] |dut-ref| = 0 samp   dut=16 ref=16
+
+----------------------------------------------------------------
+[EPSILON #2/199] relative_error = 2.829% (tol=5.00%)
+          DUT eps  (Q1.20) = 396800 (0x60e00)  -> 0.37841797
+          REF eps  (Q1.20) = 408352 (0x63b20)  -> 0.38943481
+[ THETA  #2/199] |dut-ref| = 0 samp   dut=32 ref=32
+
+----------------------------------------------------------------
+[EPSILON #3/199] relative_error = 2.217% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 426739 (0x682f3)  -> 0.40697002
+[ THETA  #3/199] |dut-ref| = 0 samp   dut=48 ref=48
+
+----------------------------------------------------------------
+[EPSILON #4/199] relative_error = 2.302% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 416631 (0x65b77)  -> 0.39733028
+[ THETA  #4/199] |dut-ref| = 0 samp   dut=64 ref=64
+
+----------------------------------------------------------------
+[EPSILON #5/199] relative_error = 1.091% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 421883 (0x66ffb)  -> 0.40233898
+[ THETA  #5/199] |dut-ref| = 0 samp   dut=80 ref=80
+
+----------------------------------------------------------------
+[EPSILON #6/199] relative_error = 4.006% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 434693 (0x6a205)  -> 0.41455555
+[ THETA  #6/199] |dut-ref| = 1 samp   dut=96 ref=97
+
+
+
+====================== SIMULATION FAIL ======================
+
+⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠋⠀⠀⠀⠀⠀
+⠄⠀⠀⠀⠀⠀⠀⠀⠀⢈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⣀⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢺⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⣀⠀⠀⠀
+⠀⠀⢰⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⢻⣿⣿⣿⣿⣿⣿⣿⣿⠇⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⢟⣿⣿⣿⣿⣿⠟⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶
+⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⡇⠘⢿⣿⣿⣿⣿⣿⣹⣿⣿⣿⡀⢹⣿⣿⣿⣿⣿⣿⡏⠀⣿⡿⠓⠋⣸⣿⣿⣿⣿⠋⣼⣿⣿⣿⣿⠟⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡜⢿⣿⣿⣿⣧⣀⠽⢿⣿⣿⣿⣿⡍⠛⢿⣿⣿⠓⡾⣿⣿⣿⣿⣿⡇⠰⣿⠶⠋⢉⣿⣿⠿⠋⠉⢹⣿⣿⣿⣿⣇⡀⣸⣿⣿⣿⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⡈⢿⡿⣿⣿⣇⠀⠀⠙⠻⣿⢿⣷⡀⠀⠙⢿⣧⡘⢿⣿⣿⣿⣿⣷⡔⠁⠀⣠⠟⠋⠀⠐⠢⣴⣿⠿⠿⠛⠁⠀⣩⣿⣿⣿⣟⠁⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠙⠶⣽⣻⣆⠀⠐⠚⠚⠓⠛⠻⣄⡀⠀⠉⠻⣄⠻⣿⣿⣿⣿⣷⡀⡼⠃⠀⢀⣠⡴⠞⠛⠓⠒⠂⠀⠀⣴⣿⣿⡿⠟⠉⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇
+⠀⠀⠀⠀⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⣉⣡⣶⣾⣿⣿⣿⣿⣷⣷⣄⡀⠀⠿⡄⠈⠙⢮⣙⠿⢿⣧⡴⣞⣽⣾⣿⣿⣿⣿⣶⣦⣄⡉⠐⠉⠁⠀⠀⣠⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢁
+⠀⠀⠀⠀⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣈⠿⣄⠀⢠⣾⢿⡿⢿⣿⣿⣿⣿⣿⣷⣏⣿⢍⠙⠢⣿⠀⠀⠀⠈⠓⢿⡁⣸⢛⣯⣼⣽⡻⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⢘⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀
+⣄⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⢀⠖⣽⠶⠞⠛⡇⠁⠀⠘⣧⣄⣨⣯⠙⠎⠁⠀⠈⠀⠀⠀⠀⠀⠀⠘⠁⠞⡟⠉⡿⠃⠀⠸⢯⣀⣙⠿⠺⣿⢦⡀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀
+⣧⡀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠁⠸⡀⠀⢷⡀⠀⠀⠀⡿⠑⢸⣤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣇⠀⢻⡄⠀⠀⠀⡟⠀⠀⠀⠈⠃⠳⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀
+⣿⣿⣶⡄⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠠⠽⠤⠄⠓⠒⠚⠉⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠑⠒⠚⠥⠤⣤⠤⠄⣠⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀
+⣿⣿⣿⣿⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣧⣤⣄⡀⠀⠿⠷⠶⠶⠆⠀⠀⠀⠀⠀⠀⠀⣠⣾⣻⡇⣀⠠⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣶⣦⣄⡀⠀⣠⣾⣿⣿⠟⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⣤
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠘⣿⣿⣿⣆⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⡿⣿⡷⡷⠨⠀⠀⠀⠀⠀⠀⠀⡔⠋⠈⣹⡟⣿⡿⣿⣿⣿⣿⡏⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢠⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄⢹⣿⣿⣿⣿⠿⠷⢆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⡟⠀⡟⢿⣿⢘⣿⡿⠁⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣿⣿⠀⠀⣤⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣇⠀⢸⣿⡟⢸⣿⣷⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠁⢰⠟⠻⣴⣦⡀⠀⠀⠀⣀⣀⣤⣄⣀⣀⣀⣀⣀⣀⣀⠀⠀⠀⢠⣦⠙⠻⠿⠛⠋⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠸⡏⠀⢰⣿⡄⢹⠈⠙⠻⣽⣍⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣩⡿⠛⣹⡇⣰⣆⣴⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠘⢦⠀⢻⣷⠀⢧⠀⠀⠀⠙⠿⣿⣻⣛⣛⣛⣿⣿⣿⡿⠟⠁⠀⠀⠙⠀⣿⣿⡿⢠⠜⠁⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢿⣻⣿⣿⣿⣿⣿⢿⣿⣿⣿⣷⡀⠈⠳⡄⢿⡀⠀⠀⠀⠀⠀⠀⠈⠑⠋⠭⠭⠍⠁⠈⠀⠀⠀⠀⠀⠀⠈⢁⣿⣷⠋⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠉⠙⠿⠿⣿⢿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠋⠉⠀⠈⠹⣿⣿⣿⣿⣿⢸⣿⣿⣿⣿⣷⡀⠀⠈⠳⢄⠀⠀⠀⠀⠀⠀⠀⠀⠦⢤⣤⠤⠶⠀⠀⠀⠀⠀⠀⠀⢀⣾⠟⠁⢀⣼⣿⣿⣿⣿⣿⣻⣿⣿⣿⣿⠁⠀⠀⠀⠀⠈⢸⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⢻⣿⣿⣿⣿⢸⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠙⠢⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠖⠋⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⡏⠀⠀⠀⠀⠀⠘⢸⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⢸⣿⣿⣿⣿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠉⠲⢤⣀⠀⠀⠀⠀⠀⠀⠀⣀⡤⠞⠉⠁⠀⢀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠁⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠈⣿⣿⣿⣿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⣀⡀⠀⠀⡈⠙⠓⠤⠤⠴⠚⠉⢀⣀⣀⢀⣠⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣿⣿⣿⡏⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿
+=============================================================
+        Simulation FAILED!!  Cycles: 0
+=============================================================
+
+❌ [THETA   #6] mismatch: |dut-ref|=1  dut=96 ref=97
+Fatal: "/home/patata0717/DICD/HW3_groupx/./sim/top_tb3.sv", 318: tb_top: at time 748980 ps
+Stop on first theta error at window #6
+$finish called from file "/home/patata0717/DICD/HW3_groupx/./sim/top_tb3.sv", line 318.
+$finish at simulation time                74898
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 748980 ps
+CPU time: .249 seconds to compile + .185 seconds to elab + .153 seconds to link + .543 seconds in simulation

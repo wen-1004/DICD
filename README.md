@@ -6,7 +6,7 @@ This is the systemC implementation of "ML Estimation of Time and Frequency Offse
 
 - Version 1: Initial build, wire connection and testbench formation
 - Version 2: First standalone system simulation with all signal using "double"
-- Version 3: Replace "double" with user-defined data type
+- Version 3: Replace C++ Primatives with user-defined SC data type
 - Version 4: Debugging, adjust Alpla-max approximation parameter, passed testcase
 - Version 5: Trim redundant bits for datapath
 - Version 6: Further reduce bits for datapath
@@ -15,9 +15,10 @@ This is the systemC implementation of "ML Estimation of Time and Frequency Offse
 - Version 9: Remove 2 lines of buffer, remove select_eps module
 - Version 10: Final version of systemc, datapath optimization, invert reset
 - Version 11: RTL MINUS, ARGMAX finish, 9 cycle latency
-- Version 12: ANGLE, DELAY_N finished, 10 cycle latency
-- Version 13: PHI_SUM, GAMMA_SUM finished, 12 cycle latency
-- Version 14: MAG, Adjust I/O, add Top
+- Version 12: ANGLE, DELAY_N finished, add to 10 cycle latency
+- Version 13: PHI_SUM, GAMMA_SUM finished, add to 12 cycle latency
+- Version 14: MAG, Adjust I/O, add Top, sim pass
+- Version 15: Optimized for pipeline MAG, add to 13 cycle latency
 
 ## How to run
 

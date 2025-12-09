@@ -1,0 +1,63 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+        -sort_by group
+Design : top
+Version: W-2024.09-SP2
+Date   : Tue Dec  9 14:21:26 2025
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ff0p88v125c   Library: N16ADFP_StdCellff0p88v125c
+Wire Load Model Mode: segmented
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: U_MAG/term_a_s3_reg_8_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  argmax             ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  angle              ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  delay_n            ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  mag                ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  gamma_sum          ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  phi_sum            ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  minus              ZeroWireload          N16ADFP_StdCellss0p72vm40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.2000     0.2000
+  input external delay                                  0.0000     0.2000 r
+  rst (in)                                              0.0029     0.2029 r
+  U42/ZN (CKND2BWP16P90LVT)                             0.0068     0.2097 f
+  U41/ZN (INVD4BWP16P90LVT)                             0.0064     0.2161 r
+  U40/Z (CKBD4BWP20P90LVT)                              0.0158     0.2319 r
+  U_MAG/rst (mag)                                       0.0000     0.2319 r
+  U_MAG/U28/Z (CKBD1BWP16P90LVT)                        0.0108     0.2428 r
+  U_MAG/U29/ZN (CKNR2D2BWP16P90LVT)                     0.0062     0.2490 f
+  U_MAG/term_a_s3_reg_8_/D (DFQD1BWP16P90LVT)           0.0000     0.2490 f
+  data arrival time                                                0.2490
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.2000     0.2000
+  clock uncertainty                                     0.0200     0.2200
+  U_MAG/term_a_s3_reg_8_/CP (DFQD1BWP16P90LVT)          0.0000     0.2200 r
+  library hold time                                     0.0292     0.2492
+  data required time                                               0.2492
+  --------------------------------------------------------------------------
+  data required time                                               0.2492
+  data arrival time                                               -0.2490
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.0002
+
+
+1

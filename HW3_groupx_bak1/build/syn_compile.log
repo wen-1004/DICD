@@ -1,0 +1,1389 @@
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid this.
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version W-2024.09-SP2 for linux64 - Nov 28, 2024 
+
+                    Copyright (c) 1988 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Current time:       Tue Dec  9 14:18:20 2025
+Hostname:           vlsilab.es.ncku.edu.tw
+CPU Model:          Intel(R) Core(TM) i9-10900 CPU @ 2.80GHz
+CPU Details:        Cores = 20 : Sockets = 1 : Cache Size = 20480 KB : Freq = 4.80 GHz
+OS:                 Linux 3.10.0-1160.119.1.el7.x86_64
+RAM:                 31 GB (Free  17 GB)
+Swap:                15 GB (Free  14 GB)
+Work Filesystem:    /home mounted to /dev/mapper/centos-home
+Tmp Filesystem:     / mounted to /dev/mapper/centos-root
+Work Disk:          1299 GB (Free 1279 GB)
+Tmp Disk:           499 GB (Free  41 GB)
+
+CPU Load: 1%, Ram Free: 17 GB, Swap Free: 14 GB, Work Disk Free: 1279 GB, Tmp Disk Free: 41 GB
+#   Read in top module
+#read_file -autoread -top CHIP {../src/ ../include}
+analyze -format sverilog {../src/top.sv}
+Running PRESTO HDLC
+Compiling source file ../src/top.sv
+Opening include file ../include/data_type.svh
+Warning:  ../include/data_type.svh:4: The package data_type has already been analyzed. It is being replaced. (VER-26)
+Opening include file ../src/angle.sv
+Opening include file ../include/data_type.svh
+Opening include file ../src/argmax.sv
+Opening include file ../include/data_type.svh
+Opening include file ../src/delay_n.sv
+Opening include file ../include/data_type.svh
+Opening include file ../src/gamma_sum.sv
+Opening include file ../include/data_type.svh
+Opening include file ../src/mag.sv
+Opening include file ../include/data_type.svh
+Opening include file ../src/minus.sv
+Opening include file ../include/data_type.svh
+Opening include file ../src/phi_sum.sv
+Opening include file ../include/data_type.svh
+Presto compilation completed successfully.
+Loading db file '/usr/cad/CBDK/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/NLDM/N16ADFP_StdCellss0p72vm40c.db'
+Loading db file '/usr/cad/CBDK/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/NLDM/N16ADFP_StdCellff0p88v125c.db'
+Loading db file '/usr/cad/CBDK/Executable_Package/Collaterals/IP/stdio/N16ADFP_StdIO/NLDM/N16ADFP_StdIOss0p72v1p62v125c.db'
+Loading db file '/usr/cad/CBDK/Executable_Package/Collaterals/IP/stdio/N16ADFP_StdIO/NLDM/N16ADFP_StdIOff0p88v1p98vm40c.db'
+Loading db file '/usr/cad/synopsys/synthesis/2024.09-sp2/libraries/syn/dw_foundation.sldb'
+1
+elaborate top
+Loading db file '/usr/cad/synopsys/synthesis/2024.09-sp2/libraries/syn/gtech.db'
+Loading db file '/usr/cad/synopsys/synthesis/2024.09-sp2/libraries/syn/standard.sldb'
+  Loading link library 'N16ADFP_StdCellss0p72vm40c'
+  Loading link library 'N16ADFP_StdCellff0p88v125c'
+  Loading link library 'N16ADFP_StdIOss0p72v1p62v125c'
+  Loading link library 'N16ADFP_StdIOff0p88v1p98vm40c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Inferred memory devices in process in routine 'top' in file
+	 ../src/top.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|  isPassBarrier_reg  | Flip-flop |   1   |  N  | N  | None  | Async | N  | 121  |
+==================================================================================
+Presto compilation completed successfully. (top)
+Module: top, Ports: 73, Input: 43, Output: 30, Inout: 0
+Module: top, Registers: 1, Async set/reset: 1, Sync set/reset: 0
+Information: Module top report end. (ELAB-965)
+Elaborated 1 design.
+Current design is now 'top'.
+Information: Building the design 'delay_n'. (HDL-193)
+Warning:  ../src/delay_n.sv:34: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../src/delay_n.sv:35: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../src/delay_n.sv:46: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../src/delay_n.sv:47: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process in routine 'delay_n' in file
+	 ../src/delay_n.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|  r_dN_out_real_reg  | Flip-flop |   7   |  Y  | N  | None  | None  | N  |  22  |
+|  r_dN_out_imag_reg  | Flip-flop |   7   |  Y  | N  | None  | None  | N  |  22  |
+| delay_line_imag_reg | Flip-flop | 1792  |  Y  | N  | None  | None  | N  |  22  |
+| delay_line_real_reg | Flip-flop | 1792  |  Y  | N  | None  | None  | N  |  22  |
+|    r_d1_real_reg    | Flip-flop |   7   |  Y  | N  | None  | None  | N  |  22  |
+|    r_d1_imag_reg    | Flip-flop |   7   |  Y  | N  | None  | None  | N  |  22  |
+==================================================================================
+Presto compilation completed successfully. (delay_n)
+Module: delay_n, Ports: 62, Input: 34, Output: 28, Inout: 0
+Module: delay_n, Registers: 3612, Async set/reset: 0, Sync set/reset: 0
+Information: Module delay_n report end. (ELAB-965)
+Information: Building the design 'phi_sum'. (HDL-193)
+
+Inferred memory devices in process in routine 'phi_sum' in file
+	 ../src/phi_sum.sv'.
+===================================================================================
+|    Register Name     |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+===================================================================================
+|      rho_s1_reg      | Flip-flop |   7   |  Y  | N  | None  | None  | N  |  87  |
+|   a_re_sq12_s1_reg   | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  87  |
+|   a_im_sq12_s1_reg   | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  87  |
+|   b_re_sq12_s1_reg   | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  87  |
+|   b_im_sq12_s1_reg   | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  87  |
+|   rho_half_s2_reg    | Flip-flop |   8   |  Y  | N  | None  | None  | N  | 104  |
+|    r_k_sq_s2_reg     | Flip-flop |  14   |  Y  | N  | None  | None  | N  | 104  |
+|   r_kmN_sq_s2_reg    | Flip-flop |  14   |  Y  | N  | None  | None  | N  | 104  |
+| energy_to_sum_s3_reg | Flip-flop |  14   |  Y  | N  | None  | None  | N  | 120  |
+|    phi_out_d3_reg    | Flip-flop |  14   |  Y  | N  | None  | None  | N  | 133  |
+|     phi_out_reg      | Flip-flop |  14   |  Y  | N  | None  | None  | N  | 133  |
+|    delay_line_reg    | Flip-flop |  224  |  Y  | N  | None  | None  | N  | 133  |
+|   current_sum_reg    | Flip-flop |  14   |  Y  | N  | None  | None  | N  | 133  |
+|    phi_out_d1_reg    | Flip-flop |  14   |  Y  | N  | None  | None  | N  | 133  |
+|    phi_out_d2_reg    | Flip-flop |  14   |  Y  | N  | None  | None  | N  | 133  |
+===================================================================================
+Presto compilation completed successfully. (phi_sum)
+Module: phi_sum, Ports: 52, Input: 38, Output: 14, Inout: 0
+Module: phi_sum, Registers: 407, Async set/reset: 0, Sync set/reset: 0
+Information: Module phi_sum report end. (ELAB-965)
+Information: Building the design 'gamma_sum'. (HDL-193)
+
+Inferred memory devices in process in routine 'gamma_sum' in file
+	 ../src/gamma_sum.sv'.
+===================================================================================
+|    Register Name     |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+===================================================================================
+|   ad_mul12_s1_reg    | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  82  |
+|   ac_mul12_s1_reg    | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  82  |
+|   bd_mul12_s1_reg    | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  82  |
+|   bc_mul12_s1_reg    | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  82  |
+| product_imag_s2_reg  | Flip-flop |  14   |  Y  | N  | None  | None  | N  | 100  |
+| product_real_s2_reg  | Flip-flop |  14   |  Y  | N  | None  | None  | N  | 100  |
+|  gamma_out_real_reg  | Flip-flop |  14   |  Y  | N  | None  | None  | N  | 114  |
+|  gamma_out_imag_reg  | Flip-flop |  14   |  Y  | N  | None  | None  | N  | 114  |
+| delay_line_imag_reg  | Flip-flop |  224  |  Y  | N  | None  | None  | N  | 114  |
+| delay_line_real_reg  | Flip-flop |  224  |  Y  | N  | None  | None  | N  | 114  |
+| current_sum_real_reg | Flip-flop |  14   |  Y  | N  | None  | None  | N  | 114  |
+| current_sum_imag_reg | Flip-flop |  14   |  Y  | N  | None  | None  | N  | 114  |
+===================================================================================
+Presto compilation completed successfully. (gamma_sum)
+Module: gamma_sum, Ports: 58, Input: 30, Output: 28, Inout: 0
+Module: gamma_sum, Registers: 588, Async set/reset: 0, Sync set/reset: 0
+Information: Module gamma_sum report end. (ELAB-965)
+Information: Building the design 'mag'. (HDL-193)
+Warning:  ../src/mag.sv:74: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../src/mag.sv:75: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../src/mag.sv:210: signed to unsigned part selection occurs. (VER-318)
+
+Statistics for case statements in always block in file
+	'../src/mag.sv'
+============================================================
+|    Line    |  full/ parallel  |      block location      |
+============================================================
+|    165     |    user/user     | always block at line 160 |
+============================================================
+
+Inferred memory devices in process in routine 'mag' in file
+	 ../src/mag.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|    max_zero1_reg    | Flip-flop |   1   |  N  | N  | None  | None  | N  |  86  |
+|     max_s1_reg      | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  86  |
+|     min_s1_reg      | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  86  |
+|     max_u1_reg      | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  86  |
+|      left1_reg      | Flip-flop |  22   |  Y  | N  | None  | None  | N  |  86  |
+|     min_s2_reg      | Flip-flop |  14   |  Y  | N  | None  | None  | N  | 143  |
+|   seg_idx_s2_reg    | Flip-flop |   4   |  Y  | N  | None  | None  | N  | 143  |
+|     max_s2_reg      | Flip-flop |  14   |  Y  | N  | None  | None  | N  | 143  |
+|    term_b_s3_reg    | Flip-flop |  14   |  Y  | N  | None  | None  | N  | 190  |
+|    term_a_s3_reg    | Flip-flop |  14   |  Y  | N  | None  | None  | N  | 190  |
+|     mag_out_reg     | Flip-flop |  14   |  Y  | N  | None  | None  | N  | 206  |
+==================================================================================
+Presto compilation completed successfully. (mag)
+Module: mag, Ports: 44, Input: 30, Output: 14, Inout: 0
+Module: mag, Registers: 139, Async set/reset: 0, Sync set/reset: 0
+Information: Module mag report end. (ELAB-965)
+Information: Building the design 'angle'. (HDL-193)
+
+Inferred memory devices in process in routine 'angle' in file
+	 ../src/angle.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|      z0_r_reg       | Flip-flop |  11   |  Y  | N  | None  | None  | N  | 138  |
+|      x0_r_reg       | Flip-flop |  14   |  Y  | N  | None  | None  | N  | 138  |
+|      y0_r_reg       | Flip-flop |  14   |  Y  | N  | None  | None  | N  | 138  |
+==================================================================================
+Presto compilation completed successfully. (angle)
+Module: angle, Ports: 41, Input: 30, Output: 11, Inout: 0
+Module: angle, Registers: 39, Async set/reset: 0, Sync set/reset: 0
+Information: Module angle report end. (ELAB-965)
+Information: Building the design 'minus'. (HDL-193)
+Warning:  ../src/minus.sv:50: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process in routine 'minus' in file
+	 ../src/minus.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|     mag_s1_reg      | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  33  |
+|  prod_full_s1_reg   | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  33  |
+|     mag_s2_reg      | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  55  |
+| rho_phi_q6_8_s2_reg | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  55  |
+|   lambda_out_reg    | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  72  |
+==================================================================================
+Presto compilation completed successfully. (minus)
+Module: minus, Ports: 52, Input: 38, Output: 14, Inout: 0
+Module: minus, Registers: 70, Async set/reset: 0, Sync set/reset: 0
+Information: Module minus report end. (ELAB-965)
+Information: Building the design 'argmax'. (HDL-193)
+Warning:  ../src/argmax.sv:73: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../src/argmax.sv:98: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../src/argmax.sv:113: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../src/argmax.sv:114: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../src/argmax.sv:126: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../src/argmax.sv:134: signed to unsigned assignment occurs. (VER-318)
+
+Inferred memory devices in process in routine 'argmax' in file
+	 ../src/argmax.sv'.
+====================================================================================
+|     Register Name     |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+====================================================================================
+|     eps_out_r_reg     | Flip-flop |  21   |  Y  | N  | None  | None  | N  | 121  |
+|    current_max_reg    | Flip-flop |  14   |  Y  | N  | None  | None  | N  | 121  |
+| current_max_idx_s_reg | Flip-flop |  10   |  Y  | N  | None  | None  | N  | 121  |
+|    current_ang_reg    | Flip-flop |  11   |  Y  | N  | None  | None  | N  | 121  |
+|       count_reg       | Flip-flop |  10   |  Y  | N  | None  | None  | N  | 121  |
+|    theta_out_r_reg    | Flip-flop |   8   |  Y  | N  | None  | None  | N  | 121  |
+====================================================================================
+Presto compilation completed successfully. (argmax)
+Module: argmax, Ports: 66, Input: 27, Output: 39, Inout: 0
+Module: argmax, Registers: 74, Async set/reset: 0, Sync set/reset: 0
+Information: Module argmax report end. (ELAB-965)
+Information: Building the design 'cordic_atan2_pipe' instantiated from design 'angle' with
+	the parameters "I=0,W=14,ZW=11,ATAN_LUT=11'sh0c9". (HDL-193)
+
+Inferred memory devices in process in routine 'cordic_atan2_pipe_0_14_11_s0c9' in file
+	 ../src/angle.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|      Z_out_reg      | Flip-flop |  11   |  Y  | N  | None  | None  | N  |  52  |
+|      X_out_reg      | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  52  |
+|      Y_out_reg      | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  52  |
+==================================================================================
+Presto compilation completed successfully. (cordic_atan2_pipe_0_14_11_s0c9)
+Module: cordic_atan2_pipe_0_14_11_s0c9, Ports: 80, Input: 41, Output: 39, Inout: 0
+Module: cordic_atan2_pipe_0_14_11_s0c9, Registers: 39, Async set/reset: 0, Sync set/reset: 0
+Information: Module cordic_atan2_pipe_0_14_11_s0c9 report end. (ELAB-965)
+Information: Building the design 'cordic_atan2_pipe' instantiated from design 'angle' with
+	the parameters "I=1,W=14,ZW=11,ATAN_LUT=11'sh076". (HDL-193)
+
+Inferred memory devices in process in routine 'cordic_atan2_pipe_1_14_11_s076' in file
+	 ../src/angle.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|      Z_out_reg      | Flip-flop |  11   |  Y  | N  | None  | None  | N  |  52  |
+|      X_out_reg      | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  52  |
+|      Y_out_reg      | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  52  |
+==================================================================================
+Presto compilation completed successfully. (cordic_atan2_pipe_1_14_11_s076)
+Module: cordic_atan2_pipe_1_14_11_s076, Ports: 80, Input: 41, Output: 39, Inout: 0
+Module: cordic_atan2_pipe_1_14_11_s076, Registers: 39, Async set/reset: 0, Sync set/reset: 0
+Information: Module cordic_atan2_pipe_1_14_11_s076 report end. (ELAB-965)
+Information: Building the design 'cordic_atan2_pipe' instantiated from design 'angle' with
+	the parameters "I=2,W=14,ZW=11,ATAN_LUT=11'sh03e". (HDL-193)
+
+Inferred memory devices in process in routine 'cordic_atan2_pipe_2_14_11_s03e' in file
+	 ../src/angle.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|      Z_out_reg      | Flip-flop |  11   |  Y  | N  | None  | None  | N  |  52  |
+|      X_out_reg      | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  52  |
+|      Y_out_reg      | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  52  |
+==================================================================================
+Presto compilation completed successfully. (cordic_atan2_pipe_2_14_11_s03e)
+Module: cordic_atan2_pipe_2_14_11_s03e, Ports: 80, Input: 41, Output: 39, Inout: 0
+Module: cordic_atan2_pipe_2_14_11_s03e, Registers: 39, Async set/reset: 0, Sync set/reset: 0
+Information: Module cordic_atan2_pipe_2_14_11_s03e report end. (ELAB-965)
+Information: Building the design 'cordic_atan2_pipe' instantiated from design 'angle' with
+	the parameters "I=3,W=14,ZW=11,ATAN_LUT=11'sh01f". (HDL-193)
+
+Inferred memory devices in process in routine 'cordic_atan2_pipe_3_14_11_s01f' in file
+	 ../src/angle.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|      Z_out_reg      | Flip-flop |  11   |  Y  | N  | None  | None  | N  |  52  |
+|      X_out_reg      | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  52  |
+|      Y_out_reg      | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  52  |
+==================================================================================
+Presto compilation completed successfully. (cordic_atan2_pipe_3_14_11_s01f)
+Module: cordic_atan2_pipe_3_14_11_s01f, Ports: 80, Input: 41, Output: 39, Inout: 0
+Module: cordic_atan2_pipe_3_14_11_s01f, Registers: 39, Async set/reset: 0, Sync set/reset: 0
+Information: Module cordic_atan2_pipe_3_14_11_s01f report end. (ELAB-965)
+Information: Building the design 'cordic_atan2_pipe' instantiated from design 'angle' with
+	the parameters "I=4,W=14,ZW=11,ATAN_LUT=11'sh010". (HDL-193)
+
+Inferred memory devices in process in routine 'cordic_atan2_pipe_4_14_11_s010' in file
+	 ../src/angle.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|      Z_out_reg      | Flip-flop |  11   |  Y  | N  | None  | None  | N  |  52  |
+|      X_out_reg      | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  52  |
+|      Y_out_reg      | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  52  |
+==================================================================================
+Presto compilation completed successfully. (cordic_atan2_pipe_4_14_11_s010)
+Module: cordic_atan2_pipe_4_14_11_s010, Ports: 80, Input: 41, Output: 39, Inout: 0
+Module: cordic_atan2_pipe_4_14_11_s010, Registers: 39, Async set/reset: 0, Sync set/reset: 0
+Information: Module cordic_atan2_pipe_4_14_11_s010 report end. (ELAB-965)
+Information: Building the design 'cordic_atan2_pipe' instantiated from design 'angle' with
+	the parameters "I=5,W=14,ZW=11,ATAN_LUT=11'sh008". (HDL-193)
+
+Inferred memory devices in process in routine 'cordic_atan2_pipe_5_14_11_s008' in file
+	 ../src/angle.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|      Z_out_reg      | Flip-flop |  11   |  Y  | N  | None  | None  | N  |  52  |
+|      X_out_reg      | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  52  |
+|      Y_out_reg      | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  52  |
+==================================================================================
+Presto compilation completed successfully. (cordic_atan2_pipe_5_14_11_s008)
+Module: cordic_atan2_pipe_5_14_11_s008, Ports: 80, Input: 41, Output: 39, Inout: 0
+Module: cordic_atan2_pipe_5_14_11_s008, Registers: 39, Async set/reset: 0, Sync set/reset: 0
+Information: Module cordic_atan2_pipe_5_14_11_s008 report end. (ELAB-965)
+1
+# SET POWER INTENT and ENVIRONMENT ###################################
+current_design top
+Current design is 'top'.
+{top}
+link
+
+  Linking design 'top'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (14 designs)              /home/patata0717/DICD/HW3_groupx/build/top.db, etc
+  N16ADFP_StdCellss0p72vm40c (library) /usr/cad/CBDK/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/NLDM/N16ADFP_StdCellss0p72vm40c.db
+  N16ADFP_StdCellff0p88v125c (library) /usr/cad/CBDK/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/NLDM/N16ADFP_StdCellff0p88v125c.db
+  N16ADFP_StdIOss0p72v1p62v125c (library) /usr/cad/CBDK/Executable_Package/Collaterals/IP/stdio/N16ADFP_StdIO/NLDM/N16ADFP_StdIOss0p72v1p62v125c.db
+  N16ADFP_StdIOff0p88v1p98vm40c (library) /usr/cad/CBDK/Executable_Package/Collaterals/IP/stdio/N16ADFP_StdIO/NLDM/N16ADFP_StdIOff0p88v1p98vm40c.db
+  dw_foundation.sldb (library) /usr/cad/synopsys/synthesis/2024.09-sp2/libraries/syn/dw_foundation.sldb
+
+1
+#   Set Design Environment
+set_host_options -max_core 8
+1
+source ../script/DC.sdc
+Using operating conditions 'ss0p72vm40c' found in library 'N16ADFP_StdCellss0p72vm40c'.
+Using operating conditions 'ff0p88v125c' found in library 'N16ADFP_StdCellff0p88v125c'.
+Warning: Design rule attributes from the driving cell will be set on the port 'clk'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rst'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'in_valid'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_re_in[15]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_re_in[14]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_re_in[13]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_re_in[12]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_re_in[11]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_re_in[10]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_re_in[9]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_re_in[8]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_re_in[7]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_re_in[6]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_re_in[5]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_re_in[4]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_re_in[3]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_re_in[2]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_re_in[1]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_re_in[0]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_img_in[15]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_img_in[14]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_img_in[13]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_img_in[12]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_img_in[11]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_img_in[10]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_img_in[9]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_img_in[8]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_img_in[7]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_img_in[6]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_img_in[5]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_img_in[4]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_img_in[3]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_img_in[2]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_img_in[1]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rx_img_in[0]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rho[7]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rho[6]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rho[5]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rho[4]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rho[3]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rho[2]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rho[1]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rho[0]'. (UID-401)
+Warning: The specified replacement character (_) is conflicting with the specified allowed or restricted character.   (UCN-4)
+Warning: Dont_touch on net 'U_ARGMAX/count_next[0]' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'U_ARGMAX/count_next[1]' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'U_ARGMAX/count_next[2]' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'U_ARGMAX/count_next[3]' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'U_ARGMAX/count_next[4]' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'U_ARGMAX/count_next[5]' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'U_ARGMAX/count_next[6]' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'U_ARGMAX/count_next[7]' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'U_ARGMAX/count_next[8]' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'U_ARGMAX/count_next[9]' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+1
+check_design
+ 
+****************************************
+check_design summary:
+Version:     W-2024.09-SP2
+Date:        Tue Dec  9 14:18:24 2025
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     28
+    Unconnected ports (LINT-28)                                    28
+
+Cells                                                              19
+    Cells do not drive (LINT-1)                                    19
+
+Nets                                                               76
+    Unloaded nets (LINT-2)                                         76
+--------------------------------------------------------------------------------
+
+Warning: In design 'phi_sum', cell 'B_2' does not drive any nets. (LINT-1)
+Warning: In design 'gamma_sum', cell 'B_2' does not drive any nets. (LINT-1)
+Warning: In design 'mag', cell 'B_17' does not drive any nets. (LINT-1)
+Warning: In design 'mag', cell 'B_18' does not drive any nets. (LINT-1)
+Warning: In design 'angle', cell 'C150' does not drive any nets. (LINT-1)
+Warning: In design 'angle', cell 'C151' does not drive any nets. (LINT-1)
+Warning: In design 'argmax', cell 'B_6' does not drive any nets. (LINT-1)
+Warning: In design 'cordic_atan2_pipe_0_14_11_s0c9', cell 'B_4' does not drive any nets. (LINT-1)
+Warning: In design 'cordic_atan2_pipe_0_14_11_s0c9', cell 'B_5' does not drive any nets. (LINT-1)
+Warning: In design 'cordic_atan2_pipe_1_14_11_s076', cell 'B_4' does not drive any nets. (LINT-1)
+Warning: In design 'cordic_atan2_pipe_1_14_11_s076', cell 'B_5' does not drive any nets. (LINT-1)
+Warning: In design 'cordic_atan2_pipe_2_14_11_s03e', cell 'B_4' does not drive any nets. (LINT-1)
+Warning: In design 'cordic_atan2_pipe_2_14_11_s03e', cell 'B_5' does not drive any nets. (LINT-1)
+Warning: In design 'cordic_atan2_pipe_3_14_11_s01f', cell 'B_4' does not drive any nets. (LINT-1)
+Warning: In design 'cordic_atan2_pipe_3_14_11_s01f', cell 'B_5' does not drive any nets. (LINT-1)
+Warning: In design 'cordic_atan2_pipe_4_14_11_s010', cell 'B_4' does not drive any nets. (LINT-1)
+Warning: In design 'cordic_atan2_pipe_4_14_11_s010', cell 'B_5' does not drive any nets. (LINT-1)
+Warning: In design 'cordic_atan2_pipe_5_14_11_s008', cell 'B_4' does not drive any nets. (LINT-1)
+Warning: In design 'cordic_atan2_pipe_5_14_11_s008', cell 'B_5' does not drive any nets. (LINT-1)
+Warning: In design 'top', net 'U_PHI_SUM/SYNOPSYS_UNCONNECTED_15' driven by pin 'U_PHI_SUM/mult_69/Z_0' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_PHI_SUM/SYNOPSYS_UNCONNECTED_14' driven by pin 'U_PHI_SUM/mult_69/Z_1' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_PHI_SUM/SYNOPSYS_UNCONNECTED_13' driven by pin 'U_PHI_SUM/mult_69/Z_2' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_PHI_SUM/SYNOPSYS_UNCONNECTED_12' driven by pin 'U_PHI_SUM/mult_69/Z_3' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_PHI_SUM/SYNOPSYS_UNCONNECTED_11' driven by pin 'U_PHI_SUM/mult_69/Z_4' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_PHI_SUM/SYNOPSYS_UNCONNECTED_10' driven by pin 'U_PHI_SUM/mult_69/Z_5' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_PHI_SUM/SYNOPSYS_UNCONNECTED_9' driven by pin 'U_PHI_SUM/mult_69/Z_6' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_PHI_SUM/SYNOPSYS_UNCONNECTED_8' driven by pin 'U_PHI_SUM/add_58/Z_0' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_PHI_SUM/SYNOPSYS_UNCONNECTED_7' driven by pin 'U_PHI_SUM/add_58/Z_1' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_PHI_SUM/SYNOPSYS_UNCONNECTED_6' driven by pin 'U_PHI_SUM/add_58/Z_2' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_PHI_SUM/SYNOPSYS_UNCONNECTED_5' driven by pin 'U_PHI_SUM/add_58/Z_3' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_PHI_SUM/SYNOPSYS_UNCONNECTED_4' driven by pin 'U_PHI_SUM/add_57/Z_0' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_PHI_SUM/SYNOPSYS_UNCONNECTED_3' driven by pin 'U_PHI_SUM/add_57/Z_1' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_PHI_SUM/SYNOPSYS_UNCONNECTED_2' driven by pin 'U_PHI_SUM/add_57/Z_2' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_PHI_SUM/SYNOPSYS_UNCONNECTED_1' driven by pin 'U_PHI_SUM/add_57/Z_3' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_GAMMA_SUM/SYNOPSYS_UNCONNECTED_8' driven by pin 'U_GAMMA_SUM/add_54/Z_0' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_GAMMA_SUM/SYNOPSYS_UNCONNECTED_7' driven by pin 'U_GAMMA_SUM/add_54/Z_1' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_GAMMA_SUM/SYNOPSYS_UNCONNECTED_6' driven by pin 'U_GAMMA_SUM/add_54/Z_2' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_GAMMA_SUM/SYNOPSYS_UNCONNECTED_5' driven by pin 'U_GAMMA_SUM/add_54/Z_3' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_GAMMA_SUM/SYNOPSYS_UNCONNECTED_4' driven by pin 'U_GAMMA_SUM/sub_55/Z_0' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_GAMMA_SUM/SYNOPSYS_UNCONNECTED_3' driven by pin 'U_GAMMA_SUM/sub_55/Z_1' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_GAMMA_SUM/SYNOPSYS_UNCONNECTED_2' driven by pin 'U_GAMMA_SUM/sub_55/Z_2' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_GAMMA_SUM/SYNOPSYS_UNCONNECTED_1' driven by pin 'U_GAMMA_SUM/sub_55/Z_3' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MAG/SYNOPSYS_UNCONNECTED_18' driven by pin 'U_MAG/mult_180/Z_0' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MAG/SYNOPSYS_UNCONNECTED_17' driven by pin 'U_MAG/mult_180/Z_1' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MAG/SYNOPSYS_UNCONNECTED_16' driven by pin 'U_MAG/mult_180/Z_2' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MAG/SYNOPSYS_UNCONNECTED_15' driven by pin 'U_MAG/mult_180/Z_3' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MAG/SYNOPSYS_UNCONNECTED_14' driven by pin 'U_MAG/mult_180/Z_4' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MAG/SYNOPSYS_UNCONNECTED_13' driven by pin 'U_MAG/mult_180/Z_5' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MAG/SYNOPSYS_UNCONNECTED_12' driven by pin 'U_MAG/mult_180/Z_6' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MAG/SYNOPSYS_UNCONNECTED_11' driven by pin 'U_MAG/mult_180/Z_7' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MAG/SYNOPSYS_UNCONNECTED_10' driven by pin 'U_MAG/mult_180/Z_22' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MAG/SYNOPSYS_UNCONNECTED_9' driven by pin 'U_MAG/mult_181/Z_0' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MAG/SYNOPSYS_UNCONNECTED_8' driven by pin 'U_MAG/mult_181/Z_1' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MAG/SYNOPSYS_UNCONNECTED_7' driven by pin 'U_MAG/mult_181/Z_2' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MAG/SYNOPSYS_UNCONNECTED_6' driven by pin 'U_MAG/mult_181/Z_3' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MAG/SYNOPSYS_UNCONNECTED_5' driven by pin 'U_MAG/mult_181/Z_4' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MAG/SYNOPSYS_UNCONNECTED_4' driven by pin 'U_MAG/mult_181/Z_5' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MAG/SYNOPSYS_UNCONNECTED_3' driven by pin 'U_MAG/mult_181/Z_6' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MAG/SYNOPSYS_UNCONNECTED_2' driven by pin 'U_MAG/mult_181/Z_7' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MAG/SYNOPSYS_UNCONNECTED_1' driven by pin 'U_MAG/mult_181/Z_22' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/Y_6__0_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/Y_out[0]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/Y_6__1_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/Y_out[1]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/Y_6__2_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/Y_out[2]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/Y_6__3_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/Y_out[3]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/Y_6__4_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/Y_out[4]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/Y_6__5_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/Y_out[5]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/Y_6__6_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/Y_out[6]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/Y_6__7_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/Y_out[7]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/Y_6__8_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/Y_out[8]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/Y_6__9_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/Y_out[9]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/Y_6__10_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/Y_out[10]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/Y_6__11_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/Y_out[11]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/Y_6__12_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/Y_out[12]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/Y_6__13_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/Y_out[13]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/X_6__0_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/X_out[0]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/X_6__1_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/X_out[1]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/X_6__2_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/X_out[2]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/X_6__3_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/X_out[3]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/X_6__4_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/X_out[4]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/X_6__5_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/X_out[5]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/X_6__6_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/X_out[6]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/X_6__7_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/X_out[7]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/X_6__8_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/X_out[8]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/X_6__9_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/X_out[9]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/X_6__10_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/X_out[10]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/X_6__11_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/X_out[11]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/X_6__12_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/X_out[12]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_ANGLE/X_6__13_' driven by pin 'U_ANGLE/STAGE_5__u_pipe/X_out[13]' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MINUS/SYNOPSYS_UNCONNECTED_7' driven by pin 'U_MINUS/mult_28/Z_0' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MINUS/SYNOPSYS_UNCONNECTED_6' driven by pin 'U_MINUS/mult_28/Z_1' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MINUS/SYNOPSYS_UNCONNECTED_5' driven by pin 'U_MINUS/mult_28/Z_2' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MINUS/SYNOPSYS_UNCONNECTED_4' driven by pin 'U_MINUS/mult_28/Z_3' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MINUS/SYNOPSYS_UNCONNECTED_3' driven by pin 'U_MINUS/mult_28/Z_4' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MINUS/SYNOPSYS_UNCONNECTED_2' driven by pin 'U_MINUS/mult_28/Z_5' has no loads. (LINT-2)
+Warning: In design 'top', net 'U_MINUS/SYNOPSYS_UNCONNECTED_1' driven by pin 'U_MINUS/mult_28/Z_6' has no loads. (LINT-2)
+Warning: In design 'top', port 'in_valid' is not connected to any nets. (LINT-28)
+Warning: In design 'delay_n', port 'r_in_real[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'delay_n', port 'r_in_real[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'delay_n', port 'r_in_real[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'delay_n', port 'r_in_real[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'delay_n', port 'r_in_real[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'delay_n', port 'r_in_real[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'delay_n', port 'r_in_real[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'delay_n', port 'r_in_real[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'delay_n', port 'r_in_real[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'delay_n', port 'r_in_imag[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'delay_n', port 'r_in_imag[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'delay_n', port 'r_in_imag[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'delay_n', port 'r_in_imag[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'delay_n', port 'r_in_imag[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'delay_n', port 'r_in_imag[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'delay_n', port 'r_in_imag[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'delay_n', port 'r_in_imag[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'delay_n', port 'r_in_imag[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'phi_sum', port 'rho_in[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'minus', port 'rho_in[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'minus', port 'rho_in[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'minus', port 'rho_in[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'minus', port 'rho_in[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'minus', port 'rho_in[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'minus', port 'rho_in[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'minus', port 'rho_in[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'minus', port 'rho_in[0]' is not connected to any nets. (LINT-28)
+1
+uniquify
+1
+set_fix_multiple_port_nets -all -buffer_constants [get_designs *]
+1
+set_max_area 0
+1
+#   Synthesize circuit
+compile -map_effort high -area_effort high
+CPU Load: 1%, Ram Free: 16 GB, Swap Free: 14 GB, Work Disk Free: 1279 GB, Tmp Disk Free: 41 GB
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | W-2024.09-DWBB_202409.2 |     *     |
+| Licensed DW Building Blocks        | W-2024.09-DWBB_202409.2 |     *     |
+============================================================================
+
+Warning: Dont_touch on net 'U_ARGMAX/count_next[0]' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'U_ARGMAX/count_next[1]' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'U_ARGMAX/count_next[2]' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'U_ARGMAX/count_next[3]' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'U_ARGMAX/count_next[4]' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'U_ARGMAX/count_next[5]' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'U_ARGMAX/count_next[6]' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'U_ARGMAX/count_next[7]' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'U_ARGMAX/count_next[8]' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'U_ARGMAX/count_next[9]' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 5631                                   |
+| Number of User Hierarchies                              | 13                                     |
+| Sequential Cell Count                                   | 5164                                   |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 134                                    |
+| Number of Dont Touch Nets                               | 24                                     |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+
+Information: There are 123 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: IO pad 'PVDD2CDGM_V' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVDD2CDGM_H' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVDD1CDGM_V' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVDD1CDGM_H' is unusable: unknown logic function.  (OPT-1022)
+Warning: Operating condition ss0p72vm40c set on design top has different process,
+voltage and temperatures parameters than the parameters at which target library 
+N16ADFP_StdCellff0p88v125c is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'argmax'
+Warning: The trip points for the library named N16ADFP_StdIOss0p72v1p62v125c differ from those in the library named N16ADFP_StdCellss0p72vm40c. (TIM-164)
+Information: The register 'eps_out_r_reg_3_' is a constant and will be removed. (OPT-1206)
+Information: The register 'eps_out_r_reg_2_' is a constant and will be removed. (OPT-1206)
+Information: The register 'eps_out_r_reg_1_' is a constant and will be removed. (OPT-1206)
+Information: The register 'eps_out_r_reg_0_' is a constant and will be removed. (OPT-1206)
+  Processing 'minus'
+  Processing 'cordic_atan2_pipe_5_14_11_s008'
+  Processing 'cordic_atan2_pipe_4_14_11_s010'
+  Processing 'cordic_atan2_pipe_3_14_11_s01f'
+  Processing 'cordic_atan2_pipe_2_14_11_s03e'
+  Processing 'cordic_atan2_pipe_1_14_11_s076'
+  Processing 'cordic_atan2_pipe_0_14_11_s0c9'
+  Processing 'angle'
+Information: The register 'z0_r_reg_0_' is a constant and will be removed. (OPT-1206)
+  Processing 'mag'
+Information: The register 'left1_reg_7_' is a constant and will be removed. (OPT-1206)
+Information: The register 'left1_reg_6_' is a constant and will be removed. (OPT-1206)
+Information: The register 'left1_reg_5_' is a constant and will be removed. (OPT-1206)
+Information: The register 'left1_reg_4_' is a constant and will be removed. (OPT-1206)
+Information: The register 'left1_reg_3_' is a constant and will be removed. (OPT-1206)
+Information: The register 'left1_reg_2_' is a constant and will be removed. (OPT-1206)
+Information: The register 'left1_reg_1_' is a constant and will be removed. (OPT-1206)
+Information: The register 'left1_reg_0_' is a constant and will be removed. (OPT-1206)
+  Processing 'gamma_sum'
+  Processing 'phi_sum'
+  Processing 'delay_n'
+  Processing 'top'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Mapping 'argmax_DW_cmp_0'
+Module: DW01_inc_width10, Ports: 20, Input: 10, Output: 10, Inout: 0
+Module: DW01_inc_width10, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Processing 'argmax_DW01_inc_0'
+Module: DW01_dec_width10, Ports: 20, Input: 10, Output: 10, Inout: 0
+Module: DW01_dec_width10, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Processing 'argmax_DW01_dec_0'
+  Mapping 'argmax_DW_cmp_1'
+Module: DW01_sub_width14, Ports: 44, Input: 29, Output: 15, Inout: 0
+Module: DW01_sub_width14, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Processing 'minus_DW01_sub_0'
+  Processing 'angle_DW01_sub_0_DW01_sub_1'
+  Processing 'angle_DW01_sub_1_DW01_sub_2'
+  Mapping 'angle_DW_cmp_0'
+Module: DW01_sub_width11, Ports: 35, Input: 23, Output: 12, Inout: 0
+Module: DW01_sub_width11, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Processing 'cordic_atan2_pipe_5_14_11_s008_DW01_sub_0_DW01_sub_3'
+Module: DW01_add_width14, Ports: 44, Input: 29, Output: 15, Inout: 0
+Module: DW01_add_width14, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Processing 'cordic_atan2_pipe_5_14_11_s008_DW01_add_0'
+  Processing 'cordic_atan2_pipe_5_14_11_s008_DW01_sub_1_DW01_sub_4'
+Module: DW01_add_width11, Ports: 35, Input: 23, Output: 12, Inout: 0
+Module: DW01_add_width11, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Processing 'cordic_atan2_pipe_5_14_11_s008_DW01_add_1'
+  Processing 'cordic_atan2_pipe_5_14_11_s008_DW01_sub_2_DW01_sub_5'
+  Processing 'cordic_atan2_pipe_5_14_11_s008_DW01_add_2'
+  Processing 'cordic_atan2_pipe_4_14_11_s010_DW01_sub_0_DW01_sub_6'
+  Processing 'cordic_atan2_pipe_4_14_11_s010_DW01_add_0_DW01_add_3'
+  Processing 'cordic_atan2_pipe_4_14_11_s010_DW01_sub_1_DW01_sub_7'
+  Processing 'cordic_atan2_pipe_4_14_11_s010_DW01_add_1_DW01_add_4'
+  Processing 'cordic_atan2_pipe_4_14_11_s010_DW01_sub_2_DW01_sub_8'
+  Processing 'cordic_atan2_pipe_4_14_11_s010_DW01_add_2_DW01_add_5'
+  Processing 'cordic_atan2_pipe_3_14_11_s01f_DW01_sub_0_DW01_sub_9'
+  Processing 'cordic_atan2_pipe_3_14_11_s01f_DW01_add_0_DW01_add_6'
+  Processing 'cordic_atan2_pipe_3_14_11_s01f_DW01_sub_1_DW01_sub_10'
+  Processing 'cordic_atan2_pipe_3_14_11_s01f_DW01_add_1_DW01_add_7'
+  Processing 'cordic_atan2_pipe_3_14_11_s01f_DW01_sub_2_DW01_sub_11'
+  Processing 'cordic_atan2_pipe_3_14_11_s01f_DW01_add_2_DW01_add_8'
+  Processing 'cordic_atan2_pipe_2_14_11_s03e_DW01_sub_0_DW01_sub_12'
+  Processing 'cordic_atan2_pipe_2_14_11_s03e_DW01_add_0_DW01_add_9'
+  Processing 'cordic_atan2_pipe_2_14_11_s03e_DW01_sub_1_DW01_sub_13'
+  Processing 'cordic_atan2_pipe_2_14_11_s03e_DW01_add_1_DW01_add_10'
+  Processing 'cordic_atan2_pipe_2_14_11_s03e_DW01_sub_2_DW01_sub_14'
+  Processing 'cordic_atan2_pipe_2_14_11_s03e_DW01_add_2_DW01_add_11'
+  Processing 'cordic_atan2_pipe_1_14_11_s076_DW01_sub_0_DW01_sub_15'
+  Processing 'cordic_atan2_pipe_1_14_11_s076_DW01_add_0_DW01_add_12'
+  Processing 'cordic_atan2_pipe_1_14_11_s076_DW01_sub_1_DW01_sub_16'
+  Processing 'cordic_atan2_pipe_1_14_11_s076_DW01_add_1_DW01_add_13'
+  Processing 'cordic_atan2_pipe_1_14_11_s076_DW01_sub_2_DW01_sub_17'
+  Processing 'cordic_atan2_pipe_1_14_11_s076_DW01_add_2_DW01_add_14'
+  Processing 'cordic_atan2_pipe_0_14_11_s0c9_DW01_sub_0_DW01_sub_18'
+  Processing 'cordic_atan2_pipe_0_14_11_s0c9_DW01_sub_1_DW01_sub_19'
+  Processing 'cordic_atan2_pipe_0_14_11_s0c9_DW01_add_0_DW01_add_15'
+  Processing 'cordic_atan2_pipe_0_14_11_s0c9_DW01_sub_2_DW01_sub_20'
+  Processing 'cordic_atan2_pipe_0_14_11_s0c9_DW01_add_1_DW01_add_16'
+  Processing 'mag_DW01_add_0_DW01_add_17'
+  Mapping 'mag_DW_cmp_0'
+  Mapping 'mag_DW_cmp_1'
+  Mapping 'mag_DW_cmp_2'
+  Mapping 'mag_DW_cmp_3'
+  Mapping 'mag_DW_cmp_4'
+  Mapping 'mag_DW_cmp_5'
+  Mapping 'mag_DW_cmp_6'
+  Mapping 'mag_DW_cmp_7'
+  Mapping 'mag_DW_cmp_8'
+  Processing 'mag_DW01_sub_0_DW01_sub_21'
+  Processing 'mag_DW01_sub_1_DW01_sub_22'
+Module: DW01_sub_width15, Ports: 47, Input: 31, Output: 16, Inout: 0
+Module: DW01_sub_width15, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Processing 'gamma_sum_DW01_sub_0_DW01_sub_23'
+Module: DW01_add_width15, Ports: 47, Input: 31, Output: 16, Inout: 0
+Module: DW01_add_width15, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Processing 'gamma_sum_DW01_add_0_DW01_add_18'
+  Processing 'phi_sum_DW01_add_0_DW01_add_19'
+  Processing 'phi_sum_DW01_add_1_DW01_add_20'
+Module: DW01_NAND2, Ports: 3, Input: 2, Output: 1, Inout: 0
+Module: DW01_NAND2, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Building model 'DW01_NAND2'
+  Processing 'DW01_NAND2'
+  Building model 'DW01_add_width14' (rpl)
+  Processing 'DW01_add_width14'
+  Building model 'DW01_sub_width14' (rpl)
+  Processing 'DW01_sub_width14'
+  Building model 'DW01_add_width15' (rpl)
+  Processing 'DW01_add_width15'
+  Mapping 'mag_DW_mult_uns_0'
+  Mapping 'mag_DW_mult_uns_1'
+  Mapping 'mag_DW_mult_uns_2'
+  Mapping 'mag_DW_mult_uns_3'
+  Mapping 'mag_DW_mult_uns_4'
+  Mapping 'mag_DW_mult_uns_5'
+  Mapping 'mag_DW_mult_uns_6'
+  Mapping 'mag_DW_mult_uns_7'
+  Processing 'gamma_sum_DW01_add_1_DW01_add_21'
+  Processing 'gamma_sum_DW01_sub_1_DW01_sub_24'
+  Processing 'gamma_sum_DW01_add_2_DW01_add_22'
+  Processing 'gamma_sum_DW01_sub_2_DW01_sub_25'
+  Processing 'phi_sum_DW01_add_2_DW01_add_23'
+  Processing 'phi_sum_DW01_sub_0_DW01_sub_26'
+  Mapping 'phi_sum_DW_mult_tc_0'
+  Processing 'phi_sum_DW01_add_3_DW01_add_24'
+  Mapping 'minus_DW_mult_tc_0'
+  Mapping 'phi_sum_DW_mult_tc_1'
+  Mapping 'phi_sum_DW_mult_tc_2'
+  Mapping 'phi_sum_DW_mult_tc_3'
+  Mapping 'gamma_sum_DW_mult_tc_0'
+  Mapping 'gamma_sum_DW_mult_tc_1'
+  Mapping 'gamma_sum_DW_mult_tc_2'
+  Mapping 'gamma_sum_DW_mult_tc_3'
+  Mapping 'phi_sum_DW_mult_tc_4'
+  Mapping 'mag_DW_mult_tc_0'
+  Mapping 'mag_DW_mult_tc_1'
+  Mapping 'argmax_DW_mult_tc_0'
+
+  Beginning Mapping Optimizations  (High effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'argmax'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'angle'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'mag'. (DDB-72)
+Information: The register 'U_ARGMAX/current_max_idx_s_reg_9_' will be removed. (OPT-1207)
+Information: The register 'U_ARGMAX/current_max_idx_s_reg_8_' will be removed. (OPT-1207)
+Loading db file '/usr/cad/CBDK/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/NLDM/N16ADFP_StdCellff0p88v125c.db'
+Module: DW01_add_width15, Ports: 47, Input: 31, Output: 16, Inout: 0
+Module: DW01_add_width15, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width15, Ports: 47, Input: 31, Output: 16, Inout: 0
+Module: DW01_add_width15, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width14, Ports: 44, Input: 29, Output: 15, Inout: 0
+Module: DW01_add_width14, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_sub_width14, Ports: 44, Input: 29, Output: 15, Inout: 0
+Module: DW01_sub_width14, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width14, Ports: 44, Input: 29, Output: 15, Inout: 0
+Module: DW01_add_width14, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width15, Ports: 47, Input: 31, Output: 16, Inout: 0
+Module: DW01_add_width15, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_sub_width14, Ports: 44, Input: 29, Output: 15, Inout: 0
+Module: DW01_sub_width14, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_sub_width14, Ports: 44, Input: 29, Output: 15, Inout: 0
+Module: DW01_sub_width14, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width14, Ports: 44, Input: 29, Output: 15, Inout: 0
+Module: DW01_add_width14, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_sub_width15, Ports: 47, Input: 31, Output: 16, Inout: 0
+Module: DW01_sub_width15, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width14, Ports: 44, Input: 29, Output: 15, Inout: 0
+Module: DW01_add_width14, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_sub_width14, Ports: 44, Input: 29, Output: 15, Inout: 0
+Module: DW01_sub_width14, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_sub_width14, Ports: 44, Input: 29, Output: 15, Inout: 0
+Module: DW01_sub_width14, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width14, Ports: 44, Input: 29, Output: 15, Inout: 0
+Module: DW01_add_width14, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_sub_width14, Ports: 44, Input: 29, Output: 15, Inout: 0
+Module: DW01_sub_width14, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width14, Ports: 44, Input: 29, Output: 15, Inout: 0
+Module: DW01_add_width14, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width14, Ports: 44, Input: 29, Output: 15, Inout: 0
+Module: DW01_add_width14, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width15, Ports: 47, Input: 31, Output: 16, Inout: 0
+Module: DW01_add_width15, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_sub_width14, Ports: 44, Input: 29, Output: 15, Inout: 0
+Module: DW01_sub_width14, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width14, Ports: 44, Input: 29, Output: 15, Inout: 0
+Module: DW01_add_width14, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:21   11824.0      0.08       4.1      18.0 U_PHI_SUM/*cell*43136/U4/Z      0.00  
+    0:00:21   11824.0      0.08       4.1      18.0 U_PHI_SUM/*cell*43136/U4/Z      0.00  
+    0:00:21   11810.1      0.03       3.7      18.0 U_PHI_SUM/*cell*43136/*cell*43186/ZN      0.00  
+    0:00:21   11806.4      0.03       3.7      18.0 U_PHI_SUM/*cell*43136/U87/ZN      0.00  
+    0:00:21   11803.2      0.03       3.7      18.0 U_PHI_SUM/*cell*43136/U62/ZN      0.00  
+    0:00:21   11756.6      0.04       3.9      18.0 U_GAMMA_SUM/*cell*43253/U94/ZN      0.00  
+    0:00:21   11752.9      0.04       3.9      18.0 U_GAMMA_SUM/*cell*43253/U89/ZN      0.00  
+    0:00:21   11749.5      0.04       3.9      18.0 U_GAMMA_SUM/*cell*43253/U85/ZN      0.00  
+    0:00:21   11718.4      0.04       3.9      18.0 U_GAMMA_SUM/*cell*43352/U6/ZN      0.00  
+    0:00:21   11711.0      0.04       3.9      18.0 U_GAMMA_SUM/*cell*43352/*cell*43403/ZN      0.00  
+    0:00:21   11692.7      0.08       4.3      18.0 U_GAMMA_SUM/*cell*43419/U4/Z      0.00  
+    0:00:21   11678.8      0.04       3.9      18.0 U_GAMMA_SUM/*cell*43419/*cell*43469/ZN      0.00  
+    0:00:21   11675.1      0.04       3.9      18.0 U_GAMMA_SUM/*cell*43419/U36/ZN      0.00  
+    0:00:21   11671.7      0.04       3.9      18.0 U_GAMMA_SUM/*cell*43419/U84/ZN      0.00  
+    0:00:22   11637.5      0.04       3.9      18.0 U_GAMMA_SUM/*cell*43518/U51/ZN      0.00  
+    0:00:22   11634.1      0.04       3.9      18.0 U_GAMMA_SUM/*cell*43518/U80/ZN      0.00  
+Information: The register 'U_ARGMAX/eps_out_r_reg_4_' is a constant and will be removed. (OPT-1206)
+Information: The register 'U_ARGMAX/eps_out_r_reg_5_' is a constant and will be removed. (OPT-1206)
+Information: The register 'U_ARGMAX/eps_out_r_reg_6_' is a constant and will be removed. (OPT-1206)
+Information: The register 'U_PHI_SUM/b_im_sq12_s1_reg_1_' is a constant and will be removed. (OPT-1206)
+Information: The register 'U_PHI_SUM/b_re_sq12_s1_reg_1_' is a constant and will be removed. (OPT-1206)
+Information: The register 'U_PHI_SUM/a_im_sq12_s1_reg_1_' is a constant and will be removed. (OPT-1206)
+Information: The register 'U_PHI_SUM/a_re_sq12_s1_reg_1_' is a constant and will be removed. (OPT-1206)
+    0:00:24   11692.4      0.04       3.8      16.0                                0.00  
+    0:00:24   11693.0      0.04       3.8      16.0                                0.00  
+    0:00:24   11693.0      0.04       3.8      16.0                                0.00  
+    0:00:24   11690.6      0.04       3.8      16.0                                0.00  
+    0:00:24   11690.6      0.04       3.7      16.0                                0.00  
+    0:00:28    8543.5      0.11      49.4      16.0                                0.00  
+    0:00:29    8545.2      0.10      75.1      16.0                                0.00  
+    0:00:31    8545.2      0.08      75.4      16.0                                0.00  
+    0:00:31    8548.5      0.11      73.4      16.0                                0.00  
+    0:00:31    8546.8      0.08      75.9      16.0                                0.00  
+    0:00:32    8548.4      0.09      74.9      16.0                                0.00  
+    0:00:32    8547.7      0.08      75.8      16.0                                0.00  
+    0:00:32    8547.9      0.08      72.7      16.0                                0.00  
+    0:00:32    8548.3      0.08      75.6      16.0                                0.00  
+    0:00:33    8549.3      0.08      76.8      16.0                                0.00  
+    0:00:33    8551.2      0.07      76.8      16.0                                0.00  
+    0:00:33    8552.3      0.07      76.7      16.0                                0.00  
+    0:00:33    8554.0      0.07      76.6      16.0                                0.00  
+    0:00:33    8555.2      0.07      76.6      16.0                                0.00  
+    0:00:33    8558.3      0.06      76.5      16.0                                0.00  
+    0:00:33    8561.1      0.06      76.5      16.0                                0.00  
+    0:00:33    8562.4      0.06      76.5      16.0                                0.00  
+    0:00:34    8567.7      0.06      76.4      16.0                                0.00  
+    0:00:34    8568.0      0.06      76.1      16.0                                0.00  
+    0:00:34    8568.0      0.06      76.1      16.0                                0.00  
+    0:00:34    8568.0      0.06      76.1      16.0                                0.00  
+    0:00:34    8568.0      0.06      76.1      16.0                                0.00  
+    0:00:34    8568.0      0.06      76.1      16.0                                0.00  
+    0:00:34    8568.0      0.06      76.1      16.0                                0.00  
+    0:00:34    8578.1      0.05      75.0      16.0 U_MAG/term_b_s3_reg_9_/D       0.00  
+    0:00:34    8590.7      0.05      74.7      16.0 U_MAG/max_zero1_reg/D          0.00  
+    0:00:34    8593.3      0.05      74.7      16.0 U_MAG/term_b_s3_reg_5_/D       0.00  
+    0:00:35    8596.1      0.04      74.6      16.0 U_MAG/term_b_s3_reg_5_/D       0.00  
+    0:00:35    8661.8      0.04      74.0      16.0                                0.00  
+    0:00:35    8664.3      0.04      73.8      16.0                                0.00  
+    0:00:36    8669.3      0.04      73.9      16.0                                0.00  
+    0:00:36    8672.2      0.04      73.9      16.0                                0.00  
+    0:00:36    8679.3      0.03      73.7      16.0                                0.00  
+    0:00:36    8682.7      0.03      73.6      16.0                                0.00  
+    0:00:36    8685.7      0.03      70.9      16.0                                0.00  
+    0:00:36    8692.0      0.03      70.5      16.0                                0.00  
+    0:00:36    8696.1      0.03      70.2      16.0                                0.00  
+    0:00:36    8699.5      0.03      70.1      16.0                                0.00  
+    0:00:37    8702.5      0.03      70.0      16.0                                0.00  
+    0:00:37    8704.4      0.03      70.0      16.0                                0.00  
+    0:00:37    8715.4      0.03      69.5      16.0                                0.00  
+    0:00:37    8716.4      0.03      69.5      16.0                                0.00  
+    0:00:37    8721.5      0.03      69.2      16.0                                0.00  
+    0:00:37    8721.9      0.03      69.2      16.0                                0.00  
+    0:00:37    8725.9      0.03      69.1      16.0                                0.00  
+    0:00:37    8727.5      0.03      69.1      16.0                                0.00  
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:37    8727.5      0.03      69.1      16.0                                0.00  
+    0:00:37    8727.5      0.03      69.1      16.0                                0.00  
+    0:00:37    8727.5      0.03      69.1      16.0                                0.00  
+    0:00:38    8730.4      0.03      69.1      16.0 U_MAG/term_b_s3_reg_12_/D      0.00  
+    0:00:38    8734.2      0.02      69.1      16.0 U_PHI_SUM/energy_to_sum_s3_reg_11_/D      0.00  
+    0:00:38    8735.6      0.02      69.1      16.0 U_MAG/term_b_s3_reg_12_/D      0.00  
+    0:00:38    8736.2      0.02      69.1      16.0 U_MAG/term_b_s3_reg_12_/D      0.00  
+    0:00:38    8736.2      0.02      69.1      16.0 U_MAG/seg_idx_s2_reg_3_/D      0.00  
+    0:00:38    8743.1      0.02      69.0      16.0 U_MAG/term_a_s3_reg_8_/D       0.00  
+    0:00:38    8751.1      0.02      68.8      16.0 U_MAG/term_b_s3_reg_9_/D       0.00  
+    0:00:39    8754.9      0.02      68.7      16.0 U_MAG/term_a_s3_reg_8_/D       0.00  
+    0:00:39    8755.7      0.02      68.7      16.0 U_MAG/seg_idx_s2_reg_0_/D      0.00  
+    0:00:39    8757.2      0.02      68.7      16.0 U_MAG/term_b_s3_reg_12_/D      0.00  
+    0:00:39    8758.3      0.02       2.6      16.0 U_MAG/term_b_s3_reg_5_/D       0.00  
+    0:00:39    8761.8      0.02       2.5      16.0 U_MAG/seg_idx_s2_reg_0_/D      0.00  
+    0:00:39    8762.2      0.02       2.5      16.0 U_MAG/term_b_s3_reg_5_/D       0.00  
+    0:00:39    8761.9      0.02       2.5      16.0 U_MAG/term_b_s3_reg_10_/D      0.00  
+    0:00:39    8763.8      0.02       2.5      16.0 U_MAG/seg_idx_s2_reg_0_/D      0.00  
+    0:00:40    8767.5      0.02       2.5      16.0 U_MAG/seg_idx_s2_reg_3_/D      0.00  
+    0:00:40    8769.2      0.02       2.5      16.0 U_MAG/term_b_s3_reg_5_/D       0.00  
+    0:00:40    8770.1      0.02       2.5      16.0 U_MAG/seg_idx_s2_reg_0_/D      0.00  
+    0:00:40    8776.4      0.02       2.5      16.0 U_MAG/term_b_s3_reg_12_/D      0.00  
+    0:00:40    8780.3      0.02       2.4      16.0 U_MAG/term_a_s3_reg_9_/D       0.00  
+    0:00:40    8785.4      0.02       2.3      16.0 U_MAG/term_b_s3_reg_12_/D      0.00  
+    0:00:40    8787.8      0.02       2.3      16.0 U_MAG/term_b_s3_reg_12_/D      0.00  
+    0:00:41    8789.7      0.02       2.2      16.0 U_MAG/term_a_s3_reg_13_/D      0.00  
+    0:00:41    8791.8      0.02       2.2      16.0 U_MAG/term_a_s3_reg_13_/D      0.00  
+    0:00:41    8796.0      0.02       2.2      16.0 U_MAG/term_b_s3_reg_12_/D      0.00  
+    0:00:41    8797.7      0.02       2.1      16.0 U_MAG/term_b_s3_reg_12_/D      0.00  
+    0:00:41    8798.8      0.02       2.1      16.0 U_MAG/term_a_s3_reg_9_/D       0.00  
+    0:00:41    8798.3      0.02       2.1      16.0 U_MAG/term_b_s3_reg_12_/D      0.00  
+    0:00:41    8799.0      0.02       2.1      16.0 U_MAG/seg_idx_s2_reg_1_/D      0.00  
+    0:00:41    8799.5      0.02       2.1      16.0 U_MAG/term_b_s3_reg_12_/D      0.00  
+    0:00:41    8801.7      0.02       2.1      16.0 U_MAG/term_b_s3_reg_5_/D       0.00  
+    0:00:41    8801.7      0.02       2.1      16.0 U_MAG/term_b_s3_reg_5_/D       0.00  
+    0:00:41    8802.6      0.02       2.1      16.0 U_ANGLE/STAGE_5__u_pipe/Y_out_reg_13_/D      0.00  
+    0:00:41    8803.2      0.02       2.1      16.0 U_MAG/term_b_s3_reg_5_/D       0.00  
+    0:00:41    8804.9      0.02       2.1      16.0 U_MAG/term_b_s3_reg_12_/D      0.00  
+    0:00:41    8807.0      0.02       2.1      16.0 U_MAG/term_a_s3_reg_8_/D       0.00  
+    0:00:42    8810.0      0.02       2.0      16.0 U_ANGLE/STAGE_2__u_pipe/X_out_reg_13_/D      0.00  
+    0:00:42    8813.8      0.02       2.0      16.0 U_MAG/term_b_s3_reg_5_/D       0.00  
+    0:00:42    8814.0      0.02       2.0      16.0 U_MAG/term_a_s3_reg_13_/D      0.00  
+    0:00:42    8814.6      0.02       1.9      16.0 U_MAG/max_u1_reg_0_/D          0.00  
+    0:00:42    8818.5      0.02       1.9      16.0 U_MAG/seg_idx_s2_reg_3_/D      0.00  
+    0:00:42    8819.3      0.02       1.9      16.0 U_MAG/term_b_s3_reg_12_/D      0.00  
+    0:00:42    8821.1      0.02       1.9      16.0 U_PHI_SUM/energy_to_sum_s3_reg_11_/D      0.00  
+    0:00:42    8822.3      0.02       1.9      16.0 U_GAMMA_SUM/ac_mul12_s1_reg_12_/D      0.00  
+    0:00:42    8822.8      0.02       1.9      16.0 U_MAG/term_b_s3_reg_12_/D      0.00  
+    0:00:45    8823.1      0.02       1.9      16.0 U_MAG/term_b_s3_reg_12_/D      0.00  
+    0:00:45    8831.4      0.01       1.8      16.0 U_ANGLE/STAGE_1__u_pipe/Y_out_reg_13_/D      0.00  
+    0:00:45    8836.2      0.01       1.4      16.0 U_MAG/seg_idx_s2_reg_1_/D      0.00  
+    0:00:46    8837.9      0.01       1.4      16.0 U_MAG/term_b_s3_reg_10_/D      0.00  
+    0:00:46    8840.6      0.01       1.4      16.0 U_MAG/term_a_s3_reg_8_/D       0.00  
+    0:00:46    8841.4      0.01       1.4      16.0 U_MAG/term_b_s3_reg_2_/D       0.00  
+    0:00:47    8841.9      0.01       1.4      16.0 U_MAG/seg_idx_s2_reg_1_/D      0.00  
+    0:00:47    8842.9      0.01       1.4      16.0 U_MAG/term_a_s3_reg_11_/D      0.00  
+    0:00:47    8842.6      0.01       1.4      16.0 U_MAG/term_a_s3_reg_11_/D      0.00  
+    0:00:47    8843.6      0.01       1.3      16.0 U_MAG/term_b_s3_reg_11_/D      0.00  
+    0:00:47    8844.5      0.01       1.3      16.0 U_MAG/term_a_s3_reg_8_/D       0.00  
+    0:00:47    8846.1      0.01       1.3      16.0 U_MAG/term_a_s3_reg_11_/D      0.00  
+    0:00:47    8846.6      0.01       1.3      16.0 U_MAG/seg_idx_s2_reg_1_/D      0.00  
+    0:00:47    8847.4      0.01       1.3      16.0 U_MAG/term_a_s3_reg_8_/D       0.00  
+    0:00:47    8849.2      0.01       1.3      16.0 U_MAG/term_a_s3_reg_11_/D      0.00  
+    0:00:48    8849.8      0.01       1.2      16.0 U_MAG/seg_idx_s2_reg_0_/D      0.00  
+    0:00:48    8850.4      0.01       1.2      16.0 U_MAG/seg_idx_s2_reg_3_/D      0.00  
+    0:00:48    8850.0      0.01       1.2      16.0 U_MAG/term_b_s3_reg_12_/D      0.00  
+    0:00:48    8851.5      0.01       1.2      16.0 U_MAG/seg_idx_s2_reg_3_/D      0.00  
+    0:00:48    8856.1      0.01       1.2      16.0 U_MAG/seg_idx_s2_reg_0_/D      0.00  
+    0:00:48    8857.2      0.01       1.2      16.0 U_MAG/seg_idx_s2_reg_0_/D      0.00  
+    0:00:48    8858.1      0.01       1.2      16.0 U_MAG/seg_idx_s2_reg_3_/D      0.00  
+    0:00:49    8859.4      0.01       1.2      16.0 U_MAG/term_a_s3_reg_12_/D      0.00  
+    0:00:49    8859.8      0.01       1.2      16.0 U_MAG/seg_idx_s2_reg_3_/D      0.00  
+    0:00:49    8860.2      0.01       1.2      16.0 U_MAG/seg_idx_s2_reg_1_/D      0.00  
+    0:00:49    8860.6      0.01       1.2      16.0 U_MAG/seg_idx_s2_reg_1_/D      0.00  
+    0:00:49    8864.6      0.01       1.2      16.0 U_MAG/seg_idx_s2_reg_0_/D      0.00  
+    0:00:49    8865.2      0.01       1.2      16.0 U_MAG/term_a_s3_reg_8_/D       0.00  
+    0:00:50    8866.1      0.01       1.2      16.0 U_MAG/term_a_s3_reg_11_/D      0.00  
+    0:00:50    8866.0      0.01       1.2      16.0 U_PHI_SUM/energy_to_sum_s3_reg_12_/D      0.00  
+    0:00:50    8866.8      0.01       1.2      16.0 U_MAG/seg_idx_s2_reg_1_/D      0.00  
+    0:00:50    8867.2      0.01       1.2      16.0 U_MAG/seg_idx_s2_reg_1_/D      0.00  
+    0:00:50    8867.0      0.01       1.1      16.0 U_MAG/term_b_s3_reg_12_/D      0.00  
+    0:00:50    8868.1      0.01       1.1      16.0 U_MAG/seg_idx_s2_reg_3_/D      0.00  
+    0:00:50    8868.8      0.01       1.1      16.0 U_MAG/seg_idx_s2_reg_1_/D      0.00  
+    0:00:50    8868.9      0.01       1.1      16.0 U_MAG/term_a_s3_reg_11_/D      0.00  
+    0:00:50    8874.5      0.01       1.1      16.0 U_MAG/term_a_s3_reg_12_/D      0.00  
+    0:00:51    8874.6      0.01       1.1      16.0 U_MAG/term_a_s3_reg_12_/D      0.00  
+    0:00:51    8873.9      0.01       1.1      16.0 U_MAG/seg_idx_s2_reg_0_/D      0.00  
+    0:00:51    8875.5      0.01       1.1      16.0 U_MAG/term_a_s3_reg_12_/D      0.00  
+    0:00:51    8875.8      0.01       1.1      16.0 U_MAG/term_b_s3_reg_11_/D      0.00  
+    0:00:51    8875.8      0.01       1.1      16.0 U_MAG/seg_idx_s2_reg_1_/D      0.00  
+    0:00:51    8876.8      0.01       1.1      16.0 U_MAG/seg_idx_s2_reg_1_/D      0.00  
+    0:00:51    8876.4      0.01       1.1      16.0 U_MAG/term_b_s3_reg_12_/D      0.00  
+    0:00:51    8876.7      0.01       1.1      16.0 U_MAG/term_b_s3_reg_12_/D      0.00  
+    0:00:53    8876.7      0.01       1.1      16.0                                0.00  
+    0:00:53    8876.3      0.01       1.1      16.0                                0.00  
+
+
+  Beginning Design Rule Fixing  (min_path)  (min_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:53    8876.3      0.01       1.1      16.0                               -1.23  
+    0:00:53    8875.9      0.01       1.1      16.0 U_MAG/term_b_s3_reg_12_/D     -1.23  
+    0:00:54    8879.3      0.01       1.1      16.0 U_MAG/term_a_s3_reg_12_/D     -1.23  
+    0:00:54    8883.3      0.01       0.7      16.0 U_MAG/seg_idx_s2_reg_1_/D     -1.23  
+    0:00:54    8885.9      0.01       0.7      16.0 U_MAG/term_b_s3_reg_12_/D     -1.23  
+    0:00:54    8889.7      0.01       0.7      16.0 U_MAG/seg_idx_s2_reg_1_/D     -1.23  
+    0:00:54    8889.7      0.01       0.7      16.0 U_MAG/seg_idx_s2_reg_1_/D     -1.23  
+    0:00:54    8890.4      0.01       0.7      16.0 U_PHI_SUM/energy_to_sum_s3_reg_11_/D     -1.23  
+    0:00:54    8891.0      0.01       0.7      16.0 U_MAG/term_b_s3_reg_12_/D     -1.23  
+    0:00:54    8893.3      0.01       0.7      16.0 U_MAG/term_b_s3_reg_12_/D     -1.23  
+    0:00:55    8896.2      0.01       0.7      16.0 U_MAG/term_a_s3_reg_12_/D     -1.23  
+    0:00:55    8897.7      0.01       0.7      16.0 U_MAG/term_b_s3_reg_12_/D     -1.23  
+    0:00:55    8898.4      0.01       0.7      16.0 U_PHI_SUM/energy_to_sum_s3_reg_11_/D     -1.23  
+    0:00:55    8898.9      0.01       0.7      16.0 U_PHI_SUM/energy_to_sum_s3_reg_11_/D     -1.23  
+    0:00:55    8898.9      0.01       0.7      16.0 U_MAG/term_a_s3_reg_12_/D     -1.23  
+    0:00:55    8899.4      0.01       0.7      16.0 U_MAG/term_b_s3_reg_12_/D     -1.23  
+    0:00:55    8900.2      0.01       0.7      16.0 U_MAG/term_b_s3_reg_5_/D      -1.23  
+    0:00:55    8900.9      0.01       0.7      16.0 U_MAG/term_b_s3_reg_5_/D      -1.23  
+    0:00:56    8901.4      0.01       0.7      16.0 U_MAG/term_b_s3_reg_5_/D      -1.23  
+    0:00:56    8902.3      0.01       0.7      16.0 U_MAG/term_a_s3_reg_12_/D     -1.23  
+    0:00:56    8905.7      0.01       0.6      16.0 U_MAG/term_b_s3_reg_12_/D     -1.23  
+    0:00:56    8907.5      0.01       0.6      16.0 U_MAG/term_b_s3_reg_5_/D      -1.23  
+    0:00:56    8907.7      0.01       0.6      16.0 U_PHI_SUM/energy_to_sum_s3_reg_11_/D     -1.23  
+    0:00:56    8909.3      0.01       0.6      16.0                               -1.23  
+    0:00:56    8909.1      0.01       0.5      16.0                               -1.23  
+    0:00:57    8909.4      0.01       0.5      16.0                               -1.23  
+    0:00:57    8910.6      0.01       0.5      16.0                               -1.23  
+    0:00:57    8911.9      0.01       0.5      16.0                               -1.23  
+    0:00:57    8913.4      0.01       0.5      16.0                               -1.23  
+    0:00:57    8914.6      0.01       0.5      16.0                               -1.23  
+    0:00:57    8917.3      0.01       0.5      16.0                               -1.23  
+    0:00:57    8919.2      0.01       0.5      16.0                               -1.23  
+    0:00:57    8920.5      0.01       0.5      16.0                               -1.23  
+    0:00:57    8923.2      0.01       0.5      16.0                               -1.23  
+    0:00:57    8923.9      0.01       0.5      16.0                               -1.23  
+    0:00:58    8924.6      0.01       0.5      16.0                               -1.23  
+    0:00:58    8925.9      0.01       0.5      16.0                               -1.23  
+
+
+  Beginning Area-Recovery Phase  (max_area 0)
+  -----------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:58    8925.9      0.01       0.5      16.0                               -1.23  
+    0:00:58    8925.9      0.01       0.5      16.0                               -1.23  
+    0:00:58    8906.6      0.01       0.5      16.0                               -1.20  
+    0:00:58    8902.7      0.01       0.5      16.0                               -1.20  
+    0:00:58    8900.3      0.01       0.5      16.0                               -1.20  
+    0:00:58    8899.8      0.01       0.5      16.0                               -1.20  
+    0:00:59    8899.5      0.01       0.5      16.0                               -1.20  
+    0:00:59    8899.2      0.01       0.5      16.0                               -1.20  
+    0:00:59    8898.9      0.01       0.5      16.0                               -1.20  
+    0:00:59    8898.6      0.01       0.5      16.0                               -1.20  
+    0:00:59    8898.3      0.01       0.5      16.0                               -1.20  
+    0:00:59    8898.0      0.01       0.5      16.0                               -1.20  
+    0:00:59    8897.7      0.01       0.5      16.0                               -1.20  
+    0:00:59    8897.4      0.01       0.5      16.0                               -1.20  
+    0:00:59    8897.0      0.01       0.5      16.0                               -1.20  
+    0:00:59    8896.7      0.01       0.5      16.0                               -1.20  
+    0:00:59    8896.4      0.01       0.5      16.0                               -1.20  
+    0:00:59    8896.1      0.01       0.5      16.0                               -1.20  
+    0:00:59    8896.1      0.01       0.5      16.0                               -1.20  
+    0:01:00    8896.7      0.01       0.5      16.0                               -1.20  
+    0:01:00    8851.3      0.02       2.3      16.0                               -1.20  
+    0:01:00    8838.9      0.02       2.3      16.0                               -1.20  
+    0:01:00    8837.1      0.02       2.3      16.0                               -1.20  
+    0:01:00    8836.8      0.02       2.3      16.0                               -1.20  
+    0:01:00    8836.8      0.02       2.3      16.0                               -1.20  
+    0:01:00    8836.8      0.02       2.3      16.0                               -1.20  
+    0:01:00    8836.8      0.02       2.3      16.0                               -1.20  
+    0:01:00    8836.8      0.02       2.3      16.0                               -1.20  
+    0:01:00    8848.4      0.01       0.8      16.0 U_MAG/term_b_s3_reg_12_/D     -1.20  
+    0:01:01    8849.8      0.01       0.8      16.0                               -1.20  
+    0:01:01    8850.1      0.01       0.8      16.0                               -1.20  
+    0:01:01    8851.3      0.01       0.8      16.0                               -1.20  
+    0:01:01    8851.7      0.01       0.8      16.0                               -1.20  
+    0:01:01    8851.7      0.01       0.8      16.0                               -1.20  
+    0:01:01    8852.7      0.01       0.8      16.0                               -1.20  
+    0:01:01    8852.8      0.01       0.8      16.0                               -1.20  
+    0:01:02    8855.3      0.01       0.8      16.0 U_MAG/term_b_s3_reg_12_/D     -1.20  
+    0:01:02    8857.8      0.01       0.8      16.0 U_MAG/term_b_s3_reg_12_/D     -1.20  
+    0:01:02    8859.8      0.01       0.8      16.0 U_MAG/seg_idx_s2_reg_0_/D     -1.20  
+    0:01:02    8860.1      0.01       0.8      16.0 U_MAG/term_b_s3_reg_12_/D     -1.20  
+    0:01:02    8860.3      0.01       0.8      16.0 U_MAG/term_b_s3_reg_12_/D     -1.20  
+    0:01:02    8860.7      0.01       0.7      16.0 U_MAG/term_b_s3_reg_4_/D      -1.20  
+    0:01:02    8864.7      0.01       0.7      16.0 U_MAG/term_a_s3_reg_8_/D      -1.20  
+    0:01:02    8873.1      0.01       0.7      16.0 U_MAG/term_a_s3_reg_12_/D     -1.20  
+    0:01:03    8873.2      0.01       0.7      16.0 U_PHI_SUM/energy_to_sum_s3_reg_11_/D     -1.20  
+    0:01:03    8875.4      0.01       0.7      16.0 U_PHI_SUM/energy_to_sum_s3_reg_11_/D     -1.20  
+    0:01:03    8878.3      0.01       0.6      16.0 U_MAG/seg_idx_s2_reg_0_/D     -1.20  
+    0:01:03    8880.3      0.01       0.6      16.0 U_MAG/term_a_s3_reg_11_/D     -1.20  
+    0:01:03    8883.3      0.01       0.6      16.0 U_MAG/term_b_s3_reg_12_/D     -1.20  
+    0:01:03    8889.1      0.01       0.6      16.0 U_MAG/seg_idx_s2_reg_1_/D     -1.20  
+    0:01:04    8891.7      0.01       0.6      16.0 U_PHI_SUM/energy_to_sum_s3_reg_11_/D     -1.20  
+    0:01:04    8894.0      0.01       0.5      16.0 U_MAG/term_a_s3_reg_8_/D      -1.20  
+    0:01:04    8896.2      0.01       0.5      16.0 U_PHI_SUM/energy_to_sum_s3_reg_11_/D     -1.20  
+    0:01:04    8898.9      0.01       0.5      16.0 U_PHI_SUM/energy_to_sum_s3_reg_11_/D     -1.20  
+    0:01:04    8899.8      0.01       0.5      16.0 U_MAG/term_a_s3_reg_12_/D     -1.20  
+    0:01:04    8902.2      0.01       0.5      16.0 U_MAG/term_a_s3_reg_11_/D     -1.20  
+    0:01:04    8902.5      0.01       0.5      16.0 U_MAG/term_a_s3_reg_5_/D      -1.20  
+    0:01:05    8904.4      0.01       0.3      16.0 U_MAG/max_zero1_reg/D         -1.20  
+    0:01:05    8905.6      0.01       0.3      16.0 U_MAG/term_b_s3_reg_11_/D     -1.20  
+    0:01:05    8908.3      0.01       0.3      16.0 U_MAG/seg_idx_s2_reg_3_/D     -1.20  
+    0:01:05    8908.2      0.01       0.3      16.0 U_MAG/term_b_s3_reg_12_/D     -1.20  
+    0:01:05    8908.4      0.01       0.3      16.0 U_MAG/term_a_s3_reg_5_/D      -1.20  
+    0:01:05    8911.7      0.00       0.3      16.0 U_PHI_SUM/energy_to_sum_s3_reg_7_/D     -1.20  
+    0:01:05    8911.5      0.00       0.3      16.0 U_MAG/seg_idx_s2_reg_1_/D     -1.20  
+    0:01:05    8912.3      0.00       0.3      16.0 U_MAG/seg_idx_s2_reg_1_/D     -1.20  
+    0:01:05    8912.3      0.00       0.3      16.0 U_MAG/term_b_s3_reg_12_/D     -1.20  
+    0:01:06    8913.9      0.00       0.3      16.0 U_MAG/term_a_s3_reg_11_/D     -1.20  
+    0:01:06    8916.8      0.00       0.3      16.0 U_MAG/term_b_s3_reg_12_/D     -1.20  
+    0:01:06    8919.3      0.00       0.3      16.0 U_MAG/term_b_s3_reg_12_/D     -1.20  
+    0:01:06    8917.7      0.00       0.3      16.0                               -1.20  
+    0:01:06    8915.4      0.00       0.3      16.0                               -1.20  
+    0:01:08    8908.6      0.00       0.3      16.0                               -1.20  
+    0:01:11    8899.3      0.00       0.3      16.0                               -1.20  
+    0:01:11    8896.8      0.00       0.3      16.0                               -1.20  
+    0:01:11    8892.5      0.00       0.3      16.0                               -1.20  
+    0:01:12    8891.2      0.00       0.3      16.0                               -1.20  
+    0:01:14    8888.5      0.00       0.3      16.0                               -1.20  
+    0:01:14    8888.3      0.00       0.3      16.0                               -1.20  
+    0:01:15    8886.9      0.00       0.3      16.0                               -1.20  
+    0:01:15    8859.4      0.01       0.5      16.0                               -1.20  
+    0:01:15    8853.3      0.01       0.6      16.0                               -1.20  
+    0:01:15    8850.3      0.01       0.6      16.0                               -1.20  
+    0:01:15    8850.2      0.01       0.6      16.0                               -1.20  
+    0:01:15    8850.2      0.01       0.6      16.0                               -1.20  
+    0:01:15    8850.2      0.01       0.6      16.0                               -1.20  
+    0:01:15    8850.2      0.01       0.6      16.0                               -1.20  
+    0:01:15    8850.2      0.01       0.6      16.0                               -1.20  
+    0:01:15    8859.5      0.01       0.4      16.0 U_MAG/seg_idx_s2_reg_3_/D     -1.20  
+    0:01:15    8861.9      0.01       0.4      16.0 U_MAG/term_b_s3_reg_9_/D      -1.20  
+    0:01:16    8875.8      0.00       0.4      16.0 U_MAG/seg_idx_s2_reg_1_/D     -1.20  
+    0:01:16    8888.0      0.00       0.2      16.0 U_MAG/term_b_s3_reg_12_/D     -1.25  
+    0:01:16    8891.0      0.00       0.2      16.0 U_MAG/term_b_s3_reg_12_/D     -1.25  
+    0:01:17    8891.8      0.00       0.2      16.0 U_MAG/seg_idx_s2_reg_3_/D     -1.25  
+    0:01:17    8892.1      0.00       0.2      16.0 U_MAG/term_b_s3_reg_12_/D     -1.25  
+    0:01:17    8895.0      0.00       0.2      16.0 U_MAG/seg_idx_s2_reg_0_/D     -1.25  
+    0:01:17    8895.5      0.00       0.2      16.0 U_MAG/term_b_s3_reg_12_/D     -1.25  
+    0:01:17    8897.9      0.00       0.2      16.0 U_MAG/seg_idx_s2_reg_1_/D     -1.25  
+    0:01:17    8899.9      0.00       0.2      16.0 U_MAG/term_b_s3_reg_9_/D      -1.25  
+    0:01:17    8900.4      0.00       0.1      16.0 U_MAG/seg_idx_s2_reg_0_/D     -1.25  
+    0:01:18    8903.2      0.00       0.1      16.0 U_MAG/term_b_s3_reg_12_/D     -1.25  
+    0:01:18    8906.7      0.00       0.1      16.0 U_MAG/seg_idx_s2_reg_3_/D     -1.25  
+    0:01:18    8910.0      0.00       0.1      16.0 U_MAG/term_b_s3_reg_12_/D     -1.25  
+    0:01:18    8913.4      0.00       0.1      16.0 U_MAG/seg_idx_s2_reg_1_/D     -1.25  
+    0:01:18    8914.5      0.00       0.1      16.0 U_MAG/seg_idx_s2_reg_1_/D     -1.25  
+    0:01:18    8916.6      0.00       0.0      16.0 U_MAG/term_b_s3_reg_12_/D     -1.25  
+    0:01:18    8920.4      0.00       0.0      16.0 U_MAG/seg_idx_s2_reg_0_/D     -1.25  
+    0:01:19    8922.6      0.00       0.0      16.0 U_MAG/seg_idx_s2_reg_0_/D     -1.25  
+    0:01:19    8922.9      0.00       0.0      16.0 U_MAG/term_a_s3_reg_12_/D     -1.25  
+    0:01:19    8924.2      0.00       0.0      16.0 U_PHI_SUM/energy_to_sum_s3_reg_13_/D     -1.25  
+    0:01:19    8926.7      0.00       0.0      16.0 U_MAG/term_b_s3_reg_12_/D     -1.25  
+    0:01:19    8927.3      0.00       0.0      16.0 U_MAG/term_b_s3_reg_12_/D     -1.25  
+    0:01:19    8928.2      0.00       0.0      16.0 U_MAG/term_b_s3_reg_12_/D     -1.25  
+    0:01:19    8929.8      0.00       0.0      16.0 U_MAG/seg_idx_s2_reg_1_/D     -1.25  
+    0:01:19    8930.1      0.00       0.0      16.0 U_MAG/seg_idx_s2_reg_1_/D     -1.25  
+    0:01:19    8930.0      0.00       0.0      16.0 U_PHI_SUM/energy_to_sum_s3_reg_13_/D     -1.25  
+    0:01:20    8931.3      0.00       0.0      16.0 U_MAG/seg_idx_s2_reg_0_/D     -1.25  
+    0:01:20    8933.5      0.00       0.0      16.0 U_MAG/term_a_s3_reg_12_/D     -1.25  
+    0:01:20    8934.0      0.00       0.0      16.0 U_MAG/term_b_s3_reg_5_/D      -1.25  
+    0:01:20    8934.7      0.00       0.0      16.0 U_MAG/seg_idx_s2_reg_0_/D     -1.25  
+    0:01:20    8934.6      0.00       0.0      16.0 U_MAG/seg_idx_s2_reg_0_/D     -1.25  
+    0:01:20    8935.3      0.00       0.0      16.0 U_MAG/seg_idx_s2_reg_3_/D     -1.25  
+    0:01:20    8936.3      0.00       0.0      16.0 U_MAG/term_b_s3_reg_9_/D      -1.25  
+    0:01:20    8937.3      0.00       0.0      16.0 U_MAG/term_b_s3_reg_12_/D     -1.25  
+    0:01:20    8937.0      0.00       0.0      16.0                               -1.25  
+    0:01:20    8934.8      0.00       0.0      16.0                               -1.25  
+    0:01:20    8934.7      0.00       0.0      16.0                               -1.25  
+    0:01:29    8916.4      0.01       0.8      16.0                               -1.20  
+    0:01:32    8903.5      0.01       0.8      16.0                               -1.20  
+    0:01:35    8891.0      0.01       0.7      16.0                               -1.20  
+    0:01:38    8883.0      0.01       0.7      16.0                               -1.20  
+    0:01:40    8875.8      0.01       0.7      16.0                               -1.20  
+    0:01:42    8869.2      0.01       0.7      16.0                               -1.20  
+    0:01:43    8863.1      0.01       0.7      16.0                               -1.20  
+    0:01:45    8855.0      0.00       0.5      16.0                               -1.20  
+    0:01:46    8850.5      0.00       0.6      16.0                               -1.20  
+    0:01:47    8846.4      0.00       0.7      16.0                               -1.20  
+    0:01:48    8843.1      0.00       0.7      16.0                               -1.20  
+    0:01:49    8840.7      0.00       0.7      16.0                               -1.20  
+    0:01:49    8838.6      0.00       0.7      16.0                               -1.20  
+    0:01:50    8835.9      0.00       0.7      16.0                               -1.20  
+    0:01:50    8833.3      0.00       0.7      16.0                               -1.20  
+    0:01:51    8830.9      0.00       0.7      16.0                               -1.20  
+    0:01:51    8830.6      0.00       0.7      16.0                               -1.20  
+    0:01:51    8830.5      0.00       0.7      16.0                               -1.20  
+    0:01:51    8830.5      0.00       0.7      16.0                               -1.20  
+    0:01:51    8830.4      0.00       0.7      16.0                               -1.20  
+    0:01:51    8830.4      0.00       0.7      16.0                               -1.20  
+    0:01:51    8830.4      0.00       0.7      16.0                               -1.20  
+    0:01:52    8830.4      0.00       0.7      16.0                               -1.20  
+    0:01:52    8830.4      0.00       0.7      16.0                               -1.20  
+    0:01:52    8830.4      0.00       0.7      16.0                               -1.20  
+    0:01:52    8789.4      0.02       1.6      16.0                               -1.20  
+    0:01:52    8777.5      0.02       1.6      16.0                               -1.20  
+    0:01:52    8776.9      0.02       1.6      16.0                               -1.20  
+    0:01:52    8776.9      0.02       1.6      16.0                               -1.20  
+    0:01:52    8776.9      0.02       1.6      16.0                               -1.20  
+    0:01:52    8776.9      0.02       1.6      16.0                               -1.20  
+    0:01:52    8776.9      0.02       1.6      16.0                               -1.20  
+    0:01:52    8776.9      0.02       1.6      16.0                               -1.20  
+    0:01:52    8788.7      0.01       0.8      16.0 U_MAG/seg_idx_s2_reg_0_/D     -1.20  
+    0:01:53    8792.2      0.00       0.6      16.0 U_MAG/term_a_s3_reg_11_/D     -1.20  
+    0:01:53    8794.7      0.00       0.5      16.0 U_MAG/term_a_s3_reg_11_/D     -1.20  
+    0:01:53    8796.5      0.00       0.5      16.0 U_MAG/term_a_s3_reg_8_/D      -1.20  
+    0:01:53    8800.6      0.00       0.5      16.0 U_MAG/term_a_s3_reg_11_/D     -1.20  
+    0:01:53    8806.6      0.00       0.2      16.0 U_MAG/term_a_s3_reg_8_/D      -1.20  
+    0:01:54    8808.4      0.00       0.2      16.0 U_MAG/term_a_s3_reg_5_/D      -1.20  
+    0:01:54    8811.3      0.00       0.2      16.0 U_MAG/seg_idx_s2_reg_3_/D     -1.20  
+    0:01:54    8811.7      0.00       0.2      16.0 U_MAG/term_a_s3_reg_11_/D     -1.20  
+    0:02:10    8814.7      0.00       0.1      16.0 U_DELAY_N/delay_line_imag_reg_0__1_/D     -0.88  
+    0:02:56    8826.7      0.00       0.0      16.0                               -0.00  
+    0:02:57    8827.6      0.00       0.0      16.0                               -0.00  
+    0:02:57    8828.1      0.00       0.0      16.0                               -0.00  
+    0:02:57    8830.6      0.00       0.0      16.0 U_MAG/term_a_s3_reg_8_/D      -0.00  
+    0:02:57    8830.8      0.00       0.0      16.0 U_MAG/term_a_s3_reg_5_/D      -0.00  
+    0:02:57    8830.9      0.00       0.0      16.0 U_MAG/term_b_s3_reg_12_/D     -0.00  
+    0:02:57    8831.4      0.00       0.0      16.0 U_MAG/seg_idx_s2_reg_3_/D     -0.00  
+    0:02:57    8833.1      0.00       0.0      16.0 U_MAG/seg_idx_s2_reg_1_/D     -0.00  
+    0:02:57    8833.8      0.00       0.0      16.0 U_MAG/term_a_s3_reg_5_/D      -0.00  
+    0:02:57    8834.0      0.00       0.0      16.0 U_MAG/term_b_s3_reg_12_/D     -0.00  
+    0:02:57    8834.5      0.00       0.0      16.0 U_MAG/seg_idx_s2_reg_1_/D     -0.00  
+    0:02:57    8835.9      0.00       0.0      16.0 U_MAG/term_a_s3_reg_11_/D     -0.00  
+    0:02:57    8835.7      0.00       0.0      16.0 U_MAG/seg_idx_s2_reg_1_/D     -0.00  
+    0:02:58    8836.0      0.00       0.0      16.0 U_MAG/term_a_s3_reg_10_/D     -0.00  
+    0:02:58    8836.3      0.00       0.0      16.0 U_PHI_SUM/energy_to_sum_s3_reg_13_/D     -0.00  
+    0:02:58    8836.8      0.00       0.0      16.0 U_MAG/term_a_s3_reg_5_/D      -0.00  
+    0:02:58    8837.7      0.00       0.0      16.0 U_MAG/term_b_s3_reg_12_/D     -0.00  
+    0:02:58    8837.3      0.00       0.0      16.0 U_MAG/term_b_s3_reg_12_/D     -0.00  
+    0:02:58    8827.2      0.00       0.0      20.6                               -0.00  
+Loading db file '/usr/cad/CBDK/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/NLDM/N16ADFP_StdCellss0p72vm40c.db'
+Loading db file '/usr/cad/CBDK/Executable_Package/Collaterals/IP/stdio/N16ADFP_StdIO/NLDM/N16ADFP_StdIOss0p72v1p62v125c.db'
+Loading db file '/usr/cad/CBDK/Executable_Package/Collaterals/IP/stdio/N16ADFP_StdIO/NLDM/N16ADFP_StdIOff0p88v1p98vm40c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'U_ANGLE/STAGE_5__u_pipe/clk': 5142 load(s), 1 driver(s)
+CPU Load: 21%, Ram Free: 17 GB, Swap Free: 14 GB, Work Disk Free: 1279 GB, Tmp Disk Free: 41 GB
+Information: Total number of MV cells in the design.
+----------------------------------------------------------------------------------------------------
+ MV Cells                                           Total Number                                   
+----------------------------------------------------------------------------------------------------
+ Level Shifter:                                     0                                             
+ Enable Level Shifter:                              0                                             
+ Isolation Cell:                                    0                                             
+ Retention Cell:                                    0                                             
+ Retention Clamp Cell:                              0                                             
+ Switch Cell:                                       0                                             
+ Always-On Cell:                                    0                                             
+ Repeater Cell:                                     0                                             
+
+----------------------------------------------------------------------------------------------------
+Unmapped MV Cells 
+----------------------------------------------------------------------------------------------------
+0 Isolation Cells are unmapped 
+0 Retention Clamp Cells are unmapped 
+----------------------------------------------------------------------------------------------------
+1
+#compile -map_effort high -area_effort high -inc
+# ungroup -all -flatten
+# compile_ultra -retime
+# compile_ultra -retime
+# compile_ultra -retime
+# compile_ultra -inc
+# optimze_netlist -area
+# optimze_netlist -area
+# optimze_netlist -area
+#   Create Report
+#timing report(setup time)
+report_timing -path full -delay max -nworst 1 -max_paths 1 -significant_digits 4 -sort_by group > ../syn/timing_max_rpt.txt
+#timing report(hold time)
+report_timing -path full -delay min -nworst 1 -max_paths 1 -significant_digits 4 -sort_by group > ../syn/timing_min_rpt.txt
+#area report
+report_area -hierarchy -nosplit > ../syn/area_rpt.txt
+#report power
+report_power -analysis_effort low > ../syn/power_rpt.txt
+#   Save syntheized file
+write -hierarchy -format verilog -output {../syn/top_syn.v}
+Writing verilog file '/home/patata0717/DICD/HW3_groupx/syn/top_syn.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Verilog writer has added 21 nets to module phi_sum using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 8 nets to module gamma_sum using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 25 nets to module mag using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 9 nets to module minus using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 7 nets to module top using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+1
+#write_sdf -version 1.0 -context verilog {../syn/top_syn.sdf}
+write_sdf -version 3.0 -context verilog {../syn/top_syn.sdf}
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/patata0717/DICD/HW3_groupx/syn/top_syn.sdf'. (WT-3)
+1
+1
+dc_shell> quit
+
+Memory usage for this session 730 Mbytes.
+Memory usage for this session including child processes 1380 Mbytes.
+CPU usage for this session 703 seconds ( 0.20 hours ).
+Elapsed time for this session 194 seconds ( 0.05 hours ).
+
+Thank you...

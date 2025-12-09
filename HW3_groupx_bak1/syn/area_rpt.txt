@@ -1,0 +1,113 @@
+ 
+****************************************
+Report : area
+Design : top
+Version: W-2024.09-SP2
+Date   : Tue Dec  9 14:21:26 2025
+****************************************
+
+Library(s) Used:
+
+    N16ADFP_StdCellss0p72vm40c (File: /usr/cad/CBDK/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/NLDM/N16ADFP_StdCellss0p72vm40c.db)
+
+Number of ports:                         3295
+Number of nets:                         21006
+Number of cells:                        17582
+Number of combinational cells:          12370
+Number of sequential cells:              5142
+Number of macros/black boxes:               0
+Number of buf/inv:                       1688
+Number of references:                      20
+
+Combinational area:               4028.797524
+Buf/Inv area:                      321.045130
+Noncombinational area:            4798.414143
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                  8827.211667
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  ---------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
+                                  Total      Total    national   national   boxes   Design
+--------------------------------  ---------  -------  ---------  ---------  ------  ---------------------------------------------
+top                               8827.2117    100.0    17.6256     1.2442  0.0000  top
+U_ANGLE                            928.1434     10.5    39.3984    35.4586  0.0000  angle
+U_ANGLE/STAGE_0__u_pipe            131.5699      1.5    37.4285    36.3917  0.0000  cordic_atan2_pipe_0_14_11_s0c9
+U_ANGLE/STAGE_0__u_pipe/r374        17.8330      0.2    17.8330     0.0000  0.0000  cordic_atan2_pipe_0_14_11_s0c9_DW01_add_J14_0
+U_ANGLE/STAGE_0__u_pipe/sub_42      20.0621      0.2    20.0621     0.0000  0.0000  cordic_atan2_pipe_0_14_11_s0c9_DW01_sub_3
+U_ANGLE/STAGE_0__u_pipe/sub_45      19.8547      0.2    19.8547     0.0000  0.0000  cordic_atan2_pipe_0_14_11_s0c9_DW01_sub_J9_0
+U_ANGLE/STAGE_1__u_pipe            145.3594      1.6    33.2294    36.3917  0.0000  cordic_atan2_pipe_1_14_11_s076
+U_ANGLE/STAGE_1__u_pipe/add_41      18.2477      0.2    18.2477     0.0000  0.0000  cordic_atan2_pipe_1_14_11_s076_DW01_add_J11_0
+U_ANGLE/STAGE_1__u_pipe/add_46      17.8848      0.2    17.8848     0.0000  0.0000  cordic_atan2_pipe_1_14_11_s076_DW01_add_J13_0
+U_ANGLE/STAGE_1__u_pipe/sub_42      20.2176      0.2    20.2176     0.0000  0.0000  cordic_atan2_pipe_1_14_11_s076_DW01_sub_J10_0
+U_ANGLE/STAGE_1__u_pipe/sub_45      19.3882      0.2    19.3882     0.0000  0.0000  cordic_atan2_pipe_1_14_11_s076_DW01_sub_J15_0
+U_ANGLE/STAGE_2__u_pipe            145.4112      1.6    33.2294    36.3917  0.0000  cordic_atan2_pipe_2_14_11_s03e
+U_ANGLE/STAGE_2__u_pipe/add_41      18.2995      0.2    18.2995     0.0000  0.0000  cordic_atan2_pipe_2_14_11_s03e_DW01_add_3
+U_ANGLE/STAGE_2__u_pipe/add_46      18.0922      0.2    18.0922     0.0000  0.0000  cordic_atan2_pipe_2_14_11_s03e_DW01_add_J14_0
+U_ANGLE/STAGE_2__u_pipe/sub_42      20.0102      0.2    20.0102     0.0000  0.0000  cordic_atan2_pipe_2_14_11_s03e_DW01_sub_J9_0
+U_ANGLE/STAGE_2__u_pipe/sub_45      19.3882      0.2    19.3882     0.0000  0.0000  cordic_atan2_pipe_2_14_11_s03e_DW01_sub_J12_0
+U_ANGLE/STAGE_3__u_pipe            148.2106      1.7    34.7846    36.3917  0.0000  cordic_atan2_pipe_3_14_11_s01f
+U_ANGLE/STAGE_3__u_pipe/add_41      18.4550      0.2    18.4550     0.0000  0.0000  cordic_atan2_pipe_3_14_11_s01f_DW01_add_J14_0
+U_ANGLE/STAGE_3__u_pipe/add_46      18.2995      0.2    18.2995     0.0000  0.0000  cordic_atan2_pipe_3_14_11_s01f_DW01_add_3
+U_ANGLE/STAGE_3__u_pipe/sub_42      20.0102      0.2    20.0102     0.0000  0.0000  cordic_atan2_pipe_3_14_11_s01f_DW01_sub_J12_0
+U_ANGLE/STAGE_3__u_pipe/sub_45      20.2694      0.2    20.2694     0.0000  0.0000  cordic_atan2_pipe_3_14_11_s01f_DW01_sub_J10_0
+U_ANGLE/STAGE_4__u_pipe            140.6419      1.6    28.5638    36.3917  0.0000  cordic_atan2_pipe_4_14_11_s010
+U_ANGLE/STAGE_4__u_pipe/add_41      18.1440      0.2    18.1440     0.0000  0.0000  cordic_atan2_pipe_4_14_11_s010_DW01_add_J14_0
+U_ANGLE/STAGE_4__u_pipe/add_46      17.9885      0.2    17.9885     0.0000  0.0000  cordic_atan2_pipe_4_14_11_s010_DW01_add_3
+U_ANGLE/STAGE_4__u_pipe/sub_42      19.7510      0.2    19.7510     0.0000  0.0000  cordic_atan2_pipe_4_14_11_s010_DW01_sub_J12_0
+U_ANGLE/STAGE_4__u_pipe/sub_45      19.8029      0.2    19.8029     0.0000  0.0000  cordic_atan2_pipe_4_14_11_s010_DW01_sub_J10_0
+U_ANGLE/STAGE_5__u_pipe            142.0934      1.6    30.5338    36.3917  0.0000  cordic_atan2_pipe_5_14_11_s008
+U_ANGLE/STAGE_5__u_pipe/add_41      18.1440      0.2    18.1440     0.0000  0.0000  cordic_atan2_pipe_5_14_11_s008_DW01_add_J10_0
+U_ANGLE/STAGE_5__u_pipe/add_46      17.8848      0.2    17.8848     0.0000  0.0000  cordic_atan2_pipe_5_14_11_s008_DW01_add_J15_0
+U_ANGLE/STAGE_5__u_pipe/sub_42      19.7510      0.2    19.7510     0.0000  0.0000  cordic_atan2_pipe_5_14_11_s008_DW01_sub_J11_0
+U_ANGLE/STAGE_5__u_pipe/sub_45      19.3882      0.2    19.3882     0.0000  0.0000  cordic_atan2_pipe_5_14_11_s008_DW01_sub_J13_0
+U_ARGMAX                           137.6870      1.6    69.3101    60.6528  0.0000  argmax
+U_ARGMAX/add_98                      7.7242      0.1     7.7242     0.0000  0.0000  argmax_DW01_inc_0
+U_DELAY_N                         4342.3777     49.2   971.9482  3370.4295  0.0000  delay_n
+U_GAMMA_SUM                       1055.1514     12.0   149.0400   548.6746  0.0000  gamma_sum
+U_GAMMA_SUM/add_0_root_sub_0_root_sub_66   19.2845     0.2   19.2845    0.0000 0.0000 gamma_sum_DW01_add_4
+U_GAMMA_SUM/add_0_root_sub_0_root_sub_71   19.2845     0.2   19.2845    0.0000 0.0000 gamma_sum_DW01_add_5
+U_GAMMA_SUM/add_54                  15.4483      0.2    15.4483     0.0000  0.0000  gamma_sum_DW01_add_3
+U_GAMMA_SUM/mult_89                 61.0675      0.7    61.0675     0.0000  0.0000  gamma_sum_DW_mult_tc_J15_0
+U_GAMMA_SUM/mult_90                 60.1344      0.7    60.1344     0.0000  0.0000  gamma_sum_DW_mult_tc_J15_1
+U_GAMMA_SUM/mult_91                 60.4973      0.7    60.4973     0.0000  0.0000  gamma_sum_DW_mult_tc_J10_0
+U_GAMMA_SUM/mult_92                 60.6010      0.7    60.6010     0.0000  0.0000  gamma_sum_DW_mult_tc_J11_0
+U_GAMMA_SUM/sub_1_root_sub_0_root_sub_66   21.5654     0.2   21.5654    0.0000 0.0000 gamma_sum_DW01_sub_3
+U_GAMMA_SUM/sub_1_root_sub_0_root_sub_71   21.5654     0.2   21.5654    0.0000 0.0000 gamma_sum_DW01_sub_4
+U_GAMMA_SUM/sub_55                  17.9885      0.2    17.9885     0.0000  0.0000  gamma_sum_DW01_sub_J11_0
+U_MAG                             1338.4570     15.2   257.4893   122.2387  0.0000  mag
+U_MAG/add_204                       18.7661      0.2    18.7661     0.0000  0.0000  mag_DW01_add_J12_0
+U_MAG/mult_108                      43.1309      0.5    43.1309     0.0000  0.0000  mag_DW_mult_uns_J6_1
+U_MAG/mult_109                      61.8451      0.7    61.8451     0.0000  0.0000  mag_DW_mult_uns_J21_0
+U_MAG/mult_110                      54.9504      0.6    54.9504     0.0000  0.0000  mag_DW_mult_uns_J17_0
+U_MAG/mult_111                      84.2400      1.0    84.2400     0.0000  0.0000  mag_DW_mult_uns_J24_0
+U_MAG/mult_112                      41.2646      0.5    41.2646     0.0000  0.0000  mag_DW_mult_uns_J4_0
+U_MAG/mult_113                     100.9843      1.1   100.9843     0.0000  0.0000  mag_DW_mult_uns_J19_0
+U_MAG/mult_114                      42.0422      0.5    42.0422     0.0000  0.0000  mag_DW_mult_uns_J3_0
+U_MAG/mult_115                      68.6880      0.8    68.6880     0.0000  0.0000  mag_DW_mult_uns_J22_0
+U_MAG/mult_180                     226.5926      2.6   226.5926     0.0000  0.0000  mag_DW_mult_tc_J45_0
+U_MAG/mult_181                     216.2246      2.4   216.2246     0.0000  0.0000  mag_DW_mult_tc_J44_0
+U_MINUS                            141.9898      1.6    20.7878    65.3184  0.0000  minus
+U_MINUS/mult_28                     35.7178      0.4    35.7178     0.0000  0.0000  minus_DW_mult_tc_J9_0
+U_MINUS/sub_70                      20.1658      0.2    20.1658     0.0000  0.0000  minus_DW01_sub_J10_0
+U_PHI_SUM                          864.5357      9.8   106.6349   376.0474  0.0000  phi_sum
+U_PHI_SUM/add_0_root_sub_0_root_sub_77   19.2845     0.2   19.2845    0.0000 0.0000 phi_sum_DW01_add_5
+U_PHI_SUM/add_57                    14.8781      0.2    14.8781     0.0000  0.0000  phi_sum_DW01_add_J14_0
+U_PHI_SUM/add_58                    14.1523      0.2    14.1523     0.0000  0.0000  phi_sum_DW01_add_J9_0
+U_PHI_SUM/add_64                    34.1107      0.4    34.1107     0.0000  0.0000  phi_sum_DW01_add_J17_0
+U_PHI_SUM/mult_69                  161.5334      1.8   161.5334     0.0000  0.0000  phi_sum_DW_mult_tc_J16_0
+U_PHI_SUM/mult_93                   29.1341      0.3    29.1341     0.0000  0.0000  phi_sum_DW_mult_tc_2_DW_mult_tc_3
+U_PHI_SUM/mult_94                   28.6675      0.3    28.6675     0.0000  0.0000  phi_sum_DW_mult_tc_1_DW_mult_tc_2
+U_PHI_SUM/mult_95                   29.2378      0.3    29.2378     0.0000  0.0000  phi_sum_DW_mult_tc_3_DW_mult_tc_4
+U_PHI_SUM/mult_96                   29.2896      0.3    29.2896     0.0000  0.0000  phi_sum_DW_mult_tc_4_DW_mult_tc_9
+U_PHI_SUM/sub_1_root_sub_0_root_sub_77   21.5654     0.2   21.5654    0.0000 0.0000 phi_sum_DW01_sub_1
+--------------------------------  ---------  -------  ---------  ---------  ------  ---------------------------------------------
+Total                                                 4028.7975  4798.4141  0.0000
+
+1

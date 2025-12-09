@@ -1,0 +1,171 @@
+Loading db file '/usr/cad/CBDK/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/NLDM/N16ADFP_StdCellss0p72vm40c.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : top
+Version: W-2024.09-SP2
+Date   : Tue Dec  9 14:21:29 2025
+****************************************
+
+
+Library(s) Used:
+
+    N16ADFP_StdCellss0p72vm40c (File: /usr/cad/CBDK/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/NLDM/N16ADFP_StdCellss0p72vm40c.db)
+
+
+Operating Conditions: ss0p72vm40c   Library: N16ADFP_StdCellss0p72vm40c
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+top                    ZeroWireload      N16ADFP_StdCellss0p72vm40c
+delay_n                ZeroWireload      N16ADFP_StdCellss0p72vm40c
+phi_sum                ZeroWireload      N16ADFP_StdCellss0p72vm40c
+gamma_sum              ZeroWireload      N16ADFP_StdCellss0p72vm40c
+mag                    ZeroWireload      N16ADFP_StdCellss0p72vm40c
+angle                  ZeroWireload      N16ADFP_StdCellss0p72vm40c
+minus                  ZeroWireload      N16ADFP_StdCellss0p72vm40c
+argmax                 ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_0_14_11_s0c9
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_1_14_11_s076
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_2_14_11_s03e
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_3_14_11_s01f
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_4_14_11_s010
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_5_14_11_s008
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+argmax_DW01_inc_0      ZeroWireload      N16ADFP_StdCellss0p72vm40c
+phi_sum_DW_mult_tc_1_DW_mult_tc_2
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+phi_sum_DW_mult_tc_2_DW_mult_tc_3
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+phi_sum_DW_mult_tc_3_DW_mult_tc_4
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+phi_sum_DW_mult_tc_4_DW_mult_tc_9
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+mag_DW_mult_uns_J4_0   ZeroWireload      N16ADFP_StdCellss0p72vm40c
+mag_DW_mult_uns_J6_1   ZeroWireload      N16ADFP_StdCellss0p72vm40c
+mag_DW_mult_uns_J3_0   ZeroWireload      N16ADFP_StdCellss0p72vm40c
+minus_DW_mult_tc_J9_0  ZeroWireload      N16ADFP_StdCellss0p72vm40c
+minus_DW01_sub_J10_0   ZeroWireload      N16ADFP_StdCellss0p72vm40c
+gamma_sum_DW01_sub_J11_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+gamma_sum_DW01_add_3   ZeroWireload      N16ADFP_StdCellss0p72vm40c
+gamma_sum_DW_mult_tc_J15_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+gamma_sum_DW_mult_tc_J15_1
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+gamma_sum_DW_mult_tc_J10_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+gamma_sum_DW_mult_tc_J11_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+mag_DW01_add_J12_0     ZeroWireload      N16ADFP_StdCellss0p72vm40c
+phi_sum_DW01_add_J9_0  ZeroWireload      N16ADFP_StdCellss0p72vm40c
+phi_sum_DW01_add_J14_0 ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_1_14_11_s076_DW01_sub_J15_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_1_14_11_s076_DW01_sub_J10_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_1_14_11_s076_DW01_add_J13_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_1_14_11_s076_DW01_add_J11_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_2_14_11_s03e_DW01_sub_J12_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_2_14_11_s03e_DW01_sub_J9_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_2_14_11_s03e_DW01_add_J14_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_2_14_11_s03e_DW01_add_3
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_3_14_11_s01f_DW01_sub_J10_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_3_14_11_s01f_DW01_sub_J12_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_3_14_11_s01f_DW01_add_3
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_3_14_11_s01f_DW01_add_J14_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_4_14_11_s010_DW01_sub_J10_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_4_14_11_s010_DW01_sub_J12_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_4_14_11_s010_DW01_add_3
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_4_14_11_s010_DW01_add_J14_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_5_14_11_s008_DW01_sub_J13_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_5_14_11_s008_DW01_sub_J11_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_5_14_11_s008_DW01_add_J15_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_5_14_11_s008_DW01_add_J10_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_0_14_11_s0c9_DW01_sub_J9_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_0_14_11_s0c9_DW01_sub_3
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+cordic_atan2_pipe_0_14_11_s0c9_DW01_add_J14_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+phi_sum_DW_mult_tc_J16_0
+                       ZeroWireload      N16ADFP_StdCellss0p72vm40c
+phi_sum_DW01_add_J17_0 ZeroWireload      N16ADFP_StdCellss0p72vm40c
+mag_DW_mult_uns_J19_0  ZeroWireload      N16ADFP_StdCellss0p72vm40c
+mag_DW_mult_uns_J21_0  ZeroWireload      N16ADFP_StdCellss0p72vm40c
+mag_DW_mult_uns_J17_0  ZeroWireload      N16ADFP_StdCellss0p72vm40c
+mag_DW_mult_uns_J22_0  ZeroWireload      N16ADFP_StdCellss0p72vm40c
+mag_DW_mult_uns_J24_0  ZeroWireload      N16ADFP_StdCellss0p72vm40c
+mag_DW_mult_tc_J44_0   ZeroWireload      N16ADFP_StdCellss0p72vm40c
+mag_DW_mult_tc_J45_0   ZeroWireload      N16ADFP_StdCellss0p72vm40c
+phi_sum_DW01_sub_1     ZeroWireload      N16ADFP_StdCellss0p72vm40c
+phi_sum_DW01_add_5     ZeroWireload      N16ADFP_StdCellss0p72vm40c
+gamma_sum_DW01_sub_3   ZeroWireload      N16ADFP_StdCellss0p72vm40c
+gamma_sum_DW01_add_4   ZeroWireload      N16ADFP_StdCellss0p72vm40c
+gamma_sum_DW01_sub_4   ZeroWireload      N16ADFP_StdCellss0p72vm40c
+gamma_sum_DW01_add_5   ZeroWireload      N16ADFP_StdCellss0p72vm40c
+
+
+Global Operating Voltage = 0.72 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =  33.9634 mW   (99%)
+  Net Switching Power  = 513.7509 uW    (1%)
+                         ---------
+Total Dynamic Power    =  34.4771 mW  (100%)
+
+Cell Leakage Power     =   5.8967 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network     33.2507            0.0000            0.0000           33.2507  (  96.43%)  i
+register           0.3032        5.5253e-02        2.6745e+03            0.3611  (   1.05%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.4081            0.4585        3.2222e+03            0.8698  (   2.52%)
+--------------------------------------------------------------------------------------------------
+Total             33.9621 mW         0.5137 mW     5.8967e+03 nW        34.4817 mW
+1
