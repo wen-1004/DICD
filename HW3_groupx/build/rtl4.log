@@ -1,0 +1,778 @@
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+       Version W-2024.09-SP2_Full64 -- Tue Dec  9 08:39:53 2025
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file '/home/patata0717/DICD/HW3_groupx/./sim/top_tb2.sv'
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/angle.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/angle.sv'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/argmax.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/argmax.sv'.
+
+Warning-[IPDW] Identifier previously declared
+/home/patata0717/DICD/HW3_groupx/./src/argmax.sv, 36
+  Second declaration for identifier 'count' ignored
+  Identifier 'count' previously declared as output port. 
+  [/home/patata0717/DICD/HW3_groupx/./src/argmax.sv, 6]
+
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/delay_n.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/delay_n.sv'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/gamma_sum.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/gamma_sum.sv'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/mag.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/mag.sv'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/minus.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/minus.sv'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/phi_sum.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/phi_sum.sv'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./sim/top_tb2.sv'.
+Top Level Modules:
+       tb_top
+
+Warning-[AOUP] Attempt to override undefined parameter
+/home/patata0717/DICD/HW3_groupx/./sim/top_tb2.sv, 102
+  Attempting to override undefined parameter "INT_BITS", will ignore it.
+
+
+Warning-[AOUP] Attempt to override undefined parameter
+/home/patata0717/DICD/HW3_groupx/./sim/top_tb2.sv, 102
+  Attempting to override undefined parameter "FRAC_BITS", will ignore it.
+
+
+Warning-[AOUP] Attempt to override undefined parameter
+/home/patata0717/DICD/HW3_groupx/./sim/top_tb2.sv, 102
+  Attempting to override undefined parameter "RHO_INT_BITS", will ignore it.
+
+
+Warning-[AOUP] Attempt to override undefined parameter
+/home/patata0717/DICD/HW3_groupx/./sim/top_tb2.sv, 102
+  Attempting to override undefined parameter "RHO_FRAC_BITS", will ignore it.
+
+TimeScale is 1 ns / 10 ps
+Starting vcs inline pass...
+2 modules and 0 UDP read.
+recompiling module tb_top
+	However, due to incremental compilation, only 1 module needs to be compiled. 
+make[1]: Entering directory '/home/patata0717/DICD/HW3_groupx/build/csrc'
+make[1]: Leaving directory '/home/patata0717/DICD/HW3_groupx/build/csrc'
+make[1]: Entering directory '/home/patata0717/DICD/HW3_groupx/build/csrc'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib -L/usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o  _10076_archive_1.so _prev_archive_1.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive       _vcs_pli_stub_.o   /usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib/vcs_save_restore_new.o /usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory '/home/patata0717/DICD/HW3_groupx/build/csrc'
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Notice: timing checks disabled with +notimingcheck at compile-time
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP2_Full64; Runtime version W-2024.09-SP2_Full64;  Dec  9 08:39 2025
+[TB] CYCLE=0.400 ns, MAX_CYCLE=100000, K=100, SAMPLES=25872
+[TB] PASS_ART=pass_art.txt  FAIL_ART=fail_art.txt
+[TB] prog_path = /home/patata0717/DICD/HW3_groupx/./sim/prog4
+*Verdi* Loading libsscore_vcs202409.so
+FSDB Dumper for VCS, Release Verdi_W-2024.09-SP2, Linux x86_64/64bit, 03/03/2025
+(C) 1996 - 2025 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'top.fsdb'
+*Verdi* : Begin traversing the scope (tb_top), layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the scope (tb_top), layer (0).
+*Verdi* : End of traversing.
+----------------------------------------------------------------
+[EPSILON #0/99] relative_error = 2.700% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 428859 (0x68b3b)  -> 0.40899181
+[ THETA  #0/99] |dut-ref| = 0 samp   dut=0 ref=0
+
+----------------------------------------------------------------
+[EPSILON #1/99] relative_error = 1.365% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 423054 (0x6748e)  -> 0.40345573
+[ THETA  #1/99] |dut-ref| = 0 samp   dut=16 ref=16
+
+----------------------------------------------------------------
+[EPSILON #2/99] relative_error = 2.573% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 428299 (0x6890b)  -> 0.40845776
+[ THETA  #2/99] |dut-ref| = 0 samp   dut=32 ref=32
+
+----------------------------------------------------------------
+[EPSILON #3/99] relative_error = 2.229% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 416318 (0x65a3e)  -> 0.39703178
+[ THETA  #3/99] |dut-ref| = 0 samp   dut=48 ref=48
+
+----------------------------------------------------------------
+[EPSILON #4/99] relative_error = 2.206% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 416222 (0x659de)  -> 0.39694023
+[ THETA  #4/99] |dut-ref| = 0 samp   dut=64 ref=64
+
+----------------------------------------------------------------
+[EPSILON #5/99] relative_error = 2.289% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 427057 (0x68431)  -> 0.40727329
+[ THETA  #5/99] |dut-ref| = 0 samp   dut=80 ref=80
+
+----------------------------------------------------------------
+[EPSILON #6/99] relative_error = 3.015% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 419695 (0x6676f)  -> 0.40025234
+[ THETA  #6/99] |dut-ref| = 0 samp   dut=96 ref=96
+
+----------------------------------------------------------------
+[EPSILON #7/99] relative_error = 1.176% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 422245 (0x67165)  -> 0.40268421
+[ THETA  #7/99] |dut-ref| = 0 samp   dut=112 ref=112
+
+----------------------------------------------------------------
+[EPSILON #8/99] relative_error = 1.675% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 424387 (0x679c3)  -> 0.40472698
+[ THETA  #8/99] |dut-ref| = 0 samp   dut=128 ref=128
+
+----------------------------------------------------------------
+[EPSILON #9/99] relative_error = 2.462% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 427811 (0x68723)  -> 0.40799236
+[ THETA  #9/99] |dut-ref| = 0 samp   dut=144 ref=144
+
+----------------------------------------------------------------
+[EPSILON #10/99] relative_error = 1.289% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 412357 (0x64ac5)  -> 0.39325428
+[ THETA  #10/99] |dut-ref| = 0 samp   dut=160 ref=160
+
+----------------------------------------------------------------
+[EPSILON #11/99] relative_error = 1.137% (tol=5.00%)
+          DUT eps  (Q1.20) = 436480 (0x6a900)  -> 0.41625977
+          REF eps  (Q1.20) = 441501 (0x6bc9d)  -> 0.42104816
+[ THETA  #11/99] |dut-ref| = 0 samp   dut=176 ref=176
+
+----------------------------------------------------------------
+[EPSILON #12/99] relative_error = 0.147% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 417896 (0x66068)  -> 0.39853668
+[ THETA  #12/99] |dut-ref| = 0 samp   dut=192 ref=192
+
+----------------------------------------------------------------
+[EPSILON #13/99] relative_error = 1.341% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 422953 (0x67429)  -> 0.40335941
+[ THETA  #13/99] |dut-ref| = 0 samp   dut=208 ref=208
+
+----------------------------------------------------------------
+[EPSILON #14/99] relative_error = 1.243% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 422532 (0x67284)  -> 0.40295792
+[ THETA  #14/99] |dut-ref| = 0 samp   dut=224 ref=224
+
+----------------------------------------------------------------
+[EPSILON #15/99] relative_error = 1.514% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 413298 (0x64e72)  -> 0.39415169
+[ THETA  #15/99] |dut-ref| = 0 samp   dut=242 ref=242
+
+----------------------------------------------------------------
+[EPSILON #16/99] relative_error = 0.673% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 420109 (0x6690d)  -> 0.40064716
+[ THETA  #16/99] |dut-ref| = 0 samp   dut=255 ref=255
+
+----------------------------------------------------------------
+[EPSILON #17/99] relative_error = 1.400% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 412819 (0x64c93)  -> 0.39369488
+[ THETA  #17/99] |dut-ref| = 0 samp   dut=0 ref=0
+
+----------------------------------------------------------------
+[EPSILON #18/99] relative_error = 2.648% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 418111 (0x6613f)  -> 0.39874172
+[ THETA  #18/99] |dut-ref| = 0 samp   dut=16 ref=16
+
+----------------------------------------------------------------
+[EPSILON #19/99] relative_error = 0.967% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 421356 (0x66dec)  -> 0.40183640
+[ THETA  #19/99] |dut-ref| = 0 samp   dut=32 ref=32
+
+----------------------------------------------------------------
+[EPSILON #20/99] relative_error = 2.505% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 417499 (0x65edb)  -> 0.39815807
+[ THETA  #20/99] |dut-ref| = 0 samp   dut=48 ref=48
+
+----------------------------------------------------------------
+[EPSILON #21/99] relative_error = 0.716% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 420290 (0x669c2)  -> 0.40081978
+[ THETA  #21/99] |dut-ref| = 0 samp   dut=64 ref=64
+
+----------------------------------------------------------------
+[EPSILON #22/99] relative_error = 2.173% (tol=5.00%)
+          DUT eps  (Q1.20) = 426240 (0x68100)  -> 0.40649414
+          REF eps  (Q1.20) = 435708 (0x6a5fc)  -> 0.41552353
+[ THETA  #22/99] |dut-ref| = 0 samp   dut=80 ref=80
+
+----------------------------------------------------------------
+[EPSILON #23/99] relative_error = 0.744% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 410091 (0x641eb)  -> 0.39109325
+[ THETA  #23/99] |dut-ref| = 0 samp   dut=96 ref=96
+
+----------------------------------------------------------------
+[EPSILON #24/99] relative_error = 1.821% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 414590 (0x6537e)  -> 0.39538383
+[ THETA  #24/99] |dut-ref| = 0 samp   dut=112 ref=112
+
+----------------------------------------------------------------
+[EPSILON #25/99] relative_error = 2.842% (tol=5.00%)
+          DUT eps  (Q1.20) = 426240 (0x68100)  -> 0.40649414
+          REF eps  (Q1.20) = 438706 (0x6b1b2)  -> 0.41838264
+[ THETA  #25/99] |dut-ref| = 0 samp   dut=128 ref=128
+
+----------------------------------------------------------------
+[EPSILON #26/99] relative_error = 1.833% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 425072 (0x67c70)  -> 0.40538025
+[ THETA  #26/99] |dut-ref| = 0 samp   dut=144 ref=144
+
+----------------------------------------------------------------
+[EPSILON #27/99] relative_error = 1.442% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 412995 (0x64d43)  -> 0.39386272
+[ THETA  #27/99] |dut-ref| = 0 samp   dut=160 ref=160
+
+----------------------------------------------------------------
+[EPSILON #28/99] relative_error = 2.249% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 416407 (0x65a97)  -> 0.39711666
+[ THETA  #28/99] |dut-ref| = 0 samp   dut=176 ref=176
+
+----------------------------------------------------------------
+[EPSILON #29/99] relative_error = 1.564% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 423909 (0x677e5)  -> 0.40427113
+[ THETA  #29/99] |dut-ref| = 0 samp   dut=192 ref=192
+
+----------------------------------------------------------------
+[EPSILON #30/99] relative_error = 0.864% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 410589 (0x643dd)  -> 0.39156818
+[ THETA  #30/99] |dut-ref| = 0 samp   dut=208 ref=208
+
+----------------------------------------------------------------
+[EPSILON #31/99] relative_error = 1.241% (tol=5.00%)
+          DUT eps  (Q1.20) = 426240 (0x68100)  -> 0.40649414
+          REF eps  (Q1.20) = 431597 (0x695ed)  -> 0.41160297
+[ THETA  #31/99] |dut-ref| = 0 samp   dut=224 ref=224
+
+----------------------------------------------------------------
+[EPSILON #32/99] relative_error = 2.856% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 429547 (0x68deb)  -> 0.40964794
+[ THETA  #32/99] |dut-ref| = 0 samp   dut=240 ref=240
+
+----------------------------------------------------------------
+[EPSILON #33/99] relative_error = 1.916% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 425431 (0x67dd7)  -> 0.40572262
+[ THETA  #33/99] |dut-ref| = 0 samp   dut=255 ref=255
+
+----------------------------------------------------------------
+[EPSILON #34/99] relative_error = 0.903% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 421082 (0x66cda)  -> 0.40157509
+[ THETA  #34/99] |dut-ref| = 0 samp   dut=0 ref=0
+
+----------------------------------------------------------------
+[EPSILON #35/99] relative_error = 1.034% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 421641 (0x66f09)  -> 0.40210819
+[ THETA  #35/99] |dut-ref| = 0 samp   dut=16 ref=16
+
+----------------------------------------------------------------
+[EPSILON #36/99] relative_error = 1.604% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 413676 (0x64fec)  -> 0.39451218
+[ THETA  #36/99] |dut-ref| = 0 samp   dut=32 ref=32
+
+----------------------------------------------------------------
+[EPSILON #37/99] relative_error = 2.101% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 426235 (0x680fb)  -> 0.40648937
+[ THETA  #37/99] |dut-ref| = 0 samp   dut=48 ref=48
+
+----------------------------------------------------------------
+[EPSILON #38/99] relative_error = 2.572% (tol=5.00%)
+          DUT eps  (Q1.20) = 396800 (0x60e00)  -> 0.37841797
+          REF eps  (Q1.20) = 407276 (0x636ec)  -> 0.38840866
+[ THETA  #38/99] |dut-ref| = 0 samp   dut=64 ref=64
+
+----------------------------------------------------------------
+[EPSILON #39/99] relative_error = 1.416% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 412886 (0x64cd6)  -> 0.39375877
+[ THETA  #39/99] |dut-ref| = 0 samp   dut=80 ref=80
+
+----------------------------------------------------------------
+[EPSILON #40/99] relative_error = 1.367% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 423065 (0x67499)  -> 0.40346622
+[ THETA  #40/99] |dut-ref| = 0 samp   dut=96 ref=96
+
+----------------------------------------------------------------
+[EPSILON #41/99] relative_error = 1.485% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 423571 (0x67693)  -> 0.40394878
+[ THETA  #41/99] |dut-ref| = 0 samp   dut=112 ref=112
+
+----------------------------------------------------------------
+[EPSILON #42/99] relative_error = 2.524% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 428084 (0x68834)  -> 0.40825272
+[ THETA  #42/99] |dut-ref| = 0 samp   dut=128 ref=128
+
+----------------------------------------------------------------
+[EPSILON #43/99] relative_error = 2.437% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 417206 (0x65db6)  -> 0.39787865
+[ THETA  #43/99] |dut-ref| = 0 samp   dut=144 ref=144
+
+----------------------------------------------------------------
+[EPSILON #44/99] relative_error = 1.888% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 425310 (0x67d5e)  -> 0.40560722
+[ THETA  #44/99] |dut-ref| = 0 samp   dut=160 ref=160
+
+----------------------------------------------------------------
+[EPSILON #45/99] relative_error = 1.417% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 423279 (0x6756f)  -> 0.40367031
+[ THETA  #45/99] |dut-ref| = 0 samp   dut=176 ref=176
+
+----------------------------------------------------------------
+[EPSILON #46/99] relative_error = 2.446% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 427743 (0x686df)  -> 0.40792751
+[ THETA  #46/99] |dut-ref| = 0 samp   dut=192 ref=192
+
+----------------------------------------------------------------
+[EPSILON #47/99] relative_error = 0.977% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 411054 (0x645ae)  -> 0.39201164
+[ THETA  #47/99] |dut-ref| = 0 samp   dut=208 ref=208
+
+----------------------------------------------------------------
+[EPSILON #48/99] relative_error = 0.749% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 420431 (0x66a4f)  -> 0.40095425
+[ THETA  #48/99] |dut-ref| = 0 samp   dut=224 ref=224
+
+----------------------------------------------------------------
+[EPSILON #49/99] relative_error = 0.439% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 419118 (0x6652e)  -> 0.39970207
+[ THETA  #49/99] |dut-ref| = 0 samp   dut=240 ref=240
+
+----------------------------------------------------------------
+[EPSILON #50/99] relative_error = 2.079% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 426138 (0x6809a)  -> 0.40639687
+[ THETA  #50/99] |dut-ref| = 0 samp   dut=255 ref=255
+
+----------------------------------------------------------------
+[EPSILON #51/99] relative_error = 1.657% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 424309 (0x67975)  -> 0.40465260
+[ THETA  #51/99] |dut-ref| = 0 samp   dut=0 ref=0
+
+----------------------------------------------------------------
+[EPSILON #52/99] relative_error = 2.069% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 426096 (0x68070)  -> 0.40635681
+[ THETA  #52/99] |dut-ref| = 0 samp   dut=16 ref=16
+
+----------------------------------------------------------------
+[EPSILON #53/99] relative_error = 2.743% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 418518 (0x662d6)  -> 0.39912987
+[ THETA  #53/99] |dut-ref| = 0 samp   dut=32 ref=32
+
+----------------------------------------------------------------
+[EPSILON #54/99] relative_error = 0.344% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 418720 (0x663a0)  -> 0.39932251
+[ THETA  #54/99] |dut-ref| = 0 samp   dut=48 ref=48
+
+----------------------------------------------------------------
+[EPSILON #55/99] relative_error = 1.254% (tol=5.00%)
+          DUT eps  (Q1.20) = 426240 (0x68100)  -> 0.40649414
+          REF eps  (Q1.20) = 431652 (0x69624)  -> 0.41165543
+[ THETA  #55/99] |dut-ref| = 0 samp   dut=64 ref=64
+
+----------------------------------------------------------------
+[EPSILON #56/99] relative_error = 1.380% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 412735 (0x64c3f)  -> 0.39361477
+[ THETA  #56/99] |dut-ref| = 0 samp   dut=80 ref=80
+
+----------------------------------------------------------------
+[EPSILON #57/99] relative_error = 1.883% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 425290 (0x67d4a)  -> 0.40558815
+[ THETA  #57/99] |dut-ref| = 0 samp   dut=96 ref=96
+
+----------------------------------------------------------------
+[EPSILON #58/99] relative_error = 1.108% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 411599 (0x647cf)  -> 0.39253139
+[ THETA  #58/99] |dut-ref| = 0 samp   dut=112 ref=112
+
+----------------------------------------------------------------
+[EPSILON #59/99] relative_error = 0.213% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 407909 (0x63965)  -> 0.38901234
+[ THETA  #59/99] |dut-ref| = 0 samp   dut=128 ref=128
+
+----------------------------------------------------------------
+[EPSILON #60/99] relative_error = 2.851% (tol=5.00%)
+          DUT eps  (Q1.20) = 396800 (0x60e00)  -> 0.37841797
+          REF eps  (Q1.20) = 408446 (0x63b7e)  -> 0.38952446
+[ THETA  #60/99] |dut-ref| = 0 samp   dut=144 ref=144
+
+----------------------------------------------------------------
+[EPSILON #61/99] relative_error = 2.494% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 417450 (0x65eaa)  -> 0.39811134
+[ THETA  #61/99] |dut-ref| = 0 samp   dut=160 ref=160
+
+----------------------------------------------------------------
+[EPSILON #62/99] relative_error = 2.379% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 427448 (0x685b8)  -> 0.40764618
+[ THETA  #62/99] |dut-ref| = 0 samp   dut=176 ref=176
+
+----------------------------------------------------------------
+[EPSILON #63/99] relative_error = 2.243% (tol=5.00%)
+          DUT eps  (Q1.20) = 396800 (0x60e00)  -> 0.37841797
+          REF eps  (Q1.20) = 405906 (0x63192)  -> 0.38710213
+[ THETA  #63/99] |dut-ref| = 0 samp   dut=192 ref=192
+
+----------------------------------------------------------------
+[EPSILON #64/99] relative_error = 2.040% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 415518 (0x6571e)  -> 0.39626884
+[ THETA  #64/99] |dut-ref| = 0 samp   dut=208 ref=208
+
+----------------------------------------------------------------
+[EPSILON #65/99] relative_error = 2.631% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 428556 (0x68a0c)  -> 0.40870285
+[ THETA  #65/99] |dut-ref| = 0 samp   dut=224 ref=224
+
+----------------------------------------------------------------
+[EPSILON #66/99] relative_error = 2.394% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 417022 (0x65cfe)  -> 0.39770317
+[ THETA  #66/99] |dut-ref| = 0 samp   dut=240 ref=240
+
+----------------------------------------------------------------
+[EPSILON #67/99] relative_error = 2.457% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 417294 (0x65e0e)  -> 0.39796257
+[ THETA  #67/99] |dut-ref| = 0 samp   dut=255 ref=255
+
+----------------------------------------------------------------
+[EPSILON #68/99] relative_error = 1.302% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 422784 (0x67380)  -> 0.40319824
+[ THETA  #68/99] |dut-ref| = 0 samp   dut=0 ref=0
+
+----------------------------------------------------------------
+[EPSILON #69/99] relative_error = 1.352% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 422998 (0x67456)  -> 0.40340233
+[ THETA  #69/99] |dut-ref| = 0 samp   dut=16 ref=16
+
+----------------------------------------------------------------
+[EPSILON #70/99] relative_error = 2.113% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 426287 (0x6812f)  -> 0.40653896
+[ THETA  #70/99] |dut-ref| = 0 samp   dut=32 ref=32
+
+----------------------------------------------------------------
+[EPSILON #71/99] relative_error = 0.882% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 420994 (0x66c82)  -> 0.40149117
+[ THETA  #71/99] |dut-ref| = 0 samp   dut=48 ref=48
+
+----------------------------------------------------------------
+[EPSILON #72/99] relative_error = 2.092% (tol=5.00%)
+          DUT eps  (Q1.20) = 426240 (0x68100)  -> 0.40649414
+          REF eps  (Q1.20) = 435347 (0x6a493)  -> 0.41517925
+[ THETA  #72/99] |dut-ref| = 0 samp   dut=64 ref=64
+
+----------------------------------------------------------------
+[EPSILON #73/99] relative_error = 2.404% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 417067 (0x65d2b)  -> 0.39774609
+[ THETA  #73/99] |dut-ref| = 0 samp   dut=80 ref=80
+
+----------------------------------------------------------------
+[EPSILON #74/99] relative_error = 2.436% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 417203 (0x65db3)  -> 0.39787579
+[ THETA  #74/99] |dut-ref| = 0 samp   dut=96 ref=96
+
+----------------------------------------------------------------
+[EPSILON #75/99] relative_error = 0.761% (tol=5.00%)
+          DUT eps  (Q1.20) = 426240 (0x68100)  -> 0.40649414
+          REF eps  (Q1.20) = 429510 (0x68dc6)  -> 0.40961266
+[ THETA  #75/99] |dut-ref| = 0 samp   dut=112 ref=112
+
+----------------------------------------------------------------
+[EPSILON #76/99] relative_error = 2.572% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 417784 (0x65ff8)  -> 0.39842987
+[ THETA  #76/99] |dut-ref| = 0 samp   dut=128 ref=128
+
+----------------------------------------------------------------
+[EPSILON #77/99] relative_error = 3.116% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 420131 (0x66923)  -> 0.40066814
+[ THETA  #77/99] |dut-ref| = 0 samp   dut=144 ref=144
+
+----------------------------------------------------------------
+[EPSILON #78/99] relative_error = 1.474% (tol=5.00%)
+          DUT eps  (Q1.20) = 426240 (0x68100)  -> 0.40649414
+          REF eps  (Q1.20) = 432615 (0x699e7)  -> 0.41257381
+[ THETA  #78/99] |dut-ref| = 0 samp   dut=160 ref=160
+
+----------------------------------------------------------------
+[EPSILON #79/99] relative_error = 1.598% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 424058 (0x6787a)  -> 0.40441322
+[ THETA  #79/99] |dut-ref| = 0 samp   dut=176 ref=176
+
+----------------------------------------------------------------
+[EPSILON #80/99] relative_error = 2.102% (tol=5.00%)
+          DUT eps  (Q1.20) = 426240 (0x68100)  -> 0.40649414
+          REF eps  (Q1.20) = 435394 (0x6a4c2)  -> 0.41522408
+[ THETA  #80/99] |dut-ref| = 0 samp   dut=192 ref=192
+
+----------------------------------------------------------------
+[EPSILON #81/99] relative_error = 1.899% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 414918 (0x654c6)  -> 0.39569664
+[ THETA  #81/99] |dut-ref| = 0 samp   dut=208 ref=208
+
+----------------------------------------------------------------
+[EPSILON #82/99] relative_error = 1.950% (tol=5.00%)
+          DUT eps  (Q1.20) = 407040 (0x63600)  -> 0.38818359
+          REF eps  (Q1.20) = 415137 (0x655a1)  -> 0.39590549
+[ THETA  #82/99] |dut-ref| = 0 samp   dut=224 ref=224
+
+----------------------------------------------------------------
+[EPSILON #83/99] relative_error = 2.103% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 426246 (0x68106)  -> 0.40649986
+[ THETA  #83/99] |dut-ref| = 0 samp   dut=240 ref=240
+
+----------------------------------------------------------------
+[EPSILON #84/99] relative_error = 1.063% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 421764 (0x66f84)  -> 0.40222549
+[ THETA  #84/99] |dut-ref| = 0 samp   dut=255 ref=255
+
+----------------------------------------------------------------
+[EPSILON #85/99] relative_error = 0.550% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 419589 (0x66705)  -> 0.40015125
+[ THETA  #85/99] |dut-ref| = 0 samp   dut=0 ref=0
+
+----------------------------------------------------------------
+[EPSILON #86/99] relative_error = 0.455% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 419189 (0x66575)  -> 0.39976978
+[ THETA  #86/99] |dut-ref| = 0 samp   dut=16 ref=16
+
+----------------------------------------------------------------
+[EPSILON #87/99] relative_error = 2.774% (tol=5.00%)
+          DUT eps  (Q1.20) = 396800 (0x60e00)  -> 0.37841797
+          REF eps  (Q1.20) = 408120 (0x63a38)  -> 0.38921356
+[ THETA  #87/99] |dut-ref| = 0 samp   dut=32 ref=32
+
+----------------------------------------------------------------
+[EPSILON #88/99] relative_error = 1.430% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 423333 (0x675a5)  -> 0.40372181
+[ THETA  #88/99] |dut-ref| = 0 samp   dut=47 ref=47
+
+----------------------------------------------------------------
+[EPSILON #89/99] relative_error = 2.684% (tol=5.00%)
+          DUT eps  (Q1.20) = 396800 (0x60e00)  -> 0.37841797
+          REF eps  (Q1.20) = 407742 (0x638be)  -> 0.38885307
+[ THETA  #89/99] |dut-ref| = 0 samp   dut=64 ref=64
+
+----------------------------------------------------------------
+[EPSILON #90/99] relative_error = 1.409% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 423243 (0x6754b)  -> 0.40363598
+[ THETA  #90/99] |dut-ref| = 0 samp   dut=80 ref=80
+
+----------------------------------------------------------------
+[EPSILON #91/99] relative_error = 1.976% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 425692 (0x67edc)  -> 0.40597153
+[ THETA  #91/99] |dut-ref| = 0 samp   dut=96 ref=96
+
+----------------------------------------------------------------
+[EPSILON #92/99] relative_error = 0.843% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 420828 (0x66bdc)  -> 0.40133286
+[ THETA  #92/99] |dut-ref| = 0 samp   dut=112 ref=112
+
+----------------------------------------------------------------
+[EPSILON #93/99] relative_error = 2.405% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 427564 (0x6862c)  -> 0.40775681
+[ THETA  #93/99] |dut-ref| = 0 samp   dut=128 ref=128
+
+----------------------------------------------------------------
+[EPSILON #94/99] relative_error = 1.016% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 421564 (0x66ebc)  -> 0.40203476
+[ THETA  #94/99] |dut-ref| = 0 samp   dut=144 ref=144
+
+----------------------------------------------------------------
+[EPSILON #95/99] relative_error = 2.086% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 426169 (0x680b9)  -> 0.40642643
+[ THETA  #95/99] |dut-ref| = 0 samp   dut=160 ref=160
+
+----------------------------------------------------------------
+[EPSILON #96/99] relative_error = 2.538% (tol=5.00%)
+          DUT eps  (Q1.20) = 396800 (0x60e00)  -> 0.37841797
+          REF eps  (Q1.20) = 407134 (0x6365e)  -> 0.38827324
+[ THETA  #96/99] |dut-ref| = 0 samp   dut=176 ref=176
+
+----------------------------------------------------------------
+[EPSILON #97/99] relative_error = 2.082% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 426151 (0x680a7)  -> 0.40640926
+[ THETA  #97/99] |dut-ref| = 0 samp   dut=192 ref=192
+
+----------------------------------------------------------------
+[EPSILON #98/99] relative_error = 1.858% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 425179 (0x67cdb)  -> 0.40548229
+[ THETA  #98/99] |dut-ref| = 0 samp   dut=208 ref=208
+
+----------------------------------------------------------------
+[EPSILON #99/99] relative_error = 2.426% (tol=5.00%)
+          DUT eps  (Q1.20) = 417280 (0x65e00)  -> 0.39794922
+          REF eps  (Q1.20) = 427654 (0x68686)  -> 0.40784264
+[ THETA  #99/99] |dut-ref| = 0 samp   dut=224 ref=224
+
+SUMMARY (K=100): out_valid_count=100  eps_err_total=0  theta_err_total=0
+
+
+====================== SIMULATION PASS ======================
+
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠛⠛⠋⣉⣉⣉⣉⠉⠉⠛⠛⠻⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⢛⡋⠀⣀⣐⣛⣛⠛⠿⣿⣿⣿⣿⡿⠋⣠⣤⣶⣦⣤⡀⠤⣙⠛⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⢋⣩⣴⡶⢋⣴⣾⣿⣿⣿⣿⣿⣶⣌⠻⡿⠃⣴⣿⣿⣿⣿⣿⣿⣿⣦⡘⢿⣶⣬⡉⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⢋⣥⣶⣿⣿⡟⢠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣗⠈⣿⣿⣿⣷⣤⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⠟⢁⣴⣿⣿⣿⣿⣿⠀⣼⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⡀⣿⡟⠝⠻⠿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿⣿⣿⣿⣦⡈⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⡟⢁⣴⣿⣿⣿⣿⣿⣿⡏⢠⣿⣿⣿⣿⣿⣿⣿⡇⠀⣀⠀⢻⠃⢿⡃⠀⠀⠐⣿⣿⣿⣿⣿⣿⡿⠘⢻⣿⣿⣿⣿⣿⣿⣦⡉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⢃⣴⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⢿⣿⣿⣿⣿⣿⣿⣧⡀⢀⣀⡹⠃⠸⢤⣤⣤⣾⣿⣿⣿⣿⣿⣿⡇⢠⣌⣙⡛⠿⢿⣿⣿⣿⣿⣆⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⡿⢁⣼⣿⣿⣿⣿⣿⣿⡿⠟⣉⣭⣤⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠀⠀⠆⠙⢿⣿⣿⣿⣿⣿⣿⣿⠏⣡⣾⣿⣿⣿⣷⣦⣙⠿⣿⣿⣿⣧⡘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⠁⣾⣿⣿⣿⣿⡿⢛⣥⣴⣿⣿⣿⣿⣷⣌⡛⠿⣿⣿⣿⡿⠟⠋⠀⠀⢀⡈⠲⣤⠙⠛⠛⠛⠛⢛⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣷⠌⠛⣻⣿⣷⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⠇⣾⣿⣿⣿⣿⢋⣀⣙⠻⠿⢿⣿⣿⣿⣿⣿⣿⣶⣶⣶⣶⣶⣾⠇⣸⡇⠻⠿⢀⣿⣷⠸⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⢛⣩⣵⣾⣧⠹⣿⣿⣧⠹⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⡿⢰⣿⣿⣿⡟⢡⣿⣿⣿⣿⣷⣦⣬⣙⠛⠿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠘⣿⣷⣶⣿⣿⠋⢸⣿⣿⣿⣿⣿⣿⡿⠟⢋⣭⣴⣾⣿⣿⣿⣿⣿⣷⡘⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⠇⣿⣿⣿⡟⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣌⣙⣻⣿⣿⣿⣿⣦⣀⡛⠛⠛⣀⣴⣿⣿⣿⣿⣿⣟⣡⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠘⣿⡇⢻⣿⣿⣿⣿⣿⣿⣿
+⡟⠀⣿⣿⡿⢱⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠁⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠇⢹⣿⢸⣿⣿⣿⣿⣿⣿⣿
+⡇⢸⣿⣿⠁⣾⢛⣛⣛⣛⣛⣛⣛⣛⣛⠛⠛⠛⠛⠛⠛⣻⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣬⣭⣭⣤⣤⣤⣴⣶⣶⡶⢶⣾⣿⣷⠸⣿⢸⣿⣿⣿⣿⣿⣿⣿
+⣇⢸⣿⣿⠐⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⣼⣿⣿⣿⢀⣿⢸⣿⣿⣿⣿⣿⣿⣿
+⣿⠀⣿⣿⠀⣿⣿⣿⣿⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠿⠿⠿⢿⣿⣿⠏⣼⣿⣿⣿⡿⢸⡿⢸⣿⣿⣿⣿⣿⣿⣿
+⣿⡆⣿⣿⠀⣿⣿⣿⣿⣷⡈⢿⣿⣿⡿⠿⠿⠿⣛⣛⣉⣬⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⠆⣠⣤⣤⣤⣤⡄⣾⡇⣸⣿⣿⣿⣿⣿⣿⣿
+⣿⣇⢹⣿⡀⢿⣿⡿⠛⠛⣁⡈⠡⣶⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⣴⣿⣿⣿⣿⣿⠁⣿⠃⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣷⠈⣿⣧⢸⣿⣾⣿⣿⣿⣿⣧⡈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢃⣼⣿⣿⣿⣿⣿⡏⢰⡟⢰⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣤⢹⣿⡆⢻⣿⣿⣿⣿⣿⣿⣿⣦⡙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⣰⣿⣿⣿⣿⣿⣿⡟⢡⡿⢁⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⡄⢿⣿⡌⢿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣜⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⣡⣾⣿⣿⣿⣿⣿⣿⣿⢃⡼⠃⣼⣿⠟⣛⣭⣍⣛⠻⣿⣿
+⣿⣿⣿⣿⡌⢻⣿⡌⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣉⡻⠿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢹⣿⣿⣿⣿⣿⡿⠟⣋⣰⣾⣿⣿⣿⣿⣿⣿⣿⣿⠃⡼⠁⣼⡿⢡⣾⣿⣿⣿⣿⣷⣌⠹
+⣿⣿⣿⣿⣿⣆⠹⣿⣦⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⣍⣛⠛⠿⢿⣿⣿⡷⢸⡿⠟⠛⣋⣭⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠘⢡⣾⠿⢠⣿⣿⣿⣿⣿⣿⣿⣿⡇
+⣿⣿⣿⣿⣿⣿⣷⡈⠿⣷⡙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠈⢀⣁⣴⣶⠸⣿⣿⣿⣿⣿⣿⣿⣿⡇
+⣿⣿⣿⣿⣿⣿⣿⣿⣦⡉⢿⣌⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠁⢊⣴⣿⣿⣿⣿⣄⢻⣿⣿⣿⣿⣿⣿⣿⣧
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠂⡘⠷⢌⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠿⠿⠛⠛⠛⣉⣀⡅⠈⣿⣿⣿⣿⣿⣿⣦⡍⢛⠿⠿⢛⣻⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠻⢶⣶⣶⣶⣬⣭⣭⣭⣭⣭⣭⣭⣭⣭⣭⣭⣭⣭⠍⣉⣉⣉⣉⠩⣥⣤⣶⣶⣶⣶⣶⣾⣿⡿⠿⠟⣁⣼⣿⣿⣿⣿⣿⣿⠟⣀⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⢡⣶⣶⣤⣬⣍⣛⡛⠛⠻⠿⠿⠿⠿⠿⠿⠿⡿⠟⢁⣊⡭⠤⢭⣘⡓⠈⠛⠛⢛⡉⢩⣭⣭⣤⣴⣶⣿⣿⣿⣿⣿⣿⣿⡿⠋⣴⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⠟⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⠗⣀⣴⣾⣿⣿⣶⣶⡦⠀⣈⣡⣤⣤⣤⣤⣌⣑⠀⣿⣿⣿⣶⣌⢻⣿⣿⣿⣷⠈⣿⣿⣿⡿⠏⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⡟⢠⣿⣿⣿⣿⣿⣿⣿⡿⢋⣴⣾⣿⣿⣿⣿⣿⣿⣿⣧⡘⣿⣿⣿⠃⠈⢉⢿⡿⢀⣿⣿⣿⣿⣿⣦⠙⣿⣿⣿⡇⣿⣿⠟⣡⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⡏⢀⣿⣿⣿⣿⣿⣿⣿⡿⢁⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⡘⢿⣿⣿⢠⣿⠟⢡⣿⣿⣿⣿⣿⣿⣿⣷⠘⢿⣿⡇⠙⣡⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⡟⠁⡾⣿⣿⣿⡏⣿⣿⣿⠁⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣦⣭⣤⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠸⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⡇⡄⡇⣿⣿⣿⡇⣿⣿⣿⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣧⡁⠐⣿⣿⣿⡆⢹⣿⣿⢸⣿⣿⣏⠉⣉⣉⣉⣭⣭⣭⣭⣭⣭⣭⣭⣭⣭⣭⣭⣭⣭⣭⣭⣥⣴⣶⣶⠀⣿⣿⡇⣸⡇⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣄⠙⣿⣿⡇⣸⣿⣿⢸⣿⣿⣿⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⣿⣿⢃⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣷⣌⠻⠇⢸⣿⣟⡀⢿⣿⣿⡄⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⣸⣿⡏⢸⣿⠁⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡄⢸⣿⣿⣷⡈⢿⣿⣿⡄⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⣰⣿⡿⢠⣿⡟⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⡟⠋⣠⣤⣤⡍⢻⣿⡇⢸⣿⣿⣿⣷⣌⠻⣿⣿⣦⣙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⣡⣼⣿⠟⣠⣿⣿⠇⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⠁⠸⣿⣿⣿⣿⠀⣉⡀⣾⣿⣿⣿⣿⣿⣷⣌⠻⢿⣿⣷⣦⣍⣙⣛⠿⠿⠿⠿⠿⠿⢛⣛⣉⣥⣶⣿⣿⠟⣡⣾⣿⣿⡏⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣦⠀⢿⣿⣿⡿⢠⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣙⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⣋⣥⣾⣿⣿⣿⡿⢡⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣷⣦⣤⣤⣶⣿⡿⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣌⣉⣛⣛⡛⢛⣛⣛⣋⣩⣤⣶⣿⣿⣿⣿⣿⣿⣿⠁⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠋⣀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⠿⠟⠂⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⡟⠉⣡⣶⣶⣾⣷⣦⡙⠛⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠃⢲⣦⣭⣉⣉⣉⡛⠛⢋⣉⣉⣉⣭⣥⣦⣉⡙⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣾⣿⣿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⡀⢻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢃⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣷⣄⠹⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⣉⣄⡙⠛⠻⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠟⢛⣁⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣷⣦⣌⣉⣙⣛⣛⣛⣛⣛⣛⣛⣛⣉⣉⣥⣤⢴⣶⣿⣿⣿⣿⣿⣿⣶⣶⣶⣶⣦⣤⣤⣤⣤⣴⣶⣶⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+=============================================================
+        Simulation PASS!!  Cycles: 25884
+=============================================================
+
+$finish called from file "/home/patata0717/DICD/HW3_groupx/./sim/top_tb2.sv", line 352.
+$finish at simulation time              1035940
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 10359400 ps
+CPU Time:      3.930 seconds;       Data structure size:   0.0Mb
+Tue Dec  9 08:40:01 2025
+CPU time: .298 seconds to compile + .174 seconds to elab + .152 seconds to link + 3.951 seconds in simulation

@@ -46,7 +46,8 @@ struct argmax : public sc_module {
 //            std::cout << "new_val: " << new_val.to_double()
 //                      << " " << new_val.to_string(sc_dt::SC_BIN)
 //                      << std::endl;
-//            std::cout << "count: " << count << std::endl;
+            std::cout << "count: " << count << std::endl;
+            std::cout << "theta: " << theta_out << std::endl;
     
             if (count == 0) {
                 current_max = new_val;

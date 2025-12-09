@@ -1,7 +1,6 @@
 g++ -std=c++17 \
   -I"$SYSTEMC_HOME/include" \
   -DUSE_RTL_MINUS \
-  -DUSE_RTL_ARGMAX \
   -DUSE_RTL_ANGLE \
   -DUSE_RTL_DELAY_N \
   -DUSE_RTL_PHI_SUM \

@@ -1,0 +1,167 @@
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+       Version W-2024.09-SP2_Full64 -- Tue Dec  9 08:39:34 2025
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file '/home/patata0717/DICD/HW3_groupx/./sim/top_tb.sv'
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/angle.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/angle.sv'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/argmax.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/argmax.sv'.
+
+Warning-[IPDW] Identifier previously declared
+/home/patata0717/DICD/HW3_groupx/./src/argmax.sv, 36
+  Second declaration for identifier 'count' ignored
+  Identifier 'count' previously declared as output port. 
+  [/home/patata0717/DICD/HW3_groupx/./src/argmax.sv, 6]
+
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/delay_n.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/delay_n.sv'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/gamma_sum.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/gamma_sum.sv'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/mag.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/mag.sv'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/minus.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/minus.sv'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Parsing included file '/home/patata0717/DICD/HW3_groupx/./src/phi_sum.sv'.
+Parsing included file '../include/data_type.svh'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/phi_sum.sv'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./src/top.sv'.
+Back to file '/home/patata0717/DICD/HW3_groupx/./sim/top_tb.sv'.
+Top Level Modules:
+       tb_top
+
+Warning-[AOUP] Attempt to override undefined parameter
+/home/patata0717/DICD/HW3_groupx/./sim/top_tb.sv, 85
+  Attempting to override undefined parameter "INT_BITS", will ignore it.
+
+
+Warning-[AOUP] Attempt to override undefined parameter
+/home/patata0717/DICD/HW3_groupx/./sim/top_tb.sv, 85
+  Attempting to override undefined parameter "FRAC_BITS", will ignore it.
+
+
+Warning-[AOUP] Attempt to override undefined parameter
+/home/patata0717/DICD/HW3_groupx/./sim/top_tb.sv, 85
+  Attempting to override undefined parameter "RHO_INT_BITS", will ignore it.
+
+
+Warning-[AOUP] Attempt to override undefined parameter
+/home/patata0717/DICD/HW3_groupx/./sim/top_tb.sv, 85
+  Attempting to override undefined parameter "RHO_FRAC_BITS", will ignore it.
+
+TimeScale is 1 ns / 10 ps
+Starting vcs inline pass...
+2 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory '/home/patata0717/DICD/HW3_groupx/build/csrc'
+make[1]: Leaving directory '/home/patata0717/DICD/HW3_groupx/build/csrc'
+make[1]: Entering directory '/home/patata0717/DICD/HW3_groupx/build/csrc'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib -L/usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o  _7686_archive_1.so _prev_archive_1.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive       _vcs_pli_stub_.o   /usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib/vcs_save_restore_new.o /usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory '/home/patata0717/DICD/HW3_groupx/build/csrc'
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Notice: timing checks disabled with +notimingcheck at compile-time
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP2_Full64; Runtime version W-2024.09-SP2_Full64;  Dec  9 08:39 2025
+[TB] CYCLE=0.400 ns, MAX_CYCLE=100000
+[TB] prog_path = /home/patata0717/DICD/HW3_groupx/./sim/prog1
+*Verdi* Loading libsscore_vcs202409.so
+FSDB Dumper for VCS, Release Verdi_W-2024.09-SP2, Linux x86_64/64bit, 03/03/2025
+(C) 1996 - 2025 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'top.fsdb'
+*Verdi* : Begin traversing the scope (tb_top), layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the scope (tb_top), layer (0).
+*Verdi* : End of traversing.
+----------------------------------------------------------------
+[EPSILON] relative_error = 2.867% (tolerance=5.00%)
+      DUT eps  (Q1.20) = 160000 (0x27100)  -> 0.15258789
+      REF eps  (Q1.20) = 164723 (0x28373)  -> 0.15709209
+[ THETA ] |dut-ref| = 0 samp   dut=121  ref=121
+SUMMARY: out_valid=1 eps_err=0 theta_err=0 
+
+
+====================== SIMULATION PASS ======================
+
+⣿⡿⣻⣵⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣄⡀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠙⠛⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣦⣙⠻⠶⠟⠋⠺⣿⣟⣿⣿⣿⣿
+⣫⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠀⠀⠀⠀⠀⣠⣍⠙⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⠀⠀⠈⠻⣿⣿⣿⣿
+⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠷⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⠀⠀⠀⠀⣼⣿⣿⣷⡄⠀⠈⠉⠛⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣄⠀⠘⢿⣿⣿
+⣿⣿⣿⣿⠿⡿⠿⠿⠟⠛⠛⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⠀⠀⠀⢸⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⠀⠙⢿
+⣿⣿⣟⡽⢲⣤⣤⣤⣄⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⣿⣿⣿⡟⠀⠀⠀⣾⣿⣿⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀⠀⠈⠙⢿⣿⣿⣿⣿⣿⣿⣿⣷⣤⠈
+⣿⣿⣿⣷⡿⠟⡩⢹⣿⣿⣿⣿⡷⠂⠀⠀⠀⠀⠀⠀⠀⣴⠁⠀⠀⠀⡰⠀⣰⣿⣿⣿⣿⣿⡇⠀⠀⢸⣿⣿⣿⣿⣿⠿⡿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⣿⢿⠿⣿⣿⣿⣿⣧
+⣷⣿⣿⣿⣧⢰⢡⣿⣿⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⢀⣼⠃⠀⠀⢀⣴⠁⣰⣿⣿⣿⣿⣿⣿⣿⠀⠀⣾⣿⣿⣿⡛⣿⣧⣷⣋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠱⣄⠊⠻⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣾⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⡟⠀⠀⢀⣾⠁⣸⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⣿⣷⣌⣾⣧⡇⢄⢯⡻⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠳⣅⢔⢍⢿
+⣿⣿⣿⣿⣿⣿⣿⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⠇⠀⢀⣾⡍⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⢰⣿⣿⣿⡻⣬⢳⣌⢂⠱⡙⠀⠀⠀⠀⢀⠀⠀⢠⠀⠀⠀⠀⠀⠀⠘⢷⡦⣻
+⣿⣿⣿⣿⣿⣿⠟⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⢰⣿⡏⠀⠀⣤⣑⠒⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⢸⣿⣿⣿⣷⣌⣿⣿⣧⣑⡔⠄⠀⠀⠀⣨⠀⢀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠳⡿
+⣿⣿⣿⣿⡿⠉⠀⠀⠀⣠⣴⡶⠁⠀⠀⠀⠀⣼⣿⡇⠀⣼⣿⡟⢘⡓⠈⠛⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⠿⠿⣿⣿⣧⠀⠀⠀⢿⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹
+⣿⣿⣿⡟⠁⠀⣠⣶⣿⣿⠟⠀⠀⠀⠀⠀⠀⣿⣿⠁⢰⣿⣿⣶⣷⣿⣷⣆⡹⣿⣿⣿⣿⣿⣿⣧⣸⣿⣿⣏⣭⣴⣶⣶⣶⣶⣶⣦⠀⠀⠰⣿⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣿⣿⡟⣀⣴⣿⣿⣿⠟⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⢀⡿⢛⣩⣭⣉⣙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⣾⣾⡀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣿⢩⢰⣿⣿⡿⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⢂⣴⣿⣿⣿⣿⣿⣷⣌⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⢛⣛⣉⣝⣛⠻⠇⠀⣿⣿⡇⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠙⡘⠊⡛⣉⣀⣀⣤⣤⡤⢰⣶⣷⠀⠀⠀⠀⣿⣿⣾⣿⣿⣿⠟⠙⢿⣿⣿⡌⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⣡⣾⣿⣿⣿⣿⣿⣿⡆⠈⢿⣿⣇⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⡈⣧⢰⣿⢿⠿⡏⢿⣿⣷⡘⣿⣿⠀⠀⠀⠀⣿⣿⣿⣿⣿⣧⣀⢀⣼⣿⣿⣷⡈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⠛⠛⢻⣿⣿⣇⣸⣆⢻⣿⣸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠰⡘⢇⢻⡘⣆⢣⢸⠈⢹⡠⢸⢻⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⣸⣿⣿⣿⣿⣿⣶⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⡐⠐⣌⠀⢣⠙⡌⢈⠃⠀⠇⠀⠀⣆⠀⠀⢸⣿⣿⡌⢿⣿⣿⣿⣿⣿⠿⢋⠅⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⢠⠀⠀⠀⠀⠀⠀⠀⠀
+⣷⣄⠛⢀⠣⠡⡡⠘⡸⡌⡘⠌⠟⠿⠀⠀⢸⣿⣿⣿⣦⣭⣛⣋⣭⣤⡞⢡⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⣰⡟⠀⠀⠀⠀⠀⠀⠀⠀
+⣿⣿⣷⡌⠳⣐⣐⣀⣁⡐⠐⡘⣤⠐⠲⡄⠘⠏⠙⠻⣻⣭⣿⣿⣿⣷⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣌⡛⠻⢿⣿⣿⣿⣿⠿⢛⣩⣿⣿⣿⣯⣴⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀
+⣿⣿⣿⣿⣷⣍⠹⢷⠀⡰⡀⡐⠸⡀⡗⠑⠀⠲⡄⠨⣿⣿⣿⣿⣿⣿⣷⣀⣿⣯⣝⣿⣿⣿⣿⣿⣿⣿⣍⠛⠿⣿⡷⣰⣶⣶⣶⢸⣿⣿⣿⣿⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣿⣯⣿⣿⣿⣿⣷⣌⠠⠐⠀⠀⠑⣀⢻⠰⠀⣻⣿⡇⢠⣴⣶⣶⣶⣶⣮⣭⣭⣭⣍⣉⣉⣛⣛⡿⠿⠿⢿⣿⣷⣦⡄⣈⣉⣉⣉⡈⣥⣶⣿⣿⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠒⢆⠢⡁⠄⢧⠀⣿⣿⡇⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣤⣬⣝⣛⡻⠿⣿⣷⣿⣿⣿⣿⣿⣿⠃⣠⠄⠀⠀⠀⠀⠀⠀⠀⠀
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⠠⣿⡜⠀⢿⣿⣇⠀⠈⠻⣿⣛⠋⠉⠉⠉⠙⠛⠛⠛⠛⠛⠿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣶⣠⠙⢻⣿⣿⣿⣿⣿⣿⡟⠀⢀⣠⡤⠶⠶⢶⣦⠀
+⣉⣙⠛⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣌⠑⠄⠘⣿⣿⡆⠀⠀⠀⠙⠓⣂⣤⣤⣴⣶⣶⣶⣶⣤⣤⣤⣄⡀⠈⠉⠙⠻⢿⡿⠟⣿⠇⣸⣿⣿⣿⣿⣿⠟⠀⡰⠋⣵⣿⣿⣷⠸⣿⡄
+⣿⣿⣿⣿⣶⣶⣌⡙⠿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣈⢻⣿⣄⠀⠰⠾⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣀⠀⠀⠉⢉⣼⣿⣿⣿⣿⠋⠋⣠⡞⠱⣿⡛⠿⣿⣿⢿⣿⡄
+⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⡉⠻⣿⣿⣿⣿⣿⣿⣿⣦⡙⣿⣧⡙⢿⣷⣶⣤⣭⣍⣙⣛⠿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠆⣠⣾⣿⣿⠿⣿⠗⠠⣾⣿⢰⣿⣿⡿⢓⣼⣿⡿⢋⣴
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣌⠙⢿⣿⣿⣿⣿⣿⣿⣌⠻⣿⣷⣌⡛⠿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣤⣭⣝⡛⠛⣋⣥⣾⣿⣿⢿⡀⠘⢉⣴⣒⡆⢀⣘⣫⣥⣾⣿⢟⣩⣴⡿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠙⠿⢿⣿⣿⣿⣿⣦⡙⢿⣿⣿⣷⠦⠭⣭⣝⣛⣛⣛⣫⣭⣭⣭⣵⣶⣿⣿⣿⣿⠟⠛⠈⠁⣀⡈⠙⠿⠧⠿⠿⠟⢛⣩⢤⣾⣿⣿⣾⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⡉⣿⣿⣿⣶⣶⣶⣶⣦⣭⣭⣉⡂⠙⠿⣿⣿⣷⣦⣭⣭⣿⣿⣿⣿⣿⣿⡿⠿⠛⠋⠉⡀⠀⠒⠁⣐⠛⢷⣶⡶⠤⠤⠀⢛⣛⣷⣾⣾⣽⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣄⣈⠉⠉⠉⠋⠉⠉⠉⡉⠁⠀⠀⠀⣈⡈⠀⢠⠀⠀⠀⠛⠿⠷⣈⣉⣛⣛⣛⣃⣀⣬⣿⣿⣿⣿⣟⡿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⢀⣿⣿⣿⣏⢣⢩⠻⠻⢻⢟⢛⠁⠑⠙⡀⣤⡀⠠⠀⠀⡀⠈⠀⣈⡈⠘⢁⠠⠀⠆⡈⠄⣾⣿⣶⣶⣤⣤⣌⣉⣉⣋⣤⣙⣛⣛⣉⣛⣛⣛
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣧⣿⣿⣿⠟⠌⠼⠴⡵⡥⡧⡣⣣⢮⡢⢂⣿⣿⡇⡘⣼⣱⡑⣸⣧⣶⣾⣄⢤⡾⡐⢠⠀⠙⠛⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+=============================================================
+        Simulation PASS!!  Cycles: 540
+
+=============================================================
+
+$finish called from file "/home/patata0717/DICD/HW3_groupx/./sim/top_tb.sv", line 305.
+$finish at simulation time                22180
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 221800 ps
+CPU Time:      0.250 seconds;       Data structure size:   0.0Mb
+Tue Dec  9 08:39:39 2025
+CPU time: .269 seconds to compile + .233 seconds to elab + .153 seconds to link + .279 seconds in simulation

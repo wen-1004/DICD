@@ -31,6 +31,7 @@ module top (
     localparam int FIRST_SAMPLES = 2*N + L; // 528
     localparam int STEP_SAMPLES  = N;       // 256
 
+
     // -------------------------
     // Internal signals
     // -------------------------
@@ -48,6 +49,8 @@ module top (
 
     theta_t theta_sig_s;
     eps_t   epsilon_sig_s;
+
+    logic [9:0] count;
 
     // -------------------------
     // Instances
@@ -113,63 +116,30 @@ module top (
     argmax U_ARGMAX (
         .clk       (clk),
         .rst       (rst),
+        .count     (count),
         .angle_in  (ang_out_s),
         .lambda_in (lambda_out_s),
         .theta_out (theta_sig_s),
         .eps_out   (epsilon_sig_s)
     );
-
     // -------------------------
     // Drive top-level outputs
     // -------------------------
     assign theta   = theta_sig_s;
     assign epsilon = epsilon_sig_s;
 
-    // -------------------------
-    // out_valid generation
-    // boundary at sample counts:
-    //   528, 784, 1040, ...
-    // pulse delayed by 12 cycles
-    // -------------------------
-    int unsigned sample_cnt;
-    logic boundary_pulse;
-
-    // Since STEP_SAMPLES = 256 (power of two),
-    // we can avoid % by using a mask.
-    localparam int STEP_MASK = STEP_SAMPLES - 1; // 255
-
-    always_ff @(posedge clk) begin
+    logic isPassBarrier;
+    always_ff @(posedge clk or posedge rst) begin
         if (rst) begin
-            sample_cnt     <= 0;
-            boundary_pulse <= 1'b0;
+            isPassBarrier <= 1'b0;
         end else begin
-            boundary_pulse <= 1'b0;
-
-            if (in_valid) begin
-                sample_cnt <= sample_cnt + 1;
-
-                // check "next" count for precise 1-cycle pulse
-                // next = sample_cnt + 1
-                if ((sample_cnt + 1) >= FIRST_SAMPLES) begin
-                    // boundary if (next - FIRST_SAMPLES) is multiple of 256
-                    if (((sample_cnt + 1 - FIRST_SAMPLES) & STEP_MASK) == 0)
-                        boundary_pulse <= 1'b1;
-                end
+            if (count == 10'd0) begin
+                isPassBarrier <= 1'b1;
+            end else begin
+                isPassBarrier <= isPassBarrier;
             end
         end
     end
-
-    // 12-cycle delay line for valid
-    logic [PIPE_DELAY-1:0] vpipe;
-
-    always_ff @(posedge clk) begin
-        if (rst) begin
-            vpipe <= '0;
-        end else begin
-            vpipe <= {vpipe[PIPE_DELAY-2:0], boundary_pulse};
-        end
-    end
-
-    assign out_valid = vpipe[PIPE_DELAY-1];
+    assign out_valid = (count == 10'd0) && (isPassBarrier == 1'b1);
 
 endmodule

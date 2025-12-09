@@ -87,8 +87,8 @@ ANF: vhdi_enc_ist_get_module_id('simv: undefined symbol: vhdi_enc_ist_get_module
 ANF: vhdi_enc_def_get_handle_by_module_id('simv: undefined symbol: vhdi_enc_def_get_handle_by_module_id')
 VCS compile option:
  option[0]: simv
- option[1]: +define+prog0
- option[2]: +prog_path=/home/patata0717/DICD/HW3_groupx/./sim/prog0
+ option[1]: +define+prog5
+ option[2]: +prog_path=/home/patata0717/DICD/HW3_groupx/./sim/prog5
  option[3]: +define+CYCLE=0.4
  option[4]: +define+MAX=100000
  option[5]: +notimingcheck
@@ -116,8 +116,8 @@ VCS compile option:
  option[27]: +vcsd1
  option[28]: +itf+/usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib/vcsdp_lite.tab
  option[29]: -full64
- option[30]: +define+prog0
- option[31]: +prog_path=/home/patata0717/DICD/HW3_groupx/./sim/prog0
+ option[30]: +define+prog5
+ option[31]: +prog_path=/home/patata0717/DICD/HW3_groupx/./sim/prog5
  option[32]: +define+CYCLE=0.4
  option[33]: +define+MAX=100000
  option[34]: +notimingcheck
@@ -127,7 +127,7 @@ VCS compile option:
  option[38]: -fsdb
  option[39]: -sverilog
  option[40]: -gen_obj
- option[41]: /home/patata0717/DICD/HW3_groupx/./sim/top_tb.sv
+ option[41]: /home/patata0717/DICD/HW3_groupx/./sim/top_tb3.sv
  option[42]: +incdir+/home/patata0717/DICD/HW3_groupx/./src+/home/patata0717/DICD/HW3_groupx/./include+/home/patata0717/DICD/HW3_groupx/./sim
  option[43]: -load
  option[44]: /usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/VCS/LINUX64/libnovas.so:FSDBDumpCmd
@@ -139,7 +139,7 @@ Limit information:
 cputime		unlimited
 filesize		unlimited
 datasize		unlimited
-stacksize		8193 kbytes
+stacksize		8192 kbytes
 coredumpsize		0 kbytes
 memoryuse		unlimited
 vmemoryuse		unlimited
@@ -150,12 +150,12 @@ maxproc		4096
 (Special)Runtime environment variables:
 
 Runtime environment variables:
-REMOTEHOST=140.116.226.70
+REMOTEHOST=140.116.29.25
 MANPATH=/opt/rh/devtoolset-11/root/usr/share/man:/usr/cad/synopsys/synthesis/2024.09-sp2/doc/syn/man:/usr/cad/synopsys/lc/2024.09-sp2/doc/lc/man:/usr/cad/synopsys/vcs/2024.09-sp2/doc/man:/usr/cad/synopsys/primelib/2025.06//ncx/man:/usr/cad/synopsys/synthesis/2024.09-sp2/doc/syn/man:/usr/cad/synopsys/lc/2024.09-sp2/doc/lc/man:/usr/cad/synopsys/vcs/2024.09-sp2/doc/man:/usr/cad/synopsys/primelib/2025.06//ncx/man
 SYNOPSYS_LC_ROOT=/usr/cad/synopsys/lc/cur
 SNPS_VCS_INTERNAL_MAKE_OPT=
 SALT_LICENSE_SERVER=1717@lstn
-XDG_SESSION_ID=37113
+XDG_SESSION_ID=37498
 HOSTNAME=vlsilab.es.ncku.edu.tw
 XLOCALEDIR=/usr/cad/synopsys/icc2/2024.09-sp2//etc/locale
 UNAME=/bin/uname
@@ -168,17 +168,17 @@ SHELL=/bin/bash
 TERM=xterm
 MAKEFLAGS=
 HISTSIZE=1000
-SSH_CLIENT=140.116.226.70 59202 22
+SSH_CLIENT=140.116.29.25 53939 22
 SELINUX_USE_CURRENT_RANGE=
 CALIBRE_2025_1_ENABLE_DEPRECATED_RHEL7=3
 VCS_PYTHON3=/usr/cad/synopsys/vcs/2024.09-sp2/linux64/bin/Python3/bin/python3
 QTDIR=/usr/lib64/qt-3.3
 MGC_LOCATION_MAP=NO_MAP
 QTINC=/usr/lib64/qt-3.3/include
-SSH_TTY=/dev/pts/6
+SSH_TTY=/dev/pts/8
 X_SCLS=devtoolset-11 
 LC_ALL=C
-SNPS_VCS_INTERNAL_ROOT_PID=30087
+SNPS_VCS_INTERNAL_ROOT_PID=10554
 QT_GRAPHICSSYSTEM_CHECKED=1
 GROUP=patata0717
 PCP_DIR=/opt/rh/devtoolset-11/root
@@ -189,7 +189,7 @@ VCS_INTERNAL_CONVERTEDLIBS=
 SYSTEMC_INCLUDE=/opt/systemc-3.0.1/include
 SYSTEMC_LIBDIR=/opt/systemc-3.0.1/lib64
 SCRIPT_NAME=vcs
-MAKE_TERMOUT=/dev/pts/6
+MAKE_TERMOUT=/dev/pts/8
 VCS_MX_HOME_INTERNAL=1
 HOSTTYPE=x86_64-linux
 SNPS_VCS_CLANG_PATH=/usr/cad/synopsys/vcs/2024.09-sp2/linux64/clang
@@ -202,7 +202,7 @@ SYNOPSYS_NCX_ROOT=/usr/cad/synopsys/primelib/2025.06/
 MAIL=/var/spool/mail/patata0717
 PATH=.:/opt/gurobi1203/linux64/bin:/tools/Xilinx/Vitis_HLS/2020.2/bin:/tools/Xilinx/Model_Composer/2020.2/bin:/tools/Xilinx/Vivado/2020.2/bin:/usr/cad/synopsys/primelib/2025.06//bin:/usr/cad/cadence/LIBERATE/LIBERATE_23.16.074/tools.lnx86/bin/64bit:/usr/cad/cadence/LIBERATE/LIBERATE_23.16.074/tools.lnx86/bin:/usr/cad/mentor/calibre/aoj_cal_2024.4_12.9/bin:/usr/cad/mentor/Questa_Sim/2024.3/questasim/bin:/usr/cad/mentor/Questa_VIP/2024.3/bin:/usr/cad/synopsys/icc2/2024.09-sp2//bin:/usr/cad/synopsys/tmax/2024.09-sp2//vui/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//vtran/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//vgen/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//vcap/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//testmax/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//idq/cur/linux64/iddq/bin:/usr/cad/synopsys/tmax/2024.09-sp2//dftview/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//ale/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//bin:/usr/cad/cadence/JASPER/jasper_2024.03p002/bin:/usr/cad/synopsys/spyglass/2024.09-sp2/SPYGLASS_HOME/bin:/usr/cad/synopsys/primetime/2024.09-sp2//amd64/syn/bin:/usr/cad/synopsys/primetime/2024.09-sp2//primeclosure/cur/amd64/syn/bin:/usr/cad/synopsys/formality/2024.09-sp2//amd64/fm/bin:/usr/cad/synopsys/vcs/2024.09-sp2/bin:/usr/cad/synopsys/vcs/2024.09-sp2/vcfca/bin:/usr/cad/synopsys/vcs/2024.09-sp2/amd64/bin:/usr/cad/synopsys/verdi/2024.09-sp2/bin:/usr/cad/synopsys/lc/2024.09-sp2/bin:/usr/cad/synopsys/synthesis/2024.09-sp2/amd64/syn/bin:/usr/cad/synopsys/lc/cur/bin:/usr/cad/cadence/GENUS/GENUS_21.18.000/tools/bin/64bit:/usr/cad/cadence/GENUS/GENUS_21.18.000/tools/bin:/opt/rh/devtoolset-11/root/usr/bin:/tools/Xilinx/Vitis_HLS/2020.2/bin:/tools/Xilinx/Model_Composer/2020.2/bin:/tools/Xilinx/Vivado/2020.2/bin:/usr/cad/synopsys/primelib/2025.06//bin:/usr/cad/cadence/LIBERATE/LIBERATE_23.16.074/tools.lnx86/bin/64bit:/usr/cad/cadence/LIBERATE/LIBERATE_23.16.074/tools.lnx86/bin:/usr/cad/mentor/calibre/aoj_cal_2024.4_12.9/bin:/usr/cad/mentor/Questa_Sim/2024.3/questasim/bin:/usr/cad/mentor/Questa_VIP/2024.3/bin:/usr/cad/synopsys/icc2/2024.09-sp2//bin:/usr/cad/synopsys/tmax/2024.09-sp2//vui/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//vtran/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//vgen/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//vcap/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//testmax/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//idq/cur/linux64/iddq/bin:/usr/cad/synopsys/tmax/2024.09-sp2//dftview/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//ale/cur/bin:/usr/cad/synopsys/tmax/2024.09-sp2//bin:/usr/cad/cadence/JASPER/jasper_2024.03p002/bin:/usr/cad/synopsys/spyglass/2024.09-sp2/SPYGLASS_HOME/bin:/usr/cad/synopsys/primetime/2024.09-sp2//amd64/syn/bin:/usr/cad/synopsys/primetime/2024.09-sp2//primeclosure/cur/amd64/syn/bin:/usr/cad/synopsys/formality/2024.09-sp2//amd64/fm/bin:/usr/cad/synopsys/vcs/2024.09-sp2/bin:/usr/cad/synopsys/vcs/2024.09-sp2/vcfca/bin:/usr/cad/synopsys/vcs/2024.09-sp2/amd64/bin:/usr/cad/synopsys/verdi/2024.09-sp2/bin:/usr/cad/synopsys/lc/2024.09-sp2/bin:/usr/cad/synopsys/synthesis/2024.09-sp2/amd64/syn/bin:/usr/cad/synopsys/lc/cur/bin:/usr/cad/cadence/GENUS/GENUS_21.18.000/tools/bin/64bit:/usr/cad/cadence/GENUS/GENUS_21.18.000/tools/bin:/opt/riscv/bin:/opt/automake-1.16.1/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
 SALT_LICENSE_FILE=1717@lstn
-SNPS_VCS_INTERNAL_CURR_PID=30087
+SNPS_VCS_INTERNAL_CURR_PID=10554
 VERDI_HOME=/usr/cad/synopsys/verdi/2024.09-sp2
 CALIBRE_HOME=/usr/cad/mentor/calibre/aoj_cal_2024.4_12.9
 PWD=/home/patata0717/DICD/HW3_groupx/build
@@ -221,7 +221,7 @@ LM_LICENSE_FILE=26585@lstn:5280@lstn:1717@lstn:
 SYNOPSYS=/usr/cad/synopsys/formality/cur
 HISTCONTROL=ignoredups
 VCS_ARG_ADDED_FOR_TMP=1
-SNPS_VCS_TMPDIR=/tmp/vcs_20251208085125_30087
+SNPS_VCS_TMPDIR=/tmp/vcs_20251209004003_10554
 SHLVL=6
 RISCV=/opt/riscv
 HOME=/home/patata0717
@@ -237,17 +237,17 @@ MACHTYPE=x86_64
 LOGNAME=patata0717
 SNPS_VCS_INTERNAL_MAKE=make
 QTLIB=/usr/lib64/qt-3.3/lib
-MAKE_TERMERR=/dev/pts/6
-SNPS_VCS_INTERNAL_ROOT_START_TIME=1765183885.525639465
+MAKE_TERMERR=/dev/pts/8
+SNPS_VCS_INTERNAL_ROOT_START_TIME=1765240803.763058388
 XDG_DATA_DIRS=/home/patata0717/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
-SSH_CONNECTION=140.116.226.70 59202 140.116.226.74 22
+SSH_CONNECTION=140.116.29.25 53939 140.116.226.74 22
 PKG_CONFIG_PATH=/opt/rh/devtoolset-11/root/usr/lib64/pkgconfig
 LESSOPEN=||/usr/bin/lesspipe.sh %s
 SHLIB_PATH=/usr/cad/synopsys/verdi/2024.09-sp2/etc/lib/libstdc++/LINUX64/:/usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/lib/LINUX64/:/usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/VCS/LINUX64/::/usr/cad/synopsys/verdi/2024.09-sp2/etc/lib/libstdc++/LINUX64/:/usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/lib/LINUX64/:/usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/VCS/LINUX64/:
 sysc_uni_pwd=/home/patata0717/DICD/HW3_groupx/build
 INFOPATH=/opt/rh/devtoolset-11/root/usr/share/info
 CMAKE_PREFIX_PATH=/opt/systemc-3.0.1
-DISPLAY=140.116.226.74:10.0
+DISPLAY=140.116.226.74:12.0
 XDG_RUNTIME_DIR=/run/user/1005
 VCS_ARCH=linux64
 VERILATOR_ROOT=/usr/local/share/verilator
@@ -262,14 +262,14 @@ SPECMAN_OUTPUT_TO_TTY=1
 FLEXLM_BORROWFILE=/home/patata0717/.vlsilab.es.ncku.edu.tw-borrow.txt
 Runtime command line arguments:
 argv[0]=simv
-argv[1]=+define+prog0
-argv[2]=+prog_path=/home/patata0717/DICD/HW3_groupx/./sim/prog0
+argv[1]=+define+prog5
+argv[2]=+prog_path=/home/patata0717/DICD/HW3_groupx/./sim/prog5
 argv[3]=+define+CYCLE=0.4
 argv[4]=+define+MAX=100000
 argv[5]=+notimingcheck
 269 profile - 100
-          CPU/Mem usage: 0.020 sys,  0.120 user,  221.61M mem
-270 Elapsed time:    0:00:01    Mon Dec  8 16:51:28 2025
+          CPU/Mem usage: 0.010 sys,  0.120 user,  221.64M mem
+270 Elapsed time:    0:00:01    Tue Dec  9 08:40:06 2025
 271 User CPU time used: 0 seconds
 272 System CPU time used: 0 seconds
 273 pliAppInit
@@ -289,109 +289,110 @@ argv[5]=+notimingcheck
 287 LIBSSCORE=found /usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/lib/LINUXAMD64/libsscore_vcs202409.so through $NOVAS_HOME setting.
 288 FSDB Dumper for VCS, Release Verdi_W-2024.09-SP2, Linux x86_64/64bit, 03/03/2025
 289 (C) 1996 - 2025 by Synopsys, Inc.
-290 sps_call_fsdbDumpfile_main at 0 : /home/patata0717/DICD/HW3_groupx/./sim/top_tb.sv(315)
+290 sps_call_fsdbDumpfile_main at 0 : /home/patata0717/DICD/HW3_groupx/./sim/top_tb3.sv(366)
 291 argv[0]: (top.fsdb)
-292 *Verdi* : Create FSDB file 'top.fsdb'
-293 [spi_vcs_vd_ppi_create_root]: no upf option
-294 DUMPER_MEMORY_REDUCTION is enabled.
-295 compile option from '/home/patata0717/DICD/HW3_groupx/build/simv.daidir/vcs_rebuild'.
-296   "vcs '-R' '-sverilog' '/home/patata0717/DICD/HW3_groupx/./sim/top_tb.sv' '-debug_access+all' '-full64' '+incdir+/home/patata0717/DICD/HW3_groupx/./src+/home/patata0717/DICD/HW3_groupx/./include+/home/patata0717/DICD/HW3_groupx/./sim' '+define+prog0' '+prog_path=/home/patata0717/DICD/HW3_groupx/./sim/prog0' '+define+CYCLE=0.4' '+define+MAX=100000' '+notimingcheck' 2>&1"
-297 DVDI_is_vir_unload_enabled is enable
-298 FSDB_VCS_ENABLE_NATIVE_VC is enable
-299 FSDB_VCS_ENABLE_MEMORY_NATIVE_VC is enabled
-300 spi_vcs_vd_vlog_vc_enable_vector_strength is skipped since VCS is not support.
-301 sps_call_fsdbDumpvars_vd_main at 0 : /home/patata0717/DICD/HW3_groupx/./sim/top_tb.sv(316)
-302 argv[0]: (0)
-303 argv[1]: (+mda)
-304 argv[2]: (handle) tb_top
-305 *Verdi* : Begin traversing the scope (tb_top), layer (0).
-306 *Verdi* : Enable +mda dumping.
-307 *Verdi* : End of traversing.
-308 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 0.030 sys,  0.130 user,  320.51M mem
-                   incr: 0.010 sys,  0.010 user,  8.50M mem
-                   accu: 0.010 sys,  0.010 user,  8.50M mem
-              accu incr: 0.010 sys,  0.010 user,  8.50M mem
+292 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+293 *Verdi* : Create FSDB file 'top.fsdb'
+294 [spi_vcs_vd_ppi_create_root]: no upf option
+295 DUMPER_MEMORY_REDUCTION is enabled.
+296 compile option from '/home/patata0717/DICD/HW3_groupx/build/simv.daidir/vcs_rebuild'.
+297   "vcs '-R' '-sverilog' '/home/patata0717/DICD/HW3_groupx/./sim/top_tb3.sv' '-debug_access+all' '-full64' '+incdir+/home/patata0717/DICD/HW3_groupx/./src+/home/patata0717/DICD/HW3_groupx/./include+/home/patata0717/DICD/HW3_groupx/./sim' '+define+prog5' '+prog_path=/home/patata0717/DICD/HW3_groupx/./sim/prog5' '+define+CYCLE=0.4' '+define+MAX=100000' '+notimingcheck' 2>&1"
+298 DVDI_is_vir_unload_enabled is enable
+299 FSDB_VCS_ENABLE_NATIVE_VC is enable
+300 FSDB_VCS_ENABLE_MEMORY_NATIVE_VC is enabled
+301 spi_vcs_vd_vlog_vc_enable_vector_strength is skipped since VCS is not support.
+302 sps_call_fsdbDumpvars_vd_main at 0 : /home/patata0717/DICD/HW3_groupx/./sim/top_tb3.sv(367)
+303 argv[0]: (0)
+304 argv[1]: (+mda)
+305 argv[2]: (handle) tb_top
+306 *Verdi* : Begin traversing the scope (tb_top), layer (0).
+307 *Verdi* : Enable +mda dumping.
+308 *Verdi* : End of traversing.
+309 pliAppHDL_DumpVarComplete traverse var: profile - 
+          CPU/Mem usage: 0.020 sys,  0.160 user,  330.12M mem
+                   incr: 0.000 sys,  0.030 user,  18.08M mem
+                   accu: 0.000 sys,  0.030 user,  18.08M mem
+              accu incr: 0.000 sys,  0.030 user,  18.08M mem
 
-          Count usage: 1913 var,  267 idcode,  141 callback
-                 incr: 1913 var,  267 idcode,  141 callback
-                 accu: 1913 var,  267 idcode,  141 callback
-            accu incr: 1913 var,  267 idcode,  141 callback
-309 Idcode  0 - bc1:0  mda:1660
-310 Elapsed time:    0:00:01    Mon Dec  8 16:51:28 2025
-311 User CPU time used: 0 seconds
-312 System CPU time used: 0 seconds
-313 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 0.030 sys,  0.130 user,  320.51M mem
+          Count usage: 104196 var,  264 idcode,  137 callback
+                 incr: 104196 var,  264 idcode,  137 callback
+                 accu: 104196 var,  264 idcode,  137 callback
+            accu incr: 104196 var,  264 idcode,  137 callback
+310 Idcode  0 - bc1:0  mda:103946
+311 Elapsed time:    0:00:02    Tue Dec  9 08:40:07 2025
+312 User CPU time used: 0 seconds
+313 System CPU time used: 0 seconds
+314 pliAppHDL_DumpVarComplete: profile - 
+          CPU/Mem usage: 0.020 sys,  0.160 user,  330.12M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
-                   accu: 0.010 sys,  0.010 user,  8.50M mem
+                   accu: 0.000 sys,  0.030 user,  18.08M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
 
-          Count usage: 1913 var,  267 idcode,  141 callback
+          Count usage: 104196 var,  264 idcode,  137 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 1913 var,  267 idcode,  141 callback
+                 accu: 104196 var,  264 idcode,  137 callback
             accu incr: 0 var,  0 idcode,  0 callback
-314 Idcode  0 - bc1:0  mda:1660
-315 Elapsed time:    0:00:01    Mon Dec  8 16:51:28 2025
-316 User CPU time used: 0 seconds
-317 System CPU time used: 0 seconds
-318 sps_call_fsdbDumpvars_vd_main at 0 : /home/patata0717/DICD/HW3_groupx/./sim/top_tb.sv(317)
-319 argv[0]: (0)
-320 argv[1]: (handle) tb_top
-321 *Verdi* : Begin traversing the scope (tb_top), layer (0).
-322 *Verdi* : End of traversing.
-323 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 0.030 sys,  0.130 user,  320.51M mem
+315 Idcode  0 - bc1:0  mda:103946
+316 Elapsed time:    0:00:02    Tue Dec  9 08:40:07 2025
+317 User CPU time used: 0 seconds
+318 System CPU time used: 0 seconds
+319 sps_call_fsdbDumpvars_vd_main at 0 : /home/patata0717/DICD/HW3_groupx/./sim/top_tb3.sv(368)
+320 argv[0]: (0)
+321 argv[1]: (handle) tb_top
+322 *Verdi* : Begin traversing the scope (tb_top), layer (0).
+323 *Verdi* : End of traversing.
+324 pliAppHDL_DumpVarComplete traverse var: profile - 
+          CPU/Mem usage: 0.020 sys,  0.160 user,  330.12M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
 
-          Count usage: 2180 var,  267 idcode,  141 callback
-                 incr: 267 var,  0 idcode,  0 callback
-                 accu: 267 var,  0 idcode,  0 callback
-            accu incr: 267 var,  0 idcode,  0 callback
-324 Idcode  0 - bc1:0  mda:1660
-325 Elapsed time:    0:00:02    Mon Dec  8 16:51:29 2025
-326 User CPU time used: 0 seconds
-327 System CPU time used: 0 seconds
-328 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 0.030 sys,  0.130 user,  320.51M mem
+          Count usage: 104460 var,  264 idcode,  137 callback
+                 incr: 264 var,  0 idcode,  0 callback
+                 accu: 264 var,  0 idcode,  0 callback
+            accu incr: 264 var,  0 idcode,  0 callback
+325 Idcode  0 - bc1:0  mda:103946
+326 Elapsed time:    0:00:02    Tue Dec  9 08:40:07 2025
+327 User CPU time used: 0 seconds
+328 System CPU time used: 0 seconds
+329 pliAppHDL_DumpVarComplete: profile - 
+          CPU/Mem usage: 0.020 sys,  0.160 user,  330.12M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
 
-          Count usage: 2180 var,  267 idcode,  141 callback
+          Count usage: 104460 var,  264 idcode,  137 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 267 var,  0 idcode,  0 callback
+                 accu: 264 var,  0 idcode,  0 callback
             accu incr: 0 var,  0 idcode,  0 callback
-329 Idcode  0 - bc1:0  mda:1660
-330 Elapsed time:    0:00:02    Mon Dec  8 16:51:29 2025
-331 User CPU time used: 0 seconds
-332 System CPU time used: 0 seconds
-333 End of simulation at 4000220
-334 Memory usage: 401.273 M
-335 Maximum resident set size: 168 MB
-336 Hard page faults: 1
-337 Soft page faults: 29529
-338 Elapsed time:    0:00:02    Mon Dec  8 16:51:29 2025
-339 User CPU time used: 0 seconds
-340 System CPU time used: 0 seconds
-341 Begin FSDB profile info:
-342 FSDB Writer : bc1(200015) bcn(1135880) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.315854) io wait(0.000000) theadpool wait(0.000000)
-FSDB Writer cpu time : MT Compression : 0
-343 End FSDB profile info
-344 FSDB closed. Name: top.fsdb Size: 170626
-345 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
-346                      - BlockUsed:12 Acquire:0 BufferUsed:21060544
-347                      - Flush:4 Expand:0 ProducerWait:0 ConsumerWait:1
-348                      - MainProducerTime:0.288081563 TotalConsumerTime:0.071403177
-349                      - ElapsedTime:1.791525000
-350 Producer   0 profile - BlockUsed:12 Acquire:0 BufferUsed:21060544
-351 Consumer   0 profile - Affinity:-1 CPUTime:0.071403177 LifeTime:0.075628472 (0.94%)
-352                      - BlockUsed:12 Acquire:0 BufferUsed:21060544
-353 SimExit
-354 Elapsed time:    0:00:03    Mon Dec  8 16:51:30 2025
-355 User CPU time used: 0 seconds
-356 System CPU time used: 0 seconds
-357 Sim process exit
+330 Idcode  0 - bc1:0  mda:103946
+331 Elapsed time:    0:00:02    Tue Dec  9 08:40:07 2025
+332 User CPU time used: 0 seconds
+333 System CPU time used: 0 seconds
+334 End of simulation at 2059940
+335 Memory usage: 1109.201 M
+336 Maximum resident set size: 701 MB
+337 Hard page faults: 0
+338 Soft page faults: 61183
+339 Elapsed time:    0:00:09    Tue Dec  9 08:40:14 2025
+340 User CPU time used: 7 seconds
+341 System CPU time used: 0 seconds
+342 Begin FSDB profile info:
+343 FSDB Writer : bc1(103003) bcn(62756171) mtf/stf(1/3)
+FSDB Writer elapsed time : flush(3.777090) io wait(0.000000) theadpool wait(0.021567)
+FSDB Writer cpu time : MT Compression : thread 0(0.7224327) thread 1(0.257019407) thread 2(0.255284438) 
+344 End FSDB profile info
+345 FSDB closed. Name: top.fsdb Size: 50221597
+346 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:512MB
+347                      - BlockUsed:398 Acquire:0 BufferUsed:832150969
+348                      - Flush:4 Expand:14 ProducerWait:52 ConsumerWait:0
+349                      - MainProducerTime:1.414779562 TotalConsumerTime:5.577213082
+350                      - ElapsedTime:8.430913000
+351 Producer   0 profile - BlockUsed:398 Acquire:0 BufferUsed:832150969
+352 Consumer   0 profile - Affinity:-1 CPUTime:5.577213082 LifeTime:6.791153053 (0.82%)
+353                      - BlockUsed:398 Acquire:0 BufferUsed:832150969
+354 SimExit
+355 Elapsed time:    0:00:10    Tue Dec  9 08:40:15 2025
+356 User CPU time used: 7 seconds
+357 System CPU time used: 0 seconds
+358 Sim process exit

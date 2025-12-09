@@ -18,11 +18,11 @@
 37
 +define+CYCLE=0.4
 +define+MAX=100000
-+define+prog0
++define+prog5
 +incdir+/home/patata0717/DICD/HW3_groupx/./src+/home/patata0717/DICD/HW3_groupx/./include+/home/patata0717/DICD/HW3_groupx/./sim
 +itf+/usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib/vcsdp_lite.tab
 +notimingcheck
-+prog_path=/home/patata0717/DICD/HW3_groupx/./sim/prog0
++prog_path=/home/patata0717/DICD/HW3_groupx/./sim/prog5
 +vcsd1
 +vpi
 -Mamsrun=
@@ -52,13 +52,13 @@
 -sverilog
 /usr/cad/synopsys/vcs/2024.09-sp2/linux64/bin/vcs1
 /usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/VCS/LINUX64/verdi.tab
-/home/patata0717/DICD/HW3_groupx/./sim/top_tb.sv
+/home/patata0717/DICD/HW3_groupx/./sim/top_tb3.sv
 76
 X_SCLS=devtoolset-11 
 XLOCALEDIR=/usr/cad/synopsys/icc2/2024.09-sp2//etc/locale
 XILINX_VIVADO=/tools/Xilinx/Vivado/2020.2
 XILINX_HLS=/tools/Xilinx/Vitis_HLS/2020.2
-XDG_SESSION_ID=37113
+XDG_SESSION_ID=37498
 XDG_RUNTIME_DIR=/run/user/1005
 XDG_DATA_DIRS=/home/patata0717/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
 VMR_MODE_FLAG=64
@@ -86,9 +86,9 @@ SYN_MAN_DIR=/usr/cad/synopsys/primelib/2025.06//ncx/man
 SYNOPSYS_NCX_ROOT=/usr/cad/synopsys/primelib/2025.06/
 SYNOPSYS_LC_ROOT=/usr/cad/synopsys/lc/cur
 SYNOPSYS=/usr/cad/synopsys/formality/cur
-SSH_TTY=/dev/pts/6
-SSH_CONNECTION=140.116.226.70 59202 140.116.226.74 22
-SSH_CLIENT=140.116.226.70 59202 22
+SSH_TTY=/dev/pts/8
+SSH_CONNECTION=140.116.29.25 53939 140.116.226.74 22
+SSH_CLIENT=140.116.29.25 53939 22
 SNPS_VCS_PYTHON3=/usr/cad/synopsys/vcs/2024.09-sp2/linux64/bin/Python3/bin/python3
 SNPS_VCS_CLANG_PATH=/usr/cad/synopsys/vcs/2024.09-sp2/linux64/clang
 SNPS_INTERNAL_VCS_LINUX_OS=linux
@@ -101,7 +101,7 @@ SCRIPT_NAME=vcs
 SALT_LICENSE_SERVER=1717@lstn
 SALT_LICENSE_FILE=1717@lstn
 RISCV=/opt/riscv
-REMOTEHOST=140.116.226.70
+REMOTEHOST=140.116.29.25
 QT_GRAPHICSSYSTEM_CHECKED=1
 QTLIB=/usr/lib64/qt-3.3/lib
 QTINC=/usr/lib64/qt-3.3/include
@@ -114,8 +114,8 @@ MGC_TMPDIR=/tmp
 MGC_LOCATION_MAP=NO_MAP
 MGC_HOME=/usr/cad/mentor/calibre/aoj_cal_2024.4_12.9
 MFLAGS=
-MAKE_TERMOUT=/dev/pts/6
-MAKE_TERMERR=/dev/pts/6
+MAKE_TERMOUT=/dev/pts/8
+MAKE_TERMERR=/dev/pts/8
 MAKELEVEL=1
 MAKEFLAGS=
 LESSOPEN=||/usr/bin/lesspipe.sh %s
@@ -138,11 +138,11 @@ CALIBRE_2025_1_ENABLE_DEPRECATED_RHEL7=3
 1765183865 /home/patata0717/DICD/HW3_groupx/./src/mag.sv
 1765183858 /home/patata0717/DICD/HW3_groupx/./src/gamma_sum.sv
 1765183852 /home/patata0717/DICD/HW3_groupx/./src/delay_n.sv
-1765183846 /home/patata0717/DICD/HW3_groupx/./src/argmax.sv
-1765183836 /home/patata0717/DICD/HW3_groupx/./src/angle.sv
+1765240307 /home/patata0717/DICD/HW3_groupx/./src/argmax.sv
+1765184330 /home/patata0717/DICD/HW3_groupx/./src/angle.sv
 1765183693 ../include/data_type.svh
-1765183884 /home/patata0717/DICD/HW3_groupx/./src/top.sv
-1762761215 /home/patata0717/DICD/HW3_groupx/./sim/top_tb.sv
+1765240725 /home/patata0717/DICD/HW3_groupx/./src/top.sv
+1762761239 /home/patata0717/DICD/HW3_groupx/./sim/top_tb3.sv
 1741065587 /usr/cad/synopsys/verdi/2024.09-sp2/share/PLI/VCS/LINUX64/verdi.tab
 1740888368 /usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib/vcsdp_lite.tab
 4
@@ -150,5 +150,5 @@ CALIBRE_2025_1_ENABLE_DEPRECATED_RHEL7=3
 1740889567 /usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib/liberrorinf.so
 1740889560 /usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib/libsnpsmalloc.so
 1740889556 /usr/cad/synopsys/vcs/2024.09-sp2/linux64/lib/libvfs.so
-1765183890 simv.daidir
+1765240815 simv.daidir
 -1 partitionlib

@@ -3,12 +3,13 @@
 module argmax (
     input  logic    clk,
     input  logic    rst,        // ACTIVE-HIGH reset (matches reset_signal_is(rst, true))
+    output logic [9:0]   count,
 
     input  lambda_t lambda_in,  // Q6.8 signed
     input  ang_t    angle_in,   // Q3.8 signed
 
     output theta_t  theta_out,  // 8-bit
-    output eps_t    eps_out     // Q1.20 signed
+    output eps_t    eps_out      // Q1.20 signed
 );
     localparam int N = 256;
 
@@ -19,7 +20,7 @@ module argmax (
         {1'b1, {(LAMBDA_W-1){1'b0}}};   // 14'b1000_0000_0000_00
 
     // count initial value in SystemC
-    localparam logic signed [9:0] COUNT_INIT = -10'sd283;
+    localparam logic signed [9:0] COUNT_INIT = -10'sd284;
 
     // INV_TWO_PI from SystemC: PI_t("0b0.00101000")
     // 0.00101000b = 40/256 = 0.15625
