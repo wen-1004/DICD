@@ -50,15 +50,9 @@ module cordic_atan2_pipe #(
 
     // Sequential register
     always_ff @(posedge clk) begin
-        if (rst) begin
-            X_out <= '0;
-            Y_out <= '0;
-            Z_out <= '0;
-        end else begin
-            X_out <= X_next;
-            Y_out <= Y_next;
-            Z_out <= Z_next;
-        end
+        X_out <= X_next;
+        Y_out <= Y_next;
+        Z_out <= Z_next;
     end
 
 endmodule
@@ -138,15 +132,9 @@ module angle (
     end
 
     always_ff @(posedge clk) begin
-        if (rst) begin
-            x0_r <= '0;
-            y0_r <= '0;
-            z0_r <= '0;
-        end else begin
-            x0_r <= x0_c;
-            y0_r <= y0_c;
-            z0_r <= z0_c;
-        end
+        x0_r <= x0_c;
+        y0_r <= y0_c;
+        z0_r <= z0_c;
     end
 
     // -------------------------------------------------------------------------

@@ -26,7 +26,14 @@ module minus (
     logic signed [RHO_W + PHI_W - 1:0] prod_full_w;
 
     // Cast phi to signed positive before multiply
-    assign prod_full_w = $signed(rho_const) * $signed({1'b0, phi_in});
+    // assign prod_full_w = $signed(rho_const) * $signed({1'b0, phi_in});
+    // Cast phi to signed positive and widen to prod width
+    logic signed [RHO_W + PHI_W - 1:0] phi_ext;
+    assign phi_ext = $signed({1'b0, phi_in});
+    
+    // Exact constant multiply by 127 = (x<<7) - x
+    assign prod_full_w = (phi_ext <<< 7) - phi_ext;
+
 
     logic signed [RHO_W + PHI_W - 1:0] prod_full_s1;
     mag_t                              mag_s1;

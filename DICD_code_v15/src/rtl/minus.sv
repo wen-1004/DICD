@@ -1,35 +1,43 @@
-`include "include/data_type.svh"
+`include "../include/data_type.svh"
 
 module minus (
-    input  logic   clk,
-    input  logic   rst,  
-    input  mag_t   mag_in,
-    input  phi_t   phi_in,
-    input  rho_t   rho_in,
+    input  logic    clk,
+    input  logic    rst,  
+
+    input  mag_t    mag_in,
+    input  phi_t    phi_in,
+    input  rho_t    rho_in,     // kept for interface compatibility (unused)
+
     output lambda_t lambda_out
 );
     import data_type::*;
 
-    // rho  : Q1.7  (RHO_W signed)
-    // phi  : Q6.8  (PHI_W unsigned)
-    // mag  : Q6.8  (MAG_W signed)
+    // ------------------------------------------------------------
+    // 2-stage pipelined minus with fixed rho constant
     //
-    // prod_full  width = RHO_W + PHI_W
-    // frac bits  = RHO_FRAC + PHI_FRAC
-    // shift by RHO_FRAC to go back to Q6.8 domain
+    // rho  : Q1.7  (8 bits signed)
+    // phi  : Q6.8  (14 bits unsigned)
+    // mag  : Q6.8  (14 bits signed)
+    //
+    // S1: prod_full = rho_const * phi_in   (register)
+    //     mag_in aligned into mag_s1
+    // S2: (prod_full >>> RHO_FRAC)[13:0] then mag - rho*phi (register)
+    //
+    // Total latency: 2 cycles
+    // ------------------------------------------------------------
 
-    localparam rho_t rho_const = 8'sb01111111; // 0.9921875 in Q1.7
+    // 0.9921875 in Q1.7
+    localparam rho_t RHO_CONST = 8'sb01111111;
 
-    // =========================================================
-    // Stage 1: multiply (largest cut)
-    // =========================================================
+    // -------------------------
+    // Stage 1: multiply + align mag
+    // -------------------------
     logic signed [RHO_W + PHI_W - 1:0] prod_full_w;
-
-    // Cast phi to signed positive before multiply
-    assign prod_full_w = $signed(rho_const) * $signed({1'b0, phi_in});
-
     logic signed [RHO_W + PHI_W - 1:0] prod_full_s1;
     mag_t                              mag_s1;
+
+    // Cast phi to signed positive before multiply
+    assign prod_full_w = $signed(RHO_CONST) * $signed({1'b0, phi_in});
 
     always_ff @(posedge clk) begin
         if (rst) begin
@@ -37,38 +45,21 @@ module minus (
             mag_s1       <= '0;
         end else begin
             prod_full_s1 <= prod_full_w;
-            mag_s1       <= mag_in;      // align with product pipeline
+            mag_s1       <= mag_in;
         end
     end
 
-    // =========================================================
-    // Stage 2: shift + truncate to 14-bit Q6.8
-    // =========================================================
-    logic signed [RHO_W + PHI_W - 1:0] prod_shifted_w;
-    logic signed [LAMBDA_W-1:0]        rho_phi_q6_8_w;
+    // -------------------------
+    // Stage 2: shift + truncate + subtract
+    // -------------------------
+    logic signed [RHO_W + PHI_W - 1:0] prod_shifted_s1;
+    logic signed [LAMBDA_W-1:0]        rho_phi_q6_8_s1;
+    logic signed [LAMBDA_W-1:0]        lambda_calc_w;
 
-    assign prod_shifted_w = prod_full_s1 >>> RHO_FRAC;
-    assign rho_phi_q6_8_w = prod_shifted_w[LAMBDA_W-1:0];
+    assign prod_shifted_s1 = prod_full_s1 >>> RHO_FRAC;
+    assign rho_phi_q6_8_s1 = prod_shifted_s1[LAMBDA_W-1:0];
 
-    logic signed [LAMBDA_W-1:0] rho_phi_q6_8_s2;
-    mag_t                       mag_s2;
-
-    always_ff @(posedge clk) begin
-        if (rst) begin
-            rho_phi_q6_8_s2 <= '0;
-            mag_s2          <= '0;
-        end else begin
-            rho_phi_q6_8_s2 <= rho_phi_q6_8_w;
-            mag_s2          <= mag_s1;   // keep alignment
-        end
-    end
-
-    // =========================================================
-    // Stage 3: subtract and register output
-    // =========================================================
-    logic signed [LAMBDA_W-1:0] lambda_calc_w;
-
-    assign lambda_calc_w = $signed(mag_s2) - $signed(rho_phi_q6_8_s2);
+    assign lambda_calc_w   = $signed(mag_s1) - $signed(rho_phi_q6_8_s1);
 
     always_ff @(posedge clk) begin
         if (rst) begin

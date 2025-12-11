@@ -16,7 +16,7 @@ module phi_sum (
 
     localparam int L_CONST_PHI = 16;
     localparam int SQ_SHIFT    = (2*R_FRAC - PHI_FRAC); // 12-8 = 4
-    localparam int EXTRA_OUT_LAT = 3; // add 3 cycles to phi_out
+    localparam int EXTRA_OUT_LAT = 4; // add 3 cycles to phi_out
 
     // -------------------------
     // Sliding window state

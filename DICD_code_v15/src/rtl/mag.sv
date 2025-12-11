@@ -1,4 +1,4 @@
-`include "include/data_type.svh"
+`include "../include/data_type.svh"
 
 module mag (
     input  logic   clk,
@@ -12,12 +12,13 @@ module mag (
     import data_type::*;
 
     // ------------------------------------------------------------
-    // 4-stage "normally distributed" AMBM |x + jy|
+    // 5-stage pipelined AMBM |x + jy| approximation
     //
-    // S1: abs + max/min + left=min<<8
-    // S2: rightk=max*SEGk + segment compare -> seg_idx
-    // S3: alpha/beta mux + 2 mult + >>>AMBM_FRAC -> term_a/term_b
-    // S4: add only -> mag_out reg
+    // S1: abs + max/min
+    // S2: cross-multiply terms
+    // S3: segment compare -> alpha/beta
+    // S4a: compute prod_a_full / prod_b_full (REGISTER)
+    // S4b: shift + add -> mag_out (REGISTER)
     // ------------------------------------------------------------
 
     // -------------------------
@@ -56,11 +57,9 @@ module mag (
     localparam ambm_t BETA8  = 10'sb00_10110100;
 
     // ============================================================
-    // S1: abs + max/min + left=min<<8
+    // S1: abs + max/min
     // ============================================================
-    gamma_t x0, y0;
-    gamma_t ax0, ay0;
-    gamma_t max0, min0;
+    gamma_t x0, y0, ax0, ay0, max0, min0;
 
     assign x0  = gm_in_real;
     assign y0  = gm_in_imag;
@@ -71,146 +70,135 @@ module mag (
     assign max0 = ($signed(ax0) >= $signed(ay0)) ? ax0 : ay0;
     assign min0 = ($signed(ax0) >= $signed(ay0)) ? ay0 : ax0;
 
-    logic [GAMMA_W-1:0] max_u0, min_u0;
-    assign max_u0 = max0;
-    assign min_u0 = min0;
-
-    logic [GAMMA_W+8-1:0] left1_c;
-    assign left1_c = {min_u0, 8'b0};
-
-    // S1 registers
-    gamma_t               max_s1, min_s1;
-    logic [GAMMA_W-1:0]   max_u1;
-    logic [GAMMA_W+8-1:0] left1;
-    logic                 max_zero1;
+    gamma_t max_s1, min_s1;
+    logic [GAMMA_W-1:0] max_u1, min_u1;
 
     always_ff @(posedge clk) begin
         if (rst) begin
-            max_s1     <= '0;
-            min_s1     <= '0;
-            max_u1     <= '0;
-            left1      <= '0;
-            max_zero1  <= 1'b1;
+            max_s1 <= '0; min_s1 <= '0;
+            max_u1 <= '0; min_u1 <= '0;
         end else begin
-            max_s1     <= max0;
-            min_s1     <= min0;
-            max_u1     <= max_u0;
-            left1      <= left1_c;
-            max_zero1  <= (max_u0 == '0);
+            max_s1 <= max0; min_s1 <= min0;
+            max_u1 <= max0; min_u1 <= min0;
         end
     end
 
     // ============================================================
-    // S2: rightk=max*SEGk + segment compare -> seg_idx
+    // S2: cross-multiply terms
     // ============================================================
+    logic [GAMMA_W+8-1:0] left2_c;
     logic [GAMMA_W+8-1:0] right0_c, right1_c, right2_c, right3_c;
     logic [GAMMA_W+8-1:0] right4_c, right5_c, right6_c, right7_c;
+    logic                 max_zero_c;
 
-    assign right0_c = max_u1 * SEG0;
-    assign right1_c = max_u1 * SEG1;
-    assign right2_c = max_u1 * SEG2;
-    assign right3_c = max_u1 * SEG3;
-    assign right4_c = max_u1 * SEG4;
-    assign right5_c = max_u1 * SEG5;
-    assign right6_c = max_u1 * SEG6;
-    assign right7_c = max_u1 * SEG7;
+    assign left2_c    = {min_u1, 8'b0};
+    assign right0_c   = max_u1 * SEG0;
+    assign right1_c   = max_u1 * SEG1;
+    assign right2_c   = max_u1 * SEG2;
+    assign right3_c   = max_u1 * SEG3;
+    assign right4_c   = max_u1 * SEG4;
+    assign right5_c   = max_u1 * SEG5;
+    assign right6_c   = max_u1 * SEG6;
+    assign right7_c   = max_u1 * SEG7;
+    assign max_zero_c = (max_u1 == '0);
 
-    // segment index:
-    // 0..7 -> ALPHA/BETA 0..7
-    // 8    -> default ALPHA/BETA 8 (r >= SEG7)
-    // 9    -> special for max==0 (force 0)
-    logic [3:0] seg_idx_c;
-
-    always_comb begin
-        seg_idx_c = 4'd8; // default
-
-        if (max_zero1) begin
-            seg_idx_c = 4'd9;
-        end
-        else if (left1 < right0_c) seg_idx_c = 4'd0;
-        else if (left1 < right1_c) seg_idx_c = 4'd1;
-        else if (left1 < right2_c) seg_idx_c = 4'd2;
-        else if (left1 < right3_c) seg_idx_c = 4'd3;
-        else if (left1 < right4_c) seg_idx_c = 4'd4;
-        else if (left1 < right5_c) seg_idx_c = 4'd5;
-        else if (left1 < right6_c) seg_idx_c = 4'd6;
-        else if (left1 < right7_c) seg_idx_c = 4'd7;
-    end
-
-    // S2 registers
-    logic [3:0] seg_idx_s2;
-    gamma_t     max_s2, min_s2;
+    logic [GAMMA_W+8-1:0] left2;
+    logic [GAMMA_W+8-1:0] right0_2, right1_2, right2_2, right3_2;
+    logic [GAMMA_W+8-1:0] right4_2, right5_2, right6_2, right7_2;
+    logic                 max_zero2;
+    gamma_t               max_s2, min_s2;
 
     always_ff @(posedge clk) begin
         if (rst) begin
-            seg_idx_s2 <= 4'd9;
-            max_s2     <= '0;
-            min_s2     <= '0;
+            left2 <= '0;
+            right0_2 <= '0; right1_2 <= '0; right2_2 <= '0; right3_2 <= '0;
+            right4_2 <= '0; right5_2 <= '0; right6_2 <= '0; right7_2 <= '0;
+            max_zero2 <= 1'b1;
+            max_s2 <= '0; min_s2 <= '0;
         end else begin
-            seg_idx_s2 <= seg_idx_c;
-            max_s2     <= max_s1;
-            min_s2     <= min_s1;
+            left2 <= left2_c;
+            right0_2 <= right0_c; right1_2 <= right1_c; right2_2 <= right2_c; right3_2 <= right3_c;
+            right4_2 <= right4_c; right5_2 <= right5_c; right6_2 <= right6_c; right7_2 <= right7_c;
+            max_zero2 <= max_zero_c;
+            max_s2 <= max_s1; min_s2 <= min_s1;
         end
     end
 
     // ============================================================
-    // S3: alpha/beta mux + 2 mult + shift -> term regs
+    // S3: segment compare -> alpha/beta
     // ============================================================
-    ambm_t alpha_s3_c, beta_s3_c;
+    ambm_t alpha3_c, beta3_c;
 
     always_comb begin
-        // default for seg_idx 8
-        alpha_s3_c = ALPHA8;
-        beta_s3_c  = BETA8;
+        alpha3_c = ALPHA8;
+        beta3_c  = BETA8;
 
-        unique case (seg_idx_s2)
-            4'd0: begin alpha_s3_c = ALPHA0; beta_s3_c = BETA0; end
-            4'd1: begin alpha_s3_c = ALPHA1; beta_s3_c = BETA1; end
-            4'd2: begin alpha_s3_c = ALPHA2; beta_s3_c = BETA2; end
-            4'd3: begin alpha_s3_c = ALPHA3; beta_s3_c = BETA3; end
-            4'd4: begin alpha_s3_c = ALPHA4; beta_s3_c = BETA4; end
-            4'd5: begin alpha_s3_c = ALPHA5; beta_s3_c = BETA5; end
-            4'd6: begin alpha_s3_c = ALPHA6; beta_s3_c = BETA6; end
-            4'd7: begin alpha_s3_c = ALPHA7; beta_s3_c = BETA7; end
-            4'd9: begin alpha_s3_c = '0;     beta_s3_c  = '0;    end
-            default: ; // keep ALPHA8/BETA8
-        endcase
+        if (max_zero2) begin
+            alpha3_c = '0; beta3_c = '0;
+        end
+        else if (left2 < right0_2) begin alpha3_c = ALPHA0; beta3_c = BETA0; end
+        else if (left2 < right1_2) begin alpha3_c = ALPHA1; beta3_c = BETA1; end
+        else if (left2 < right2_2) begin alpha3_c = ALPHA2; beta3_c = BETA2; end
+        else if (left2 < right3_2) begin alpha3_c = ALPHA3; beta3_c = BETA3; end
+        else if (left2 < right4_2) begin alpha3_c = ALPHA4; beta3_c = BETA4; end
+        else if (left2 < right5_2) begin alpha3_c = ALPHA5; beta3_c = BETA5; end
+        else if (left2 < right6_2) begin alpha3_c = ALPHA6; beta3_c = BETA6; end
+        else if (left2 < right7_2) begin alpha3_c = ALPHA7; beta3_c = BETA7; end
     end
 
-    logic signed [AMBM_W+GAMMA_W-1:0] prod_a_full_c, prod_b_full_c;
-    assign prod_a_full_c = $signed(alpha_s3_c) * $signed(max_s2);
-    assign prod_b_full_c = $signed(beta_s3_c)  * $signed(min_s2);
-
-    logic signed [MAG_W:0] term_a_c, term_b_c;
-    assign term_a_c = $signed(prod_a_full_c >>> AMBM_FRAC);
-    assign term_b_c = $signed(prod_b_full_c >>> AMBM_FRAC);
-
-    // S3 registers
-    logic signed [MAG_W:0] term_a_s3, term_b_s3;
+    ambm_t alpha_s3, beta_s3;
+    gamma_t max_s3, min_s3;
 
     always_ff @(posedge clk) begin
         if (rst) begin
-            term_a_s3 <= '0;
-            term_b_s3 <= '0;
+            alpha_s3 <= '0; beta_s3 <= '0;
+            max_s3 <= '0;   min_s3 <= '0;
         end else begin
-            term_a_s3 <= term_a_c;
-            term_b_s3 <= term_b_c;
+            alpha_s3 <= alpha3_c;
+            beta_s3  <= beta3_c;
+            max_s3   <= max_s2;
+            min_s3   <= min_s2;
         end
     end
 
     // ============================================================
-    // S4: add only -> mag_out reg
+    // S4a: compute products (REGISTER HERE)
     // ============================================================
-    logic signed [MAG_W:0] z_sum_c;
-    assign z_sum_c = term_a_s3 + term_b_s3;
+    logic signed [AMBM_W+GAMMA_W-1:0] prod_a_full_w, prod_b_full_w;
+    assign prod_a_full_w = $signed(alpha_s3) * $signed(max_s3);
+    assign prod_b_full_w = $signed(beta_s3)  * $signed(min_s3);
+
+    logic signed [AMBM_W+GAMMA_W-1:0] prod_a_full_s4;
+    logic signed [AMBM_W+GAMMA_W-1:0] prod_b_full_s4;
+
+    always_ff @(posedge clk) begin
+        if (rst) begin
+            prod_a_full_s4 <= '0;
+            prod_b_full_s4 <= '0;
+        end else begin
+            prod_a_full_s4 <= prod_a_full_w;
+            prod_b_full_s4 <= prod_b_full_w;
+        end
+    end
+
+    // ============================================================
+    // S4b: shift + add -> mag_out
+    // ============================================================
+    logic signed [MAG_W:0] term_a_q68_w;
+    logic signed [MAG_W:0] term_b_q68_w;
+
+    assign term_a_q68_w = $signed(prod_a_full_s4 >>> AMBM_FRAC);
+    assign term_b_q68_w = $signed(prod_b_full_s4 >>> AMBM_FRAC);
+
+    logic signed [MAG_W:0] z_sum_q68_w;
+    assign z_sum_q68_w = term_a_q68_w + term_b_q68_w;
 
     always_ff @(posedge clk) begin
         if (rst) begin
             mag_out <= '0;
         end else begin
-            mag_out <= mag_t'(z_sum_c[MAG_W-1:0]);
+            mag_out <= mag_t'(z_sum_q68_w[MAG_W-1:0]);
         end
     end
 
 endmodule
-

@@ -1,9 +1,0 @@
-{"vcs1":{"timestamp_begin":1765257907.179464428, "rt":4.98, "ut":3.90, "st":0.41}}
-{"vcselab":{"timestamp_begin":1765257912.188949896, "rt":1.25, "ut":0.56, "st":0.02}}
-{"link":{"timestamp_begin":1765257913.465898450, "rt":0.48, "ut":0.35, "st":0.14}}
-{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1765257906.965007827}
-{"VCS_COMP_START_TIME": 1765257906.965007827}
-{"VCS_COMP_END_TIME": 1765257917.349451616}
-{"VCS_USER_OPTIONS": "-R -sverilog +neg_tchk -negdelay -v /usr/cad/CBDK/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/VERILOG/N16ADFP_StdCell.v /home/patata0717/DICD/HW3_groupx/./sim/top_tb.sv -debug_access+all -full64 -diag=sdf:verbose +incdir+/home/patata0717/DICD/HW3_groupx/./syn+/home/patata0717/DICD/HW3_groupx/./src+/home/patata0717/DICD/HW3_groupx/./include+/home/patata0717/DICD/HW3_groupx/./sim +define+SYN+prog0 +define+CYCLE=3 +define+MAX=100000 +prog_path=/home/patata0717/DICD/HW3_groupx/./sim/prog0"}
-{"vcs1": {"peak_mem": 372600}}
-{"vcselab": {"peak_mem": 203588}}

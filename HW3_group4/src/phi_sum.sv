@@ -50,6 +50,20 @@ module phi_sum (
     phi_t phi_out_d1, phi_out_d2, phi_out_d3;
 
     // -------------------------
+    // Valid mask for delay line tail
+    // 0 means "treat old value as 0"
+    // -------------------------
+    logic [L_CONST_PHI-1:0] valid_sr;
+
+    always_ff @(posedge clk) begin
+        if (rst) begin
+            valid_sr <= '0;
+        end else begin
+            valid_sr <= {valid_sr[L_CONST_PHI-2:0], 1'b1};
+        end
+    end
+
+    // -------------------------
     // Stage 2 combinational wires
     // Sum squares in Q2.12 FIRST, then truncate once
     // -------------------------
@@ -68,12 +82,20 @@ module phi_sum (
         $signed({r_kmN_sq_s2[PHI_W-1], r_kmN_sq_s2});
 
     logic signed [RHO_W + (PHI_W+1) - 1:0] energy_prod_w;
-    assign energy_prod_w = $signed(rho_half_s2) * $signed(sum_sq_ext_w);
+    // assign energy_prod_w = $signed(rho_half_s2) * $signed(sum_sq_ext_w);
+    // 63 * sum = (sum << 6) - sum  (exact, no early truncation)
+    logic signed [PHI_W+6:0] sum_mul63_w;
+    assign sum_mul63_w  = ($signed(sum_sq_ext_w) <<< 6) - $signed(sum_sq_ext_w);
+    
+    // Keep the same signal name/width so the rest of your pipeline is untouched
+    assign energy_prod_w = $signed(sum_mul63_w);
+
 
     // -------------------------
     // Stage 4 combinational wires
     // -------------------------
-    wire phi_t old_energy_w = delay_line[L_CONST_PHI-1];
+    wire phi_t old_energy_raw = delay_line[L_CONST_PHI-1];
+    wire phi_t old_energy_w = valid_sr[L_CONST_PHI-1] ? old_energy_raw : '0;
 
     logic signed [PHI_W:0] sum_calc_w;
     assign sum_calc_w =
@@ -134,8 +156,6 @@ module phi_sum (
     integer i;
     always_ff @(posedge clk) begin
         if (rst) begin
-            for (i = 0; i < L_CONST_PHI; i++)
-                delay_line[i] <= '0;
             current_sum <= '0;
 
             phi_out_d1 <= '0;
@@ -143,11 +163,6 @@ module phi_sum (
             phi_out_d3 <= '0;
             phi_out    <= '0;
         end else begin
-            // shift window
-            for (i = L_CONST_PHI-1; i > 0; i--)
-                delay_line[i] <= delay_line[i-1];
-            delay_line[0] <= energy_to_sum_s3;
-
             // update internal sum (keep algorithm timing unchanged)
             current_sum <= new_sum_w;
 
@@ -158,5 +173,15 @@ module phi_sum (
             phi_out    <= phi_out_d3;
         end
     end
+
+    always_ff @(posedge clk) begin
+            // shift window
+            for (i = L_CONST_PHI-1; i > 0; i--)
+                delay_line[i] <= delay_line[i-1];
+            delay_line[0] <= energy_to_sum_s3;
+
+    end
+
+
 
 endmodule

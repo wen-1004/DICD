@@ -9,7 +9,7 @@ Report : timing
         -sort_by group
 Design : top
 Version: W-2024.09-SP2
-Date   : Tue Dec  9 15:32:18 2025
+Date   : Wed Dec 10 19:41:36 2025
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -17,9 +17,9 @@ Date   : Tue Dec  9 15:32:18 2025
 Operating Conditions: ss0p72vm40c   Library: N16ADFP_StdCellss0p72vm40c
 Wire Load Model Mode: segmented
 
-  Startpoint: U_MAG/max_u1_reg_7_
+  Startpoint: U_MAG/max_u1_reg_5_
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: U_MAG/seg_idx_s2_reg_3_
+  Endpoint: U_MAG/seg_idx_s2_reg_1_
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -46,58 +46,53 @@ Wire Load Model Mode: segmented
   phi_sum            ZeroWireload          N16ADFP_StdCellss0p72vm40c
   top                ZeroWireload          N16ADFP_StdCellss0p72vm40c
   delay_n            ZeroWireload          N16ADFP_StdCellss0p72vm40c
-  mag_DW_mult_uns_J17_0
-                     ZeroWireload          N16ADFP_StdCellss0p72vm40c
-  mag_DW_mult_uns_J4_0
+  mag_DW_mult_uns_J6_1
                      ZeroWireload          N16ADFP_StdCellss0p72vm40c
   mag_DW_mult_uns_J19_0
                      ZeroWireload          N16ADFP_StdCellss0p72vm40c
-  mag_DW_mult_uns_J7_1
-                     ZeroWireload          N16ADFP_StdCellss0p72vm40c
-  mag_DW_mult_uns_J18_0
-                     ZeroWireload          N16ADFP_StdCellss0p72vm40c
-  mag_DW_mult_uns_J5_0
+  mag_DW_mult_uns_J22_0
                      ZeroWireload          N16ADFP_StdCellss0p72vm40c
 
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock clk (rise edge)                                 0.0000     0.0000
   clock network delay (ideal)                           0.2000     0.2000
-  U_MAG/max_u1_reg_7_/CP (DFQD2BWP16P90LVT)             0.0000 #   0.2000 r
-  U_MAG/max_u1_reg_7_/Q (DFQD2BWP16P90LVT)              0.0673     0.2673 f
-  U_MAG/U10/Z (BUFFD16BWP16P90LVT)                      0.0177     0.2850 f
-  U_MAG/mult_116/a[7] (mag_DW_mult_uns_J18_0)           0.0000     0.2850 f
-  U_MAG/mult_116/U188/S (FA1D1BWP16P90LVT)              0.0418     0.3268 r
-  U_MAG/mult_116/U187/S (FA1D1BWP16P90LVT)              0.0353     0.3621 f
-  U_MAG/mult_116/U267/ZN (ND2D2BWP16P90LVT)             0.0070     0.3691 r
-  U_MAG/mult_116/U292/ZN (OAI21D2BWP16P90LVT)           0.0075     0.3766 f
-  U_MAG/mult_116/U264/ZN (AOI21D1BWP16P90LVT)           0.0114     0.3880 r
-  U_MAG/mult_116/U299/ZN (OAI21D2BWP16P90LVT)           0.0113     0.3994 f
-  U_MAG/mult_116/U208/ZN (AOI21D1BWP16P90LVT)           0.0109     0.4103 r
-  U_MAG/mult_116/U320/Z (XOR2D1BWP16P90LVT)             0.0186     0.4289 f
-  U_MAG/mult_116/product[16] (mag_DW_mult_uns_J18_0)    0.0000     0.4289 f
-  U_MAG/U517/ZN (INVD1BWP16P90LVT)                      0.0059     0.4348 r
-  U_MAG/U180/ZN (ND2D1BWP16P90LVT)                      0.0086     0.4435 f
-  U_MAG/U222/ZN (ND3D1BWP16P90LVT)                      0.0076     0.4511 r
-  U_MAG/U101/ZN (INR4D1BWP16P90LVT)                     0.0066     0.4577 f
-  U_MAG/U173/ZN (IIND4D1BWP16P90LVT)                    0.0172     0.4750 f
-  U_MAG/U165/ZN (OAI222D1BWP16P90LVT)                   0.0162     0.4912 r
-  U_MAG/U164/ZN (CKND2BWP16P90LVT)                      0.0095     0.5007 f
-  U_MAG/U338/ZN (CKND2BWP16P90LVT)                      0.0052     0.5058 r
-  U_MAG/U334/ZN (ND3D1BWP16P90LVT)                      0.0084     0.5143 f
-  U_MAG/U323/ZN (OAI31D1BWP16P90LVT)                    0.0111     0.5254 r
-  U_MAG/seg_idx_s2_reg_3_/D (DFQD2BWP16P90LVT)          0.0000     0.5254 r
-  data arrival time                                                0.5254
+  U_MAG/max_u1_reg_5_/CP (DFQD2BWP16P90LVT)             0.0000 #   0.2000 r
+  U_MAG/max_u1_reg_5_/Q (DFQD2BWP16P90LVT)              0.0656     0.2656 f
+  U_MAG/U450/Z (BUFFD12BWP16P90LVT)                     0.0170     0.2826 f
+  U_MAG/mult_112/a[5] (mag_DW_mult_uns_J22_0)           0.0000     0.2826 f
+  U_MAG/mult_112/U307/S (FA1D1BWP16P90LVT)              0.0404     0.3230 r
+  U_MAG/mult_112/U183/S (FA1D1BWP16P90LVT)              0.0300     0.3529 r
+  U_MAG/mult_112/U306/ZN (CKNR2D4BWP16P90LVT)           0.0081     0.3610 f
+  U_MAG/mult_112/U317/ZN (NR2D2BWP16P90LVT)             0.0090     0.3701 r
+  U_MAG/mult_112/U290/ZN (ND2D2BWP16P90LVT)             0.0079     0.3780 f
+  U_MAG/mult_112/U215/Z (OR2D1BWP16P90LVT)              0.0143     0.3923 f
+  U_MAG/mult_112/U205/ZN (CKND2D2BWP16P90LVT)           0.0070     0.3993 r
+  U_MAG/mult_112/U334/ZN (AOI21D2BWP16P90LVT)           0.0093     0.4086 f
+  U_MAG/mult_112/U256/Z (XOR2D1BWP16P90LVT)             0.0177     0.4263 r
+  U_MAG/mult_112/product[19] (mag_DW_mult_uns_J22_0)    0.0000     0.4263 r
+  U_MAG/U457/ZN (CKND2BWP16P90LVT)                      0.0064     0.4327 f
+  U_MAG/U156/ZN (CKND2D4BWP16P90LVT)                    0.0058     0.4384 r
+  U_MAG/U464/ZN (CKND2BWP16P90LVT)                      0.0060     0.4445 f
+  U_MAG/U798/ZN (NR4D1BWP16P90LVT)                      0.0148     0.4593 r
+  U_MAG/U159/Z (AN2D2BWP16P90LVT)                       0.0162     0.4755 r
+  U_MAG/U280/ZN (OAI31D1BWP16P90LVT)                    0.0091     0.4846 f
+  U_MAG/U220/Z (OA21D2BWP16P90LVT)                      0.0154     0.4999 f
+  U_MAG/U323/ZN (ND2D2BWP16P90LVT)                      0.0049     0.5048 r
+  U_MAG/U283/ZN (AOI32D2BWP16P90LVT)                    0.0123     0.5172 f
+  U_MAG/U284/ZN (AOI21D2BWP16P90LVT)                    0.0086     0.5258 r
+  U_MAG/seg_idx_s2_reg_1_/D (DFQD2BWP16P90LVT)          0.0000     0.5258 r
+  data arrival time                                                0.5258
 
   clock clk (rise edge)                                 0.3500     0.3500
   clock network delay (ideal)                           0.2000     0.5500
   clock uncertainty                                    -0.0200     0.5300
-  U_MAG/seg_idx_s2_reg_3_/CP (DFQD2BWP16P90LVT)         0.0000     0.5300 r
-  library setup time                                   -0.0046     0.5254
-  data required time                                               0.5254
+  U_MAG/seg_idx_s2_reg_1_/CP (DFQD2BWP16P90LVT)         0.0000     0.5300 r
+  library setup time                                   -0.0042     0.5258
+  data required time                                               0.5258
   --------------------------------------------------------------------------
-  data required time                                               0.5254
-  data arrival time                                               -0.5254
+  data required time                                               0.5258
+  data arrival time                                               -0.5258
   --------------------------------------------------------------------------
   slack (MET)                                                      0.0000
 

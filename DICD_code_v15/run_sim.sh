@@ -4,6 +4,8 @@ g++ -std=c++17 \
   -DUSE_MAG \
   -DUSE_ANGLE \
   -DUSE_ARGMAX \
+  -DUSE_GAMMA_SUM \
+  -DUSE_DELAY_N \
   -I"$SYSTEMC_HOME/include" \
   -I"$VERILATOR_ROOT/include" \
   -I"$VERILATOR_ROOT/include/vltstd" \
