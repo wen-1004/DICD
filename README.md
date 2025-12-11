@@ -29,4 +29,4 @@ This is the systemC implementation of "ML Estimation of Time and Frequency Offse
 ## Result
 
 - Synthesize & Run gate-sim at 0.35ns
-- Area: 7550
+- Area: 7550 um^2
