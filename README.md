@@ -18,10 +18,15 @@ This is the systemC implementation of "ML Estimation of Time and Frequency Offse
 - Version 12: ANGLE, DELAY_N finished, add to 10 cycle latency
 - Version 13: PHI_SUM, GAMMA_SUM finished, add to 12 cycle latency
 - Version 14: MAG, Adjust I/O, add Top, sim pass
-- Version 15: Optimized for pipeline MAG, add to 13 cycle latency
+- Version 15: Remove reset in datapath, DPOPT
 
 ## How to run
 
 1. (verilator) ./run_varilator.sh to "verilate" RTL module to C object
 2. ./run_sim.sh to compile executable file
 3. ./full_test prog{x} to run simulation
+
+## Result
+
+- Synthesize & Run gate-sim at 0.35ns
+- Area: 7550
